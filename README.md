@@ -2,14 +2,14 @@
 <p align="center">
   基于Python的Web综合漏洞扫描器,名字取自<b>Arknights® Closure</b>
   <br><br>
-  <a href='https://blog.ysneko.com'><img src="https://img.shields.io/static/v1?label=Powered%20by&message=Y5neKO&color=green"></a>
-  <a href='https://www.python.org/'><img src="https://img.shields.io/static/v1?label=Python&message=1.8&color=yellow"></a>
+  <a href='https://blog.ysneko.com'><img src="https://img.shields.io/static/v1?label=Powered%20by&message=Y5neKO&color=green" alt="Author"></a>
+  <a href='https://www.python.org/'><img src="https://img.shields.io/static/v1?label=Python&message=1.8&color=yellow" alt="Python"></a>
   <br><br>
   <a href="#">
-    <img src="https://img.shields.io/badge/Supported%20by-Alipay🈲%20%E2%86%92-gray.svg?colorA=655BE1&colorB=4F44D6&style=for-the-badge"/>
+    <img src="https://img.shields.io/badge/Supported%20by-Alipay🈲%20%E2%86%92-gray.svg?colorA=655BE1&colorB=4F44D6&style=for-the-badge" alt="支付宝"/>
   </a>
   <a href="#">
-    <img src="https://img.shields.io/badge/Supported%20by-WechatPay🈲%20%E2%86%92-gray.svg?colorA=61c265&colorB=4CAF50&style=for-the-badge"/>
+    <img src="https://img.shields.io/badge/Supported%20by-WechatPay🈲%20%E2%86%92-gray.svg?colorA=61c265&colorB=4CAF50&style=for-the-badge" alt="微信支付"/>
   </a>
   <br><br>
   <a>———— </a>
@@ -17,7 +17,6 @@
   <a>———— </a>
   <br><br>
   <img src="https://img-blog.csdnimg.cn/7512889713bd422dbd791e17359ed1d3.png" alt="image-20220503164740855" style="zoom:30%;" />
-  <img src="https://img-blog.csdnimg.cn/66faca6cebf54f778e201362c8a34388.png" alt="image-20220503164740855" style="zoom:30%;" />
 </p>
   
 ## CVS - ClosureVulnScanner
@@ -30,6 +29,12 @@
 
 
 ## 目录描述
+`core` 核心功能目录
+
+`exp` 插件化exp目录
+
+`finger` 指纹信息目录
+
 `log` 错误日志目录
 
 

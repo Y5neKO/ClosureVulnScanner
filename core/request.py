@@ -1,3 +1,10 @@
+"""
+@Time: 2023/10/26 20:45
+@Auth: Y5neKO
+@File: request.py
+@IDE: PyCharm
+"""
+
 import requests
 import random
 import socket
@@ -63,8 +70,6 @@ ua = random.choice([
     "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.15 (KHTML, like Gecko) Chrome/24.0.1295.0 Safari/537.15",
     "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.14 (KHTML, like Gecko) Chrome/24.0.1292.0 Safari/537.14"])
 
-headers = {"User-Agent": ua}
-
 
 def check_network() -> bool:
     ipaddress = socket.gethostbyname(socket.gethostname())
@@ -74,12 +79,17 @@ def check_network() -> bool:
         return True
 
 
-def web_request(url, post=None):
+def alive(url) -> bool:
+    ipaddress = socket.gethostbyname(socket.gethostname())
+    if ipaddress == url:
+        return False
+    else:
+        return True
+
+
+def web_request(url, cookie=None, post=None):
     if check_network():
-        if post is None:
-            response = requests.get(url, headers=headers)
-        else:
-            response = requests.get(url, headers=headers, data=post)
+        response = requests.get(url, headers={"User-Agent": ua, "Cookie": cookie}, data=post)
         return response
     else:
         print("请检查网络")

@@ -1,3 +1,10 @@
+"""
+@Time: 2023/10/26 20:45
+@Auth: Y5neKO
+@File: banner.py
+@IDE: PyCharm
+"""
+
 from core import request
 
 version = "0.0"
