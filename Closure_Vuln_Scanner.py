@@ -6,7 +6,7 @@
 """
 
 from core.banner import banner
-from core.console import main
+from core.console import *
 
 
 def run():

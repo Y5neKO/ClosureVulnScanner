@@ -1,6 +1,0 @@
-{
-  "CVE": "CVE-2016-4437",
-  "comment": "shiro550反序列化",
-  "exp_type": "Cookie",
-  "response": "rememberMe=deleteMe"
-}

@@ -8,6 +8,9 @@
 import requests
 import random
 import socket
+from core.log import *
+from urllib3.util import parse_url
+from urllib3 import disable_warnings
 
 # 随机User-Agent防检测
 ua = random.choice([
@@ -79,6 +82,13 @@ def check_network() -> bool:
         return True
 
 
+def check_protocol(url):
+    if url.startswith("http"):
+        return url
+    else:
+        return "http://" + url
+
+
 def alive(url) -> bool:
     ipaddress = socket.gethostbyname(socket.gethostname())
     if ipaddress == url:
@@ -87,9 +97,25 @@ def alive(url) -> bool:
         return True
 
 
-def web_request(url, cookie=None, post=None):
+def web_request(url, cookie=None, post=None, timeout=5000):
     if check_network():
-        response = requests.get(url, headers={"User-Agent": ua, "Cookie": cookie}, data=post)
+        url = check_protocol(url)
+        try:
+            disable_warnings()
+            session = requests.Session()
+            session.verify = False  # 关闭SSL校验
+            response = session.get(url, headers={"User-Agent": ua}, cookies=cookie, data=post, timeout=timeout / 1000, allow_redirects=True)
+            if response.is_redirect:  # 检查是否发生重定向
+                location = response.headers['Location']
+                parsed_location = parse_url(location)
+                if parsed_location.scheme == 'http':  # 如果URL的协议是HTTP，则将其转换为HTTPS
+                    location = parsed_location.scheme + 's' + '://' + parsed_location.netloc + parsed_location.path
+                    response = session.get(location, headers={"User-Agent": ua}, cookies=cookie, data=post,
+                                           timeout=timeout / 1000, allow_redirects=True)
+            return response
+        except requests.exceptions.RequestException as error:
+            response = error
+            error_log(error)
         return response
     else:
         print("请检查网络")

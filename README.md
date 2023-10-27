@@ -16,7 +16,7 @@
   <br>
   <a>———— </a>
   <br><br>
-  <img src="https://img-blog.csdnimg.cn/7512889713bd422dbd791e17359ed1d3.png" alt="image-20220503164740855" style="zoom:30%;" />
+  <img src="" alt="image-20220503164740855" style="zoom:30%;" />
 </p>
   
 ## CVS - ClosureVulnScanner
