@@ -4,6 +4,8 @@
 @File: request.py
 @IDE: PyCharm
 """
+import ssl
+from urllib.parse import urlparse
 
 import requests
 import random
@@ -121,3 +123,52 @@ def web_request(url, cookie=None, post=None, timeout=5000):
         print("请检查网络")
         return 0
 
+
+def raw_request(url, payload):
+    parsed_url = urlparse(url)
+    if url.startswith("https://"):
+        https_flag = True
+        host = parsed_url.netloc
+        port = parsed_url.port
+        if port is None:
+            port = 443
+    elif url.startswith("http://"):
+        https_flag = False
+        host = parsed_url.netloc
+        port = parsed_url.port
+        if port is None:
+            port = 80
+    else:
+        return 0
+    ip_address = socket.gethostbyname(host)
+
+    payload = payload.format(host, port)
+    print(payload)
+
+    # 创建socket对象
+    client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    if https_flag:
+        # 使用ssl模块创建ssl上下文
+        ssl_context = ssl.SSLContext(ssl.PROTOCOL_SSLv23)
+        ssl_context.options |= ssl.OP_NO_SSLv2
+        ssl_context.options |= ssl.OP_NO_SSLv3
+        ssl_context.verify_mode = ssl.CERT_NONE
+        ssl_socket = ssl_context.wrap_socket(client_socket, server_hostname=url)
+        # 连接到目标服务器
+        ssl_socket.connect((ip_address, port))
+        ssl_socket.sendall(payload)
+        response_data = ssl_socket.recv(4096)
+        ssl_socket.close()
+        return response_data
+    else:
+        # 创建socket对象
+        client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        # 连接到目标服务器
+        client_socket.connect((ip_address, port))
+        # 发送HTTP请求消息
+        client_socket.sendall(payload)
+        # 接收并打印服务器的响应
+        response_data = client_socket.recv(4096)
+        # 关闭连接
+        client_socket.close()
+        return response_data

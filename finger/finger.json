@@ -1,0 +1,25 @@
+{
+  "AssetName": {
+    "Shiro": {
+      "description": "Shiro指纹,通过rememberMe字段识别",
+      "payload": {
+        "method": "GET",
+        "uri": "/",
+        "headers": "Cookie: rememberMe=test",
+        "body": ""
+      },
+      "keywords": "rememberMe=deleteMe"
+    },
+    "Weblogic": {
+      "description": "Weblogic默认指纹,直接通过关键字识别",
+      "payload": {
+        "method": "GET",
+        "uri": "/",
+        "headers": "",
+        "body": ""
+      },
+      "keywords": "From RFC 2068 Hypertext Transfer Protocol"
+    }
+  },
+  "test": "test"
+}

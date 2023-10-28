@@ -6,7 +6,7 @@
 
 指纹索引文件
 """
-from finger import Shiro
-from finger import Weblogic
+from poc import Shiro550
+from poc import Weblogic
 
-finger_index = ["Shiro", "Weblogic"]
+poc_index = ["Shiro550", "Weblogic"]
