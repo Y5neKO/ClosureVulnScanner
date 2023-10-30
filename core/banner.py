@@ -6,6 +6,7 @@
 """
 
 from core import request
+from core.color import *
 
 version = "0.0"
 # 调用一言接口
@@ -26,7 +27,7 @@ banner = """
     
                                                                            v{} By Y5neKO :)
                                                                            {}
-""".format(version, hitokoto)
+""".format(color(version, "cyan"), hitokoto)
 
 banner2 = """
 """

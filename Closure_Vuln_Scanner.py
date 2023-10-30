@@ -3,6 +3,8 @@
 @Auth: Y5neKO
 @File: Closure_Vuln_Scanner.py
 @IDE: PyCharm
+
+主程序入口
 """
 
 from core.banner import banner

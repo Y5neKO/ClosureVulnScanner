@@ -5,7 +5,9 @@
       "payload": {
         "method": "GET",
         "uri": "/",
-        "headers": "Cookie: rememberMe=test",
+        "headers": {
+          "Cookie": "rememberMe=test"
+        },
         "body": ""
       },
       "keywords": "rememberMe=deleteMe"
@@ -15,11 +17,22 @@
       "payload": {
         "method": "GET",
         "uri": "/",
-        "headers": "",
+        "headers": {
+        },
         "body": ""
       },
-      "keywords": "From RFC 2068 Hypertext Transfer Protocol"
+      "keywords": "<H3>From RFC 2068 <i>Hypertext Transfer Protocol -- HTTP/1.1</i>:</H3>"
+    },
+    "Nacos": {
+      "description": "Nacos默认指纹,直接通过关键字识别",
+      "payload": {
+        "method": "GET",
+        "uri": "/",
+        "headers": {
+        },
+        "body": ""
+      },
+      "keywords": "<link rel=\"shortcut icon\" href=\"console-ui/public/img/favicon.ico\" type=\"image/x-icon\">"
     }
-  },
-  "test": "test"
+  }
 }

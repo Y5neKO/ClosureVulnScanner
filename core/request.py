@@ -3,6 +3,8 @@
 @Auth: Y5neKO
 @File: request.py
 @IDE: PyCharm
+
+web请求模块
 """
 import ssl
 from urllib.parse import urlparse
@@ -106,13 +108,42 @@ def web_request(url, cookie=None, post=None, timeout=5000):
             disable_warnings()
             session = requests.Session()
             session.verify = False  # 关闭SSL校验
-            response = session.get(url, headers={"User-Agent": ua}, cookies=cookie, data=post, timeout=timeout / 1000, allow_redirects=True)
+            response = session.get(url, headers={"User-Agent": ua}, cookies=cookie, data=post, timeout=timeout / 1000,
+                                   allow_redirects=True)
             if response.is_redirect:  # 检查是否发生重定向
                 location = response.headers['Location']
                 parsed_location = parse_url(location)
                 if parsed_location.scheme == 'http':  # 如果URL的协议是HTTP，则将其转换为HTTPS
                     location = parsed_location.scheme + 's' + '://' + parsed_location.netloc + parsed_location.path
                     response = session.get(location, headers={"User-Agent": ua}, cookies=cookie, data=post,
+                                           timeout=timeout / 1000, allow_redirects=True)
+            return response
+        except requests.exceptions.RequestException as error:
+            response = error
+            error_log(error)
+        return response
+    else:
+        print("请检查网络")
+        return 0
+
+
+def web_request_plus(url, headers, cookie=None, post=None, timeout=5000):
+    headers['User-Agent'] = ua
+    if check_network():
+        url = check_protocol(url)
+        try:
+            disable_warnings()
+            session = requests.Session()
+            session.verify = False  # 关闭SSL校验
+            response = session.get(url, headers=headers, cookies=cookie, data=post,
+                                   timeout=timeout / 1000,
+                                   allow_redirects=True)
+            if response.is_redirect:  # 检查是否发生重定向
+                location = response.headers['Location']
+                parsed_location = parse_url(location)
+                if parsed_location.scheme == 'http':  # 如果URL的协议是HTTP，则将其转换为HTTPS
+                    location = parsed_location.scheme + 's' + '://' + parsed_location.netloc + parsed_location.path
+                    response = session.get(location, headers=headers, cookies=cookie, data=post,
                                            timeout=timeout / 1000, allow_redirects=True)
             return response
         except requests.exceptions.RequestException as error:
@@ -142,11 +173,12 @@ def raw_request(url, payload):
         return 0
     ip_address = socket.gethostbyname(host)
 
-    payload = payload.format(host, port)
+    payload = payload.format(host, port).encode()
     print(payload)
 
     # 创建socket对象
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    # client_socket.setblocking(False)
     if https_flag:
         # 使用ssl模块创建ssl上下文
         ssl_context = ssl.SSLContext(ssl.PROTOCOL_SSLv23)
@@ -157,7 +189,15 @@ def raw_request(url, payload):
         # 连接到目标服务器
         ssl_socket.connect((ip_address, port))
         ssl_socket.sendall(payload)
-        response_data = ssl_socket.recv(4096)
+        # response_data = ssl_socket.recv(10000)
+        response_data = b''
+        while len(response_data) < 10500:
+            packet = ssl_socket.recv(1024)
+            # time.sleep(1)
+            if not packet:
+                # break
+                exit()
+            response_data += packet
         ssl_socket.close()
         return response_data
     else:
@@ -168,7 +208,7 @@ def raw_request(url, payload):
         # 发送HTTP请求消息
         client_socket.sendall(payload)
         # 接收并打印服务器的响应
-        response_data = client_socket.recv(4096)
+        response_data = client_socket.recv(10000)
         # 关闭连接
         client_socket.close()
         return response_data

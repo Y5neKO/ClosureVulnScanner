@@ -14,10 +14,13 @@ from core.color import color
 
 def run(url, timeout):
     response = request.web_request(url, {"rememberMe": "123"}, timeout=timeout)
-    set_cookie = response.headers['set-Cookie']
-    if 'rememberMe=deleteMe' in set_cookie:
-        return 1, "[" + color("+", "green") + "]目标 {} 存在".format(url) + color("Shiro框架", "orange") + "特征"
-    else:
+    try:
+        set_cookie = response.headers['set-Cookie']
+        if 'rememberMe=deleteMe' in set_cookie:
+            return 1, "[" + color("+", "green") + "]目标 {} 存在".format(url) + color("Shiro框架", "orange") + "特征"
+        else:
+            return 0, "[" + color("-", "red") + "]目标 {} 不存在Shiro框架特征".format(url)
+    except:
         return 0, "[" + color("-", "red") + "]目标 {} 不存在Shiro框架特征".format(url)
 
 

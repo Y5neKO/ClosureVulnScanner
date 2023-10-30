@@ -1,0 +1,16 @@
+{
+  "PocName": {
+    "Shiro550": {
+      "description": "Shiro默认key",
+      "payload": {
+        "method": "GET",
+        "uri": "/",
+        "headers": {
+          "Cookie": "rememberMe=test"
+        },
+        "body": ""
+      },
+      "keywords": "rememberMe=deleteMe"
+    }
+  }
+}
