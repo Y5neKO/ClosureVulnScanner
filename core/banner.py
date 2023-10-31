@@ -25,9 +25,9 @@ banner = """
    Y8a.    .a8P  88  "8a,   ,a8"  aa    ]8I  "8a,   ,a88  88          "8b,   ,aa
     `"Y8888Y"'   88   `"YbbdP"'   `"YbbdP"'   `"YbbdP'Y8  88           `"Ybbd8"'
     
-                                                                           v{} By Y5neKO :)
+                                                                           v{} By {} :)
                                                                            {}
-""".format(color(version, "cyan"), hitokoto)
+""".format(color(version, "cyan"), color("Y5neKO", "yellow"), hitokoto)
 
 banner2 = """
 """

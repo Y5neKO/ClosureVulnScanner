@@ -14,10 +14,10 @@ from core.color import color
 
 def run(url, timeout):
     response = request.web_request(url, timeout=timeout)
-    if 'From RFC 2068 Hypertext Transfer Protocol' in response.text:
-        return 1, "[" + color("+", "green") + "]目标 {} 存在".format(url) + color("Weblogic", "orange") + "特征"
+    if 'Hypertext Transfer Protocol' in response.text:
+        return 1, "[" + color("+", "green") + "]目标[ {} ]存在[".format(url) + color("Weblogic", "orange") + "]漏洞"
     else:
-        return 0, "[" + color("-", "red") + "]目标 {} 不存在Weblogic特征".format(url)
+        return 0, "[" + color("-", "red") + "]目标[ {} ]不存在[Weblogic]漏洞".format(url)
 
 
 if __name__ == '__main__':

@@ -6,7 +6,6 @@
 """
 
 import os
-import json
 
 
 # 遍历目录下所有exp的json

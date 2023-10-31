@@ -10,18 +10,20 @@
 import argparse
 import json
 import sys
+import threading
 
+import socks
 from bs4 import BeautifulSoup
 
 from core.color import *
-from core.request import *
 from core.log import *
+from core.request import *
 from poc.index import *
 
 
 def web_info(url):
     """
-    头部输出网站信息
+    头部输出目标主要信息
     @param url: 地址
     @return: Flag
     """
@@ -34,14 +36,20 @@ def web_info(url):
     uri = parsed_url.path
     if port is None:
         port = 80
+        if protocal == "https":
+            port = 443
     soup = BeautifulSoup(response.text, "html.parser")
     title = soup.title.string
     print("[*]--------------------目标信息--------------------")
     print("Title: " + title)
-    print("Prot:  " + protocal)
+    print("Proto: " + protocal)
     print("Host:  " + host)
     print("Port:  " + str(port))
     print("Uri:   " + uri)
+    if socks.get_default_proxy():
+        print("Proxy: " + color("On", "green"))
+    else:
+        print("Proxy: " + color("Off", "red"))
     return 1
 
 
@@ -52,10 +60,19 @@ def identify(url, timeout):
     @param timeout: 超时时间
     @return: Flag
     """
+    threads = []
     print("回显窗口:\n")
     web_info(url)
     print("[*]--------------------任务开始--------------------")
-    finger_base(url, timeout)
+    with open("./finger/finger.json", "r", encoding="utf-8") as file:
+        json_data = json.load(file)
+        # 多线程操作
+        for asset_name, info in json_data['AssetName'].items():
+            t = threading.Thread(target=finger_base, args=(url, timeout, asset_name, info))
+            threads.append(t)
+            t.start()
+    for t in threads:
+        t.join()
     print("[*]--------------------任务结束--------------------")
     return 1
 
@@ -67,15 +84,30 @@ def scan(url, timeout):
     @param timeout: 超时时间
     @return: Flag
     """
+    threads = []
+    threads2 = []
     print("回显窗口:\n")
     web_info(url)
     print("[*]--------------------任务开始--------------------")
-    ez_poc_base(url, timeout=timeout)       # 首先进行简单poc验证
-    for i in poc_index:                     # 接着在进行复杂poc验证
-        res = poc_base(i, url, timeout)
-        if res[0]:
-            normal_log(res[1])
-        print(res[1])
+    # 首先进行简单poc验证
+    with open("./ez_poc/ez_poc.json", "r", encoding="utf-8") as file:
+        json_data = json.load(file)
+        # 多线程操作
+        for asset_name, info in json_data['PocName'].items():
+            t = threading.Thread(target=finger_base, args=(url, timeout, asset_name, info))
+            threads.append(t)
+            t.start()
+    for t in threads:
+        t.join()
+
+    # 接着在进行复杂poc验证
+    # 多线程操作
+    for i in poc_index:
+        t2 = threading.Thread(target=poc_thread_func, args=(i, url, timeout))   # 通过poc_thread_func方法进行多线程操作
+        threads2.append(t2)
+        t2.start()
+    for t2 in threads2:
+        t2.join()
     print("[*]--------------------任务结束--------------------")
     return 1
 
@@ -95,27 +127,23 @@ def exp(url, timeout):
     return 1
 
 
-def finger_base(url, timeout):
+def finger_base(url, timeout, asset_name, info):
     """
     指纹基础模块，用于资产识别模块调用
-    @param url: 地址
+    @param url: 链接
     @param timeout: 超时时间
-    @return: Flag
+    @param asset_name: 资产名称
+    @param info: 指纹详细信息
+    @return:
     """
-    with open("./finger/finger.json", "r", encoding="utf-8") as file:
-        json_data = json.load(file)
-        for asset_name, info in json_data['AssetName'].items():
-            response = web_request_plus(url, headers=info["payload"]["headers"], post=info["payload"]["body"], timeout=timeout)
-            if re.search(info["keywords"], response.text) or re.search(info["keywords"], str(response.headers)):
-                # print(response.text)
-                result = ("[" + color("+", "green") + "]目标 " + url + " 存在" + color(asset_name, "orange") + "特征")
-                print(result)
-                normal_log(result)
-            else:
-                # print(response.text)
-                result = ("[" + color("-", "red") + "]目标 " + url + " 不存在" + asset_name + "特征")
-                print(result)
-    return 1
+    response = web_request_plus(url, headers=info["payload"]["headers"], post=info["payload"]["body"], timeout=timeout)
+    if re.search(info["keywords"], response.text) or re.search(info["keywords"], str(response.headers)):
+        result = ("[" + color("+", "green") + "]目标[ " + url + " ]存在[" + color(asset_name, "orange") + "]特征")
+        print(result)
+        normal_log(result)
+    else:
+        result = ("[" + color("-", "red") + "]目标[ " + url + " ]不存在[" + asset_name + "]特征")
+        print(result)
 
 
 def poc_base(poc_name, url, timeout):
@@ -127,39 +155,69 @@ def poc_base(poc_name, url, timeout):
     @return: Flag、验证结果
     """
     try:
-        url = check_protocol(url)
         flag, res = eval(poc_name).run(url, timeout)
         return flag, res
     except Exception as error:
-        error_log(str(error))
         pass
 
 
-def ez_poc_base(url, timeout):
+def poc_thread_func(i, url, timeout):
     """
-    简单poc验证模块，用于漏洞扫描模块调用
+    复杂poc验证多线程模块，用于漏洞扫描模块调用
+    @param i: 线程索引
     @param url: 地址
     @param timeout: 超时时间
     @return: Flag
     """
-    with open("./ez_poc/ez_poc.json", "r", encoding="utf-8") as file:
-        json_data = json.load(file)
-        for poc_name, info in json_data['PocName'].items():
-            response = web_request_plus(url, headers=info["payload"]["headers"], post=info["payload"]["body"],
-                                        timeout=timeout)
-            if re.search(info["keywords"], response.text) or re.search(info["keywords"], str(response.headers)):
-                # print(response.text)
-                result = ("[" + color("+", "green") + "]目标 " + url + " 存在" + color(poc_name, "orange") + "漏洞")
-                print(result)
-                normal_log(result)
-            else:
-                # print(response.text)
-                result = ("[" + color("-", "red") + "]目标 " + url + " 不存在" + poc_name + "漏洞")
-                print(result)
+    res = poc_base(i, url, timeout)
+    print(res[1])
+    return 1
+
+
+def ez_poc_base(url, timeout, poc_name, info):
+    """
+    简单poc验证模块，用于漏洞扫描模块调用
+    @param url:
+    @param timeout:
+    @param poc_name:
+    @param info:
+    @return:
+    """
+    response = web_request_plus(url, headers=info["payload"]["headers"], post=info["payload"]["body"], timeout=timeout)
+    if re.search(info["keywords"], response.text) or re.search(info["keywords"], str(response.headers)):
+        result = ("[" + color("+", "green") + "]目标[ " + url + " ]存在[" + color(poc_name, "orange") + "]漏洞")
+        print(result)
+        normal_log(result)
+    else:
+        result = ("[" + color("-", "red") + "]目标[ " + url + " ]不存在[" + poc_name + "]漏洞")
+        print(result)
 
 
 def exp_base():
     print("exp基础利用模块")
+
+
+def proxy(proxy_addr):
+    """
+    代理模块
+    @param proxy_addr: 代理完整地址
+    @return: Flag
+    """
+    match = re.search(r"//(\d+\.\d+\.\d+\.\d+):(\d+)", proxy_addr)
+    if match:
+        # 提取IP地址和端口号
+        ip_address = match.group(1)
+        port_number = match.group(2)
+        if proxy_addr.startswith("socks://"):
+            socks.set_default_proxy(socks.SOCKS5, ip_address, int(port_number))
+        elif proxy_addr.startswith("http://"):
+            socks.set_default_proxy(socks.HTTP, ip_address, int(port_number))
+        socket.socket = socks.socksocket
+        return 1
+    else:
+        print("代理格式错误")
+        error_log("代理格式错误")
+        return 0
 
 
 class Logger(object):
@@ -189,7 +247,8 @@ def main():
     # scanner.add_argument("--scan", type=str, dest="scan", default="all",
     #                     help="基础扫描, 使用poc目录内插件:Shiro,Weblogic, 不指定默认全部扫描")
     scanner.add_argument("-t", type=int, dest="timeout", default=5000, help="设置超时时间(ms), 默认5000ms")
-    scanner.add_argument("--proxy", type=str, dest="proxy", help="使用代理, 目前仅支持Socks")
+    scanner.add_argument("--proxy", type=str, dest="proxy",
+                         help="使用代理, 目前支持Socks,HTTP; 格式:{socks|http}://ip_addr:port")
     scanner.add_argument("-o", type=str, dest="output", help="输出扫描结果到指定路径")
 
     scanner2 = parser.add_argument_group('拓展参数')
@@ -202,6 +261,9 @@ def main():
     if args.output:
         log = Logger(args.output)
         sys.stdout = log
+
+    if args.proxy:  # 设置全局代理
+        proxy(args.proxy)
 
     if args.url and args.extension == "identify":
         try:
@@ -223,5 +285,13 @@ def main():
         except ConnectionError as error:
             error_log("core.console->main()->exp模块|" + str(error))
             print("[*]--------------------连接错误--------------------")
+
+    elif args.add_poc_name:
+        with open('./poc/index.py', 'r') as file:
+            # 读取文件内容
+            content = file.read()
+        new_content = content.replace(']', ', "' + args.add_poc_name + '"]')
+        print(new_content)
+
 
     return 1

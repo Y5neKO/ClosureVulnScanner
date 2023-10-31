@@ -16,7 +16,7 @@
   <br>
   <a>———— </a>
   <br><br>
-  <img src="Closure.png" alt="Closure">
+  <img src="Closure.png" alt="Closure" style="zoom:50%;" />
 </p>
 
 ## CVS - ClosureVulnScanner
@@ -25,7 +25,15 @@
 
 
 ## 默认配置
-`Python 3_8_0`  |  `PyCharm 2023.2.3`  |  `UTF-8`
+`Python 3_8_0`  |  `PyCharm 2023.2.3`  |  `Windows 11`  |  `UTF-8`
+
+
+## 版本&更新日志
+**版本** v0.0
+
+- *2023.10.26* | First init.
+
+- ~ | 功能更新中
 
 
 ## 目录描述
@@ -40,14 +48,6 @@
 `log`: 程序日志目录
 
 `poc`: 复杂poc验证模块插件目录
-
-
-## 版本&更新日志
-**版本** v0.0
-
-- *2023.10.26* | First init.
-
-- ~ | 功能更新中
 
 
 ## 贡献者

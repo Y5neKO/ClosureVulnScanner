@@ -6,15 +6,16 @@
 
 web请求模块
 """
+import random
+import socket
 import ssl
 from urllib.parse import urlparse
 
 import requests
-import random
-import socket
-from core.log import *
-from urllib3.util import parse_url
 from urllib3 import disable_warnings
+from urllib3.util import parse_url
+
+from core.log import *
 
 # 随机User-Agent防检测
 ua = random.choice([

@@ -17,11 +17,11 @@ def run(url, timeout):
     try:
         set_cookie = response.headers['set-Cookie']
         if 'rememberMe=deleteMe' in set_cookie:
-            return 1, "[" + color("+", "green") + "]目标 {} 存在".format(url) + color("Shiro框架", "orange") + "特征"
+            return 1, "[" + color("+", "green") + "]目标[ {} ]存在[".format(url) + color("Shiro框架", "orange") + "]漏洞"
         else:
-            return 0, "[" + color("-", "red") + "]目标 {} 不存在Shiro框架特征".format(url)
+            return 0, "[" + color("-", "red") + "]目标[ {} ]不存在[Shiro框架]漏洞".format(url)
     except:
-        return 0, "[" + color("-", "red") + "]目标 {} 不存在Shiro框架特征".format(url)
+        return 0, "[" + color("-", "red") + "]目标[ {} ]不存在[Shiro框架]漏洞".format(url)
 
 
 if __name__ == '__main__':

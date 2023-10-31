@@ -27,10 +27,6 @@ def normal_log(log):
     logger.addHandler(fh)
     logger.setLevel(logging.INFO)
     logger.info(log)
-    # logging.basicConfig(filename='./log/normal_log_' + formatted_date + '.log',
-    #                     format='%(asctime)s %(message)s',
-    #                     filemode="a", level=logging.INFO)
-    # logging.info(log)
 
 
 def error_log(log):
