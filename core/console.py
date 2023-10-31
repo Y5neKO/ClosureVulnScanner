@@ -9,6 +9,8 @@
 
 import argparse
 import json
+import sys
+
 from bs4 import BeautifulSoup
 
 from core.color import *
@@ -18,8 +20,14 @@ from poc.index import *
 
 
 def web_info(url):
+    """
+    头部输出网站信息
+    @param url: 地址
+    @return: Flag
+    """
     parsed_url = urlparse(url)
     response = requests.get(url, timeout=3)
+    response.encoding = "utf-8"
     protocal = parsed_url.scheme
     host = parsed_url.netloc
     port = parsed_url.port
@@ -34,48 +42,69 @@ def web_info(url):
     print("Host:  " + host)
     print("Port:  " + str(port))
     print("Uri:   " + uri)
+    return 1
 
 
 def identify(url, timeout):
+    """
+    资产识别模块
+    @param url: 地址
+    @param timeout: 超时时间
+    @return: Flag
+    """
     print("回显窗口:\n")
     web_info(url)
     print("[*]--------------------任务开始--------------------")
     finger_base(url, timeout)
     print("[*]--------------------任务结束--------------------")
+    return 1
 
 
 def scan(url, timeout):
+    """
+    漏洞扫描模块
+    @param url: 地址
+    @param timeout: 超时时间
+    @return: Flag
+    """
     print("回显窗口:\n")
+    web_info(url)
     print("[*]--------------------任务开始--------------------")
-    ez_poc_base(url, timeout=timeout)
-    for i in poc_index:
+    ez_poc_base(url, timeout=timeout)       # 首先进行简单poc验证
+    for i in poc_index:                     # 接着在进行复杂poc验证
         res = poc_base(i, url, timeout)
         if res[0]:
             normal_log(res[1])
         print(res[1])
     print("[*]--------------------任务结束--------------------")
+    return 1
 
 
 def exp(url, timeout):
+    """
+    exp利用模块
+    @param url: 地址
+    @param timeout: 超时时间
+    @return: Flag
+    """
     print("回显窗口:\n")
+    web_info(url)
     print("[*]--------------------任务开始--------------------")
     print("exp模块")
     print("[*]--------------------任务结束--------------------")
+    return 1
 
 
 def finger_base(url, timeout):
+    """
+    指纹基础模块，用于资产识别模块调用
+    @param url: 地址
+    @param timeout: 超时时间
+    @return: Flag
+    """
     with open("./finger/finger.json", "r", encoding="utf-8") as file:
         json_data = json.load(file)
         for asset_name, info in json_data['AssetName'].items():
-            # print(f'Asset Name: {asset_name}')
-            # print(f'Description: {info["description"]}')
-            # print(f'Payload Method: {info["payload"]["method"]}')
-            # print(f'Payload URI: {info["payload"]["uri"]}')
-            # print(f'Payload Headers: {info["payload"]["headers"]}')
-            # print(f'Payload Body: {info["payload"]["body"]}')
-            # print(f'Keywords: {info["keywords"]}')
-            # print('---')
-
             response = web_request_plus(url, headers=info["payload"]["headers"], post=info["payload"]["body"], timeout=timeout)
             if re.search(info["keywords"], response.text) or re.search(info["keywords"], str(response.headers)):
                 # print(response.text)
@@ -86,9 +115,17 @@ def finger_base(url, timeout):
                 # print(response.text)
                 result = ("[" + color("-", "red") + "]目标 " + url + " 不存在" + asset_name + "特征")
                 print(result)
+    return 1
 
 
 def poc_base(poc_name, url, timeout):
+    """
+    复杂poc验证基础模块，用于漏洞扫描模块调用
+    @param poc_name: poc目录内的poc索引名称
+    @param url: 地址
+    @param timeout: 超时时间
+    @return: Flag、验证结果
+    """
     try:
         url = check_protocol(url)
         flag, res = eval(poc_name).run(url, timeout)
@@ -99,6 +136,12 @@ def poc_base(poc_name, url, timeout):
 
 
 def ez_poc_base(url, timeout):
+    """
+    简单poc验证模块，用于漏洞扫描模块调用
+    @param url: 地址
+    @param timeout: 超时时间
+    @return: Flag
+    """
     with open("./ez_poc/ez_poc.json", "r", encoding="utf-8") as file:
         json_data = json.load(file)
         for poc_name, info in json_data['PocName'].items():
@@ -119,23 +162,46 @@ def exp_base():
     print("exp基础利用模块")
 
 
+class Logger(object):
+    def __init__(self, filename="Default.log"):
+        self.terminal = sys.stdout
+        self.log = open(filename, "w", encoding="utf-8")  # 防止编码错误
+
+    def write(self, message):
+        self.terminal.write(message)
+        message = re.sub('\033\[\d+m', '', message)
+        self.log.write(message)
+
+    def flush(self):
+        pass
+
+
 def main():
-    # 扫描参数
+    """
+    控制台主入口
+    @return: Flag
+    """
     parser = argparse.ArgumentParser(description="使用帮助")
     scanner = parser.add_argument_group('扫描参数')
     scanner.add_argument("-u", type=str, dest="url", help="目标url, example: http(s)://www.baidu.com/")
     scanner.add_argument("-e", type=str, dest="extension", default="identify", choices=["identify", "scan", "exp"],
                          help="指定操作类型, 默认为资产识别。identify:资产识别 | scan:漏洞扫描 | exp:漏洞利用")
-    scanner.add_argument("--scan", type=str, dest="scan", choices=["All", "Shiro", "Weblogic"],
-                         help="基础扫描, 使用poc目录内插件:Shiro,Weblogic, 不指定默认全部扫描")
+    # scanner.add_argument("--scan", type=str, dest="scan", default="all",
+    #                     help="基础扫描, 使用poc目录内插件:Shiro,Weblogic, 不指定默认全部扫描")
     scanner.add_argument("-t", type=int, dest="timeout", default=5000, help="设置超时时间(ms), 默认5000ms")
     scanner.add_argument("--proxy", type=str, dest="proxy", help="使用代理, 目前仅支持Socks")
     scanner.add_argument("-o", type=str, dest="output", help="输出扫描结果到指定路径")
 
     scanner2 = parser.add_argument_group('拓展参数')
+    scanner2.add_argument('--list', type=str, dest="list_poc_name", help="列出已经加载的poc插件")
+    scanner2.add_argument('--add-poc', type=str, dest="add_poc_name", help="添加poc插件")
     scanner2.add_argument('--add-exp', type=str, dest="add_exp_name", help="添加exp插件")
 
     args = parser.parse_args()
+
+    if args.output:
+        log = Logger(args.output)
+        sys.stdout = log
 
     if args.url and args.extension == "identify":
         try:
@@ -157,3 +223,5 @@ def main():
         except ConnectionError as error:
             error_log("core.console->main()->exp模块|" + str(error))
             print("[*]--------------------连接错误--------------------")
+
+    return 1

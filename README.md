@@ -16,26 +16,30 @@
   <br>
   <a>———— </a>
   <br><br>
-  <img src="" alt="image-20220503164740855" style="zoom:30%;" />
+  <img src="Closure.png" alt="Closure">
 </p>
-  
+
 ## CVS - ClosureVulnScanner
 
 目前正在开发中，广泛征求意见.
 
 
 ## 默认配置
-`Python 3_8_0`  |  `PyCharm 2023.2.3`
+`Python 3_8_0`  |  `PyCharm 2023.2.3`  |  `UTF-8`
 
 
 ## 目录描述
-`core` 核心功能目录
+`core`: 核心功能目录
 
-`exp` 插件化exp目录
+`exp`: 漏洞利用模块插件目录
 
-`finger` 指纹信息目录
+`ez_poc`: 简单发包型poc验证模块插件目录
 
-`log` 错误日志目录
+`finger`: 指纹信息目录
+
+`log`: 程序日志目录
+
+`poc`: 复杂poc验证模块插件目录
 
 
 ## 版本&更新日志

@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# _*_ coding:utf-8 _*_
 """
 @Time: 2023/10/26 20:45
 @Auth: Y5neKO
