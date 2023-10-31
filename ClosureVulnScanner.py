@@ -3,7 +3,7 @@
 """
 @Time: 2023/10/26 20:45
 @Auth: Y5neKO
-@File: Closure_Vuln_Scanner.py
+@File: ClosureVulnScanner.py
 @IDE: PyCharm
 
 主程序入口
