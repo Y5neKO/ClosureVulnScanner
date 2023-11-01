@@ -8,7 +8,7 @@
         "headers": {
           "Cookie": "rememberMe=test"
         },
-        "body": ""
+        "body": {}
       },
       "keywords": "rememberMe=deleteMe"
     },
@@ -19,7 +19,7 @@
         "uri": "/",
         "headers": {
         },
-        "body": ""
+        "body": {}
       },
       "keywords": "<H3>From RFC 2068 <i>Hypertext Transfer Protocol -- HTTP/1.1</i>:</H3>"
     },
@@ -30,7 +30,7 @@
         "uri": "/",
         "headers": {
         },
-        "body": ""
+        "body": {}
       },
       "keywords": "<link rel=\"shortcut icon\" href=\"console-ui/public/img/favicon.ico\" type=\"image/x-icon\">"
     }
