@@ -33,6 +33,3146 @@
         "body": {}
       },
       "keywords": "<link rel=\"shortcut icon\" href=\"console-ui/public/img/favicon.ico\" type=\"image/x-icon\">"
+    },
+    "AspCMS": {
+      "description": "AspCMS指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/plug/comment.html",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": "aspcms"
+    },
+    "DedeCMS(织梦)": {
+      "description": "DedeCMS(织梦)指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/company/template/default/search_list.htm",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": "dedecms"
+    },
+    "Discuz!": {
+      "description": "Discuz!指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": "Powered by.*?</a></strong>"
+    },
+    "Discuz(康盛)": {
+      "description": "Discuz(康盛)指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/uc_server/view/default/admin_frame_main.htm",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": "discuz"
+    },
+    "Drupal(水滴)": {
+      "description": "Drupal(水滴)指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/modules/legacy/legacy.info",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": "drupal"
+    },
+    "Dvbbs(动网)": {
+      "description": "Dvbbs(动网)指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/skins/myspace/default01/demo.htm",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": "dvbbs"
+    },
+    "Ecshop(商派)": {
+      "description": "Ecshop(商派)指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/widget/blog_sohu.xhtml",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": "ecshop"
+    },
+    "Emlog": {
+      "description": "Emlog指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/content/templates/default/tpl.ini",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": "emlog"
+    },
+    "EmpireCMS(帝国)": {
+      "description": "EmpireCMS(帝国)指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/t/index.html",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": "empirecms"
+    },
+    "EspCMS(易思)": {
+      "description": "EspCMS(易思)指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/templates/wap/en/public/footer.html",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": "espcms"
+    },
+    "FoosunCMS(风讯)": {
+      "description": "FoosunCMS(风讯)指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/xml/products/dotnetcmsversion.xml",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": "foosuncms"
+    },
+    "HdWiki(中文维基)": {
+      "description": "HdWiki(中文维基)指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/view/default/admin_addlink.htm",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": "hdwiki"
+    },
+    "Joomla(逐浪)": {
+      "description": "Joomla(逐浪)指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/templates/atomic/css/template.css",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": "joomla"
+    },
+    "KesionCMS(科讯)": {
+      "description": "KesionCMS(科讯)指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/template/common/activecode.html",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": "kesioncms"
+    },
+    "KingCMS": {
+      "description": "KingCMS指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/webftp/index.asp",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": "kingcms"
+    },
+    "liangjing(良精)": {
+      "description": "liangjing(良精)指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/Html_skin30/enabout.html",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": "liangjing"
+    },
+    "LjCMS(良精)": {
+      "description": "LjCMS(良精)指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/T/skin05/about.html",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": "ljcms"
+    },
+    "PHP168(国徽)": {
+      "description": "PHP168(国徽)指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/template/admin/ask/config.html",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": "php168"
+    },
+    "phpCMS(盛大)": {
+      "description": "phpCMS(盛大)指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/yp/images/js/global.js",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": "phpcms"
+    },
+    "PHPWind": {
+      "description": "PHPWind指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/windid/res/js/dev/wind.js",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": "phpwind"
+    },
+    "PowerEasy(动易)": {
+      "description": "PowerEasy(动易)指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/WebServices/CategoryService.asmx",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": "powereasy"
+    },
+    "qiboSoft(齐博)": {
+      "description": "qiboSoft(齐博)指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/wap/template/foot.htm",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": "qiboSoft"
+    },
+    "SiteServer": {
+      "description": "SiteServer指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/SiteServer/Services/AdministratorService.asmx",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Southidc(南方数据)": {
+      "description": "Southidc(南方数据)指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/Script/Html.js",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": "southidc"
+    },
+    "WordPress": {
+      "description": "WordPress指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/wp-includes/wlwmanifest.xml",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": "wordpress"
+    },
+    "Z-Blog": {
+      "description": "Z-Blog指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/readme.txt",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Jingyi": {
+      "description": "Jingyi指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/favicon.ico",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "phpmps": {
+      "description": "phpmps指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/images/arrow_up.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Discuz7.2": {
+      "description": "Discuz7.2指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/robots.tst",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "phpmaps": {
+      "description": "phpmaps指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/include/fckeditor/fckstyles.xml",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "dedecms": {
+      "description": "dedecms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/include/data/vdcode.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "泛微OA": {
+      "description": "泛微OA指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/js/ext/resources/css/ext-all.css",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "网趣商城": {
+      "description": "网趣商城指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/images/logo.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "用友U8": {
+      "description": "用友U8指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/pic/logo-tw.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "泛微E-office": {
+      "description": "泛微E-office指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/login/bg_top.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "小计天空进销存管理系统": {
+      "description": "小计天空进销存管理系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/Admin_Management/upload/desk.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "SupeSite": {
+      "description": "SupeSite指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/templates/default/images/link_icons.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "ecshop": {
+      "description": "ecshop指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/ecshopfiles.md5",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "zoomla": {
+      "description": "zoomla指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/App_Themes/AdminDefaultTheme/images/input_username.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Discuz": {
+      "description": "Discuz指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/static/image/admincp/bg_repno.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "贷齐乐系统": {
+      "description": "贷齐乐系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/plugins/avatar/crossdomain.xml",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "metinfo": {
+      "description": "metinfo指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/favicon.ico",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "PIW内容管理系统": {
+      "description": "PIW内容管理系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/piw/images/de.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "EC_word企业管理系统": {
+      "description": "EC_word企业管理系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/images/login.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "phpok": {
+      "description": "phpok指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/top.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "qibosoft": {
+      "description": "qibosoft指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/ewebeditor/KindEditor.js",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "V5Shop": {
+      "description": "V5Shop指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/weblogin/images/login1.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "phpweb": {
+      "description": "phpweb指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/base/templates/images/2.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "espcms": {
+      "description": "espcms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/adminsoft/templates/images/windowclose.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "用友TurBCRM系统": {
+      "description": "用友TurBCRM系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/css/blue/fp_body_bg.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "akcms": {
+      "description": "akcms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/admin/sprites.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "foosun文章系统": {
+      "description": "foosun文章系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/Vote/Img/skin/css_2/2_logo.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "PigCms": {
+      "description": "PigCms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/tpl/home/pigcms/common/js/page.js",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "aspcms": {
+      "description": "aspcms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/aspcms_admin/images/login_submit.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "南方数据": {
+      "description": "南方数据指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/DatePicker/skin/datePicker.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "DayuCms": {
+      "description": "DayuCms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/template/images/login-top.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "未知查询系统": {
+      "description": "未知查询系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/life/img/kuang1.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "良精南方": {
+      "description": "良精南方指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/image/title.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Phpwind": {
+      "description": "Phpwind指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/windid/res/images/admin/login/bg.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Phpwind网站程序": {
+      "description": "Phpwind网站程序指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/admin/login/logo.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "phpcms": {
+      "description": "phpcms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/robots.txt",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "HdWiki": {
+      "description": "HdWiki指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/style/default/folder.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Joomla": {
+      "description": "Joomla指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/banners/white.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "汇成企业建站CMS": {
+      "description": "汇成企业建站CMS指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/images/login_new.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Drupal": {
+      "description": "Drupal指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/README.txt",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "kesioncms": {
+      "description": "kesioncms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/KS_Inc/ajax.js",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "iPowerCMS": {
+      "description": "iPowerCMS指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/m/_/images/login/inbox_bg.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "KingCms": {
+      "description": "KingCms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/system/images/topbg.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Wordpress": {
+      "description": "Wordpress指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/wp-admin/images/wp-logo-2x.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "shopex": {
+      "description": "shopex指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/favicon.ico",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "绿麻雀借贷系统": {
+      "description": "绿麻雀借贷系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/style/jbox/skins/currently/images/jbox-close1.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "emlog": {
+      "description": "emlog指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/views/style/green/style.css",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "southidc": {
+      "description": "southidc指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/SouthidcEditor/Include/Editor.js",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "HDwiki": {
+      "description": "HDwiki指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/style/default/hdwiki.css",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "diguoCMS帝国": {
+      "description": "diguoCMS帝国指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/e/tool/feedback/temp/test.txt",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "爱装网": {
+      "description": "爱装网指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/index_24.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "N点虚拟主机": {
+      "description": "N点虚拟主机指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/favicon.ico",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "味多美导航": {
+      "description": "味多美导航指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/logo/01.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "新秀": {
+      "description": "新秀指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/system/images/login_background.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "86cms": {
+      "description": "86cms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/adfile/ad9.js",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "THEOL网络教学综合平台": {
+      "description": "THEOL网络教学综合平台指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/eol/common/script/styles/default/image/resource_fuctionbg.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "luzhucms": {
+      "description": "luzhucms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/bg1.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "ideacms": {
+      "description": "ideacms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/template/skin4/images/logo.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "MvMmall": {
+      "description": "MvMmall指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/favicon.ico",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "actcms": {
+      "description": "actcms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/Admin/Images/bg_admin.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "qibocms": {
+      "description": "qibocms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/images/login/index_hz03.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "siteserver": {
+      "description": "siteserver指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/siteserver/pic/company/logo.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "fcms梦想建站": {
+      "description": "fcms梦想建站指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/tv_ico.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "zmcms建站": {
+      "description": "zmcms建站指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/jia.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "e创站": {
+      "description": "e创站指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/2/more.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "智睿网站系统": {
+      "description": "智睿网站系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/Arrow_02.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "YiDacms": {
+      "description": "YiDacms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/qq/1.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Yidacms": {
+      "description": "Yidacms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/yi.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "pageadmin": {
+      "description": "pageadmin指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/e/master/images/login_r1_c1.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "qianbocms": {
+      "description": "qianbocms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/zoom.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "finecms": {
+      "description": "finecms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/member/statics/js/dayrui.js",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "EmpireCMS": {
+      "description": "EmpireCMS指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/e/data/ecmseditor/images/blank.html",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "nbcms": {
+      "description": "nbcms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/api/login.api.php",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "joomla": {
+      "description": "joomla指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/components/com_mailto/views/sent/metadata.xml",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "金蝶协作办公系统": {
+      "description": "金蝶协作办公系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/kingdee/weboa/images/formtable_bg.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "wordpress": {
+      "description": "wordpress指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/wp-admin/images/w-logo-blue.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Wangzt": {
+      "description": "Wangzt指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/console/images/login.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "phpcmsv9": {
+      "description": "phpcmsv9指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/robots.txt",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "phpwind": {
+      "description": "phpwind指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/licence.txt",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "powereasy动易": {
+      "description": "powereasy动易指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/License.txt",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "dvbbs": {
+      "description": "dvbbs指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/post/post_reply.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "青果软件教务系统": {
+      "description": "青果软件教务系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/index_border1.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "青果学生综合系统": {
+      "description": "青果学生综合系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/button/bgbtn2_0.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "BeesCms": {
+      "description": "BeesCms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/template/images/login_title.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "drupal": {
+      "description": "drupal指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/themes/README.txt",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "JeeCMS": {
+      "description": "JeeCMS指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/r/cms/www/red/img/prompt.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "大汉JCMS": {
+      "description": "大汉JCMS指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/script/pagecontrol.js",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "joomle": {
+      "description": "joomle指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/htaccess.txt",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "方维团购": {
+      "description": "方维团购指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/Public/img_loading.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "皓翰通用数字化校园平台": {
+      "description": "皓翰通用数字化校园平台指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/Inedu3In1/images/default/images/2.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "PowerEasy": {
+      "description": "PowerEasy指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/License.txt",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "shopxp": {
+      "description": "shopxp指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/xin/bt.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "zhuangxiu": {
+      "description": "zhuangxiu指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/top-jlwm_.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "mlecms": {
+      "description": "mlecms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/inc/tools/iepngfix/blank.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "zcncms": {
+      "description": "zcncms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/data/adflash.txt",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "netgather": {
+      "description": "netgather指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/cn/images/banner_page_bg.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "尘月企业网站管理系统": {
+      "description": "尘月企业网站管理系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/Admin_Cy/Script/xselect.js",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "尘缘雅境图文系统": {
+      "description": "尘缘雅境图文系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/article/ADMIN/IMAGES/underline.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "口福科技": {
+      "description": "口福科技指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/xheditor/xheditor_plugins/multiupload/img/progressbg.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "爱淘客": {
+      "description": "爱淘客指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/member/skin/images/level_10.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "DuomiCMS": {
+      "description": "DuomiCMS指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/duomiui/default/images/play.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "maccms": {
+      "description": "maccms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/adm/left_menus1.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "WCM系统V6": {
+      "description": "WCM系统V6指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/wcm/images/error.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "abcms": {
+      "description": "abcms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images-global/zoom/zoom-caption-fill.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "gocdkey": {
+      "description": "gocdkey指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/adminlogoin.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "中企动力CMS": {
+      "description": "中企动力CMS指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/common/oper-noinfo.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "kuwebs": {
+      "description": "kuwebs指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/images/message.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "TRS身份认证系统": {
+      "description": "TRS身份认证系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/ids/admin/images/loginmpbg.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "FengCms": {
+      "description": "FengCms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/image/login_box.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "expocms": {
+      "description": "expocms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/logo_bg.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "分类信息网bank.asp后门": {
+      "description": "分类信息网bank.asp后门指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/login.js",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "iwebshop": {
+      "description": "iwebshop指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/lib/web/js/source/form/form.js",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "ILoanP2P借贷系统": {
+      "description": "ILoanP2P借贷系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/web/cn/images/error.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "最土团购系统": {
+      "description": "最土团购系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/static/css/i/bg-box-702.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "记事狗": {
+      "description": "记事狗指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/templates/default/admin/images/alert.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "xycms": {
+      "description": "xycms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/editor/themes/qq/editor.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "skypost": {
+      "description": "skypost指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/images/menu_title3a.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "otcms": {
+      "description": "otcms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/inc_img/vote/vote2_1.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Live800插件": {
+      "description": "Live800插件指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/live800/header_images/login2.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "万欣高校管理系统": {
+      "description": "万欣高校管理系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/customer/images/wx_logo2.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "sdcms": {
+      "description": "sdcms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/images/icon_close.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "易想CMS": {
+      "description": "易想CMS指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/images/admin_left_6.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "gxcms": {
+      "description": "gxcms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/views/images/install/set01_top_nav.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "maxcms": {
+      "description": "maxcms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/template/default/images/index_97.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "亿邮Email": {
+      "description": "亿邮Email指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/php/user/css/main.css",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "露珠文章管理系统": {
+      "description": "露珠文章管理系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/luzhu.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "凡诺企业网站管理系统": {
+      "description": "凡诺企业网站管理系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/images/left_nav.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "非凡建站": {
+      "description": "非凡建站指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/qq/images/mid4.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "74cms": {
+      "description": "74cms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/data/setmealimg/3.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "siteengine": {
+      "description": "siteengine指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/data/css/arrow-down-title.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Tomcat": {
+      "description": "Tomcat指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/manager/images/tomcat.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "JBOOS": {
+      "description": "JBOOS指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/favicon.ico",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "WebLogic": {
+      "description": "WebLogic指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/console/images/button_bg_n.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "用友FE协作办公平台": {
+      "description": "用友FE协作办公平台指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/buttonImg/add.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "phpshop": {
+      "description": "phpshop指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/shopdata/images/error_tips.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "jumbotcms": {
+      "description": "jumbotcms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/install/images/logo.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "jishigou": {
+      "description": "jishigou指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/mobile/images/redirect_icon.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "shlcms": {
+      "description": "shlcms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/inc/img/qmiddle.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "hishop": {
+      "description": "hishop指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/Themes/default/zh-cn/images/bbs_nav.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "宁志学校网站系统": {
+      "description": "宁志学校网站系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/nz.ico",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "XpShop": {
+      "description": "XpShop指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/favicon.ico",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Live800": {
+      "description": "Live800指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/live800/style2/img/advisor.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "宁志学校网站": {
+      "description": "宁志学校网站指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/ad_duilian/close.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "老Y文章管理系统": {
+      "description": "老Y文章管理系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/Admin/images/right.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "万户OA": {
+      "description": "万户OA指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/favicon.ico",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "IMO云办公室系统": {
+      "description": "IMO云办公室系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/favicon.ico",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "万众电子期刊CMS": {
+      "description": "万众电子期刊CMS指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/images/bg_top_ul_left.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "cmstop": {
+      "description": "cmstop指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/css/content.css",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "OpenSNS": {
+      "description": "OpenSNS指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/oshpgnsi/644561/Public/images/tools.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "ayacms": {
+      "description": "ayacms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/static/sex0.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "cmseasy": {
+      "description": "cmseasy指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/js/upimg/subbotton.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "kingcms": {
+      "description": "kingcms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/user/face/2.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "DswjCms": {
+      "description": "DswjCms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/public/img/feature-sprites.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "nitc(定海神真)": {
+      "description": "nitc(定海神真)指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/office/images/login/ico.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "B2Bbuilder": {
+      "description": "B2Bbuilder指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/favicon.ico",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "cutecms": {
+      "description": "cutecms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/images/bg-pay-return-success.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "金蝶OA": {
+      "description": "金蝶OA指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/oa/errors/images/ico_fhsy.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "08cms": {
+      "description": "08cms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/admina/arrow.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "建站之星": {
+      "description": "建站之星指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/template/images/site_logo.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Epaper报刊系统": {
+      "description": "Epaper报刊系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/epaper/images/index_r8_c2.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "beidou": {
+      "description": "beidou指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/Admin/db/s.css",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "众拓": {
+      "description": "众拓指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/sysmanage/Images/login_02.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "myweb": {
+      "description": "myweb指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/images/bt_login.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "商奇CMS": {
+      "description": "商奇CMS指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/images/admin_top.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "ILAS图书系统": {
+      "description": "ILAS图书系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/bg_logininfo.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "三才期刊系统": {
+      "description": "三才期刊系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/Styles/default/SignInbg.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Webnet CMS": {
+      "description": "Webnet CMS指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/css//ajax-poller.css",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "金色校园": {
+      "description": "金色校园指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/images/login/login_r3_c1.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "万博网站管理系统2006": {
+      "description": "万博网站管理系统2006指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/system/Images/Login_Top.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "万博网站管理系统": {
+      "description": "万博网站管理系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/system/Images/Login_Bottom.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "方维团购购物分享系统": {
+      "description": "方维团购购物分享系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/Tpl/Default/Static/Js/jquery.js",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "VENSHOP2010凡人网络购物系统": {
+      "description": "VENSHOP2010凡人网络购物系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/img/logina3.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "网钛文章管理系统": {
+      "description": "网钛文章管理系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/upFiles/images/thumb_2011010241734953.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "anleye(安居乐业cms)": {
+      "description": "anleye(安居乐业cms)指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/themes/blue2012/css/adminlogin.css",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "讯时网站管理系统cms": {
+      "description": "讯时网站管理系统cms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/1012.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "薄冰时期网站管理系统": {
+      "description": "薄冰时期网站管理系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/img/login1.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "乐彼多网店": {
+      "description": "乐彼多网店指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/pic/logo/login_logo.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "四通政府网站管理系统": {
+      "description": "四通政府网站管理系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/admin_03.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "商家信息管理系统": {
+      "description": "商家信息管理系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/images/icon-demo.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Destoon": {
+      "description": "Destoon指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/file/script/config.js",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "eims": {
+      "description": "eims指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/eims.js",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "IwmsCms": {
+      "description": "IwmsCms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/Admin/images/login_logo.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Zoomla": {
+      "description": "Zoomla指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/App_Themes/AdminDefaultTheme/images/signin.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Yongyou": {
+      "description": "Yongyou指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/logo/images/login_logo_bottom.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "WebMail": {
+      "description": "WebMail指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/script/valid_formdata.js",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "时代企业邮": {
+      "description": "时代企业邮指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/webmail/template/3/images/login.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "用友": {
+      "description": "用友指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/yyoa/images/login/dl.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "集时通讯程序": {
+      "description": "集时通讯程序指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/userweb/images/tableft1.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "创捷驾校系统": {
+      "description": "创捷驾校系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/images/pwd_1.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "DzzOffice": {
+      "description": "DzzOffice指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/favicon.ico",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "KessionCms": {
+      "description": "KessionCms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/ks_inc/jquery.js",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "科迈RAS": {
+      "description": "科迈RAS指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/server/images/logo.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "DK动科cms": {
+      "description": "DK动科cms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/images/login_bg.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "浪潮CMS": {
+      "description": "浪潮CMS指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/logo.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "蓝科CMS": {
+      "description": "蓝科CMS指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/images/left_title.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "TipAsk问答系统": {
+      "description": "TipAsk问答系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/favicon.ico",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "LeBiShop网上商城": {
+      "description": "LeBiShop网上商城指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/theme/system/systempage/admin/images/login/main.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "HiShop商城系统": {
+      "description": "HiShop商城系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/images/images_2.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "安乐业房产系统": {
+      "description": "安乐业房产系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/themes/blue2012/images/xj_sprite.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Digital Campus2.0": {
+      "description": "Digital Campus2.0指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/js/oa/dealthings/visit/winsjs/winsdtt.js",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "3gmeeting视讯系统": {
+      "description": "3gmeeting视讯系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/download.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "自动发卡平台": {
+      "description": "自动发卡平台指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/tpl/green/common/images/notebg.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "全程oa": {
+      "description": "全程oa指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/download.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "T-Site建站系统": {
+      "description": "T-Site建站系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/Admin/images/dl_bg.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "悟空CRM": {
+      "description": "悟空CRM指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/public/js/php/file_manager_json.php",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "CactiEZ插件": {
+      "description": "CactiEZ插件指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/plugins/weathermap/images/exclamation.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "easy7视频监控平台": {
+      "description": "easy7视频监控平台指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/Easy7/images/ico/loginbutton.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "天柏在线考试系统": {
+      "description": "天柏在线考试系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/favicon.ico",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "WizBank": {
+      "description": "WizBank指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/wb_image/tp.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "桃源相册管理系统": {
+      "description": "桃源相册管理系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/logo.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "VeryIde": {
+      "description": "VeryIde指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/favicon.ico",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "PhpMyAdmin": {
+      "description": "PhpMyAdmin指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/phpmyadmin/themes/pmahomme/img/logo_right.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "BookingeCMS酒店系统": {
+      "description": "BookingeCMS酒店系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/theme/admin/images/btn_search.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Jboos": {
+      "description": "Jboos指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/favicon.ico",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "悟空CRM系统": {
+      "description": "悟空CRM系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/public/ico/favicon.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "HJCMS企业网站管理系统": {
+      "description": "HJCMS企业网站管理系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/hjadmin/js/login.js",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "5UCMS": {
+      "description": "5UCMS指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/images/style.css",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "用友FE管理系统": {
+      "description": "用友FE管理系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/common/error/images/reminder_03.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "青云客CMS": {
+      "description": "青云客CMS指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/ui/artlt_dot.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "企智通系列上网行为管理系统": {
+      "description": "企智通系列上网行为管理系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/login/login_bg.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "V2视频会议系统": {
+      "description": "V2视频会议系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/Conf/images/driftuser.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "通达OA系统": {
+      "description": "通达OA系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/theme/10/images/icon64_error.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "TurboMail邮箱系统": {
+      "description": "TurboMail邮箱系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/enterprise/ico/del.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "联众Mediinfo医院综合管理平台": {
+      "description": "联众Mediinfo医院综合管理平台指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/App_Themes/default/images/bodybg1.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "华夏创新AppEx系统": {
+      "description": "华夏创新AppEx系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/login-background.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "程氏舞曲CMS": {
+      "description": "程氏舞曲CMS指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/attachment/nv_nopic.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "AfterLogicWebMail系统": {
+      "description": "AfterLogicWebMail系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/webmail/skins/AfterLogic/mail.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "新为软件E-learning管理系统": {
+      "description": "新为软件E-learning管理系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/customize/nwc_755_newvlms_default/login/images/newvlogo.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "未知政府采购系统": {
+      "description": "未知政府采购系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/view/resource/scripts/util/sysInfo.js",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "H5酒店管理系统": {
+      "description": "H5酒店管理系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/statics/images/admin_img/images/logo.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "擎天政务系统": {
+      "description": "擎天政务系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/App_Themes/theme1/images/main-panel-h3_bg.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "ShopNum": {
+      "description": "ShopNum指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/Themes/Skin_Default/images/Third/_ThirdpartyLoginType1.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "未知OEM安防监控系统": {
+      "description": "未知OEM安防监控系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/cn/base/css/local/images/index-top-bg.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "科信邮件系统": {
+      "description": "科信邮件系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/small_loader.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "易创思(ECS)教学系统": {
+      "description": "易创思(ECS)教学系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/Images/System/greyline01.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "AppCms": {
+      "description": "AppCms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/templates/default/css/img/index/bg-topic-special.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "CxCms": {
+      "description": "CxCms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/favicon.ico",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "51Fax传真系统": {
+      "description": "51Fax传真系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/password.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "ShopNc商城系统": {
+      "description": "ShopNc商城系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/shop/templates/default/images/tip-yellowsimple_arrows.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "XPlus报社系统": {
+      "description": "XPlus报社系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/static/images/index/button_gj.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "SAPNetWeaver": {
+      "description": "SAPNetWeaver指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/title.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "HituxCMS": {
+      "description": "HituxCMS指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/AdminBeat/images/back_bg.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "WilmarOA系统": {
+      "description": "WilmarOA系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/vimgs/login/login_sub.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "WS2004校园管理系统": {
+      "description": "WS2004校园管理系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/WS2004/Public/Images/SysLogin/web_30.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "DOYO通用建站系统": {
+      "description": "DOYO通用建站系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/install/logo.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "EasySite内容管理": {
+      "description": "EasySite内容管理指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/favicon.ico",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "eShangBao易商宝": {
+      "description": "eShangBao易商宝指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/tpl/images/bg.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "青峰网络智能网站管理系统": {
+      "description": "青峰网络智能网站管理系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/images/lg_fs.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Soullon": {
+      "description": "Soullon指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/content/platcontentnew/images/baselogin/loginsj.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "TrsIDS": {
+      "description": "TrsIDS指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/ids/admin/js/TRSBase.js",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Chinacreator": {
+      "description": "Chinacreator指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/comm_front/tzzx/download.jsp",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Insightsoft": {
+      "description": "Insightsoft指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/csccmis/img/bottom.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "金钱柜P2P": {
+      "description": "金钱柜P2P指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/plugins/timepicker/WdatePicker.js",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "速贝CMS": {
+      "description": "速贝CMS指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/App_Themes/Admin/admin_images/titlebg.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "WebOffice": {
+      "description": "WebOffice指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/index/login.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Epoint": {
+      "description": "Epoint指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/epointbigfileupload/version.txt",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "杰奇小说连载系统": {
+      "description": "杰奇小说连载系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/templates/admin/images/l_bg.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Glassfish": {
+      "description": "Glassfish指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/theme/com/sun/webui/jsf/suntheme/images/login/gradlogtop.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Kangle虚拟主机": {
+      "description": "Kangle虚拟主机指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": ":3312/vhost/view/default/imgs/vhost_login.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "EduSoho": {
+      "description": "EduSoho指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/assets/v2/img/icon_search.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "蓝凌EIS智慧协同平台": {
+      "description": "蓝凌EIS智慧协同平台指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/App_Themes/Login/default/images/logo.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "MaticsoftSNS": {
+      "description": "MaticsoftSNS指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/js/msgbox/images/loading.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Gever": {
+      "description": "Gever指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/resource/dgzc/webroot/css/index_V2.css",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Mailgard": {
+      "description": "Mailgard指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/help/images/f1.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "iDVR": {
+      "description": "iDVR指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/ui/idvr.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Zabbix": {
+      "description": "Zabbix指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/zabbix/favicon.ico",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "明腾CMS": {
+      "description": "明腾CMS指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/BackOffice/images/logo.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "HiMail": {
+      "description": "HiMail指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/place/dflogin_but.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "1039家校通": {
+      "description": "1039家校通指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/jxt_login_bg.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Mymps蚂蚁分类信息": {
+      "description": "Mymps蚂蚁分类信息指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/template/default/images/global/upgo.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "qzdatasoft强智教务管理系统": {
+      "description": "qzdatasoft强智教务管理系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/oa/hlp/Images/node.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "anmai安脉教务管理系统": {
+      "description": "anmai安脉教务管理系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/anmai/images/logobot.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "MallBuilder": {
+      "description": "MallBuilder指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/image/default/icon.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "汉码高校毕业生就业信息系统": {
+      "description": "汉码高校毕业生就业信息系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/indexcss/default/hb_gb_o.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "易创思教育建站系统": {
+      "description": "易创思教育建站系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/tab_tit.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "天融信Panabit": {
+      "description": "天融信Panabit指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/img/log-app1.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "MajExpress": {
+      "description": "MajExpress指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/favicon.ico",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Trunkey": {
+      "description": "Trunkey指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/robots.txt",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "FoosunCms": {
+      "description": "FoosunCms指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/sysImages/folder/error.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Shop7z": {
+      "description": "Shop7z指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/images/login-top-bg.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "OurPhp": {
+      "description": "OurPhp指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/favicon.ico",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "省级农机构置补贴信息管理系统": {
+      "description": "省级农机构置补贴信息管理系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/Images/gongs.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "PowerCreator在线教学系统": {
+      "description": "PowerCreator在线教学系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/logo/yunlogo.jpg",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "6KBBS": {
+      "description": "6KBBS指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/bbs/pic/0.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "汇文图书馆书目检索系统": {
+      "description": "汇文图书馆书目检索系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/favicon.ico",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "菲斯特诺期刊系统": {
+      "description": "菲斯特诺期刊系统指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/images/more27.gif",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "Winmail Server": {
+      "description": "Winmail Server指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/favicon.ico",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "微擎科技": {
+      "description": "微擎科技指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/web/resource/images/success-small.png",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
+    },
+    "VOS3000": {
+      "description": "VOS3000指纹特征",
+      "payload": {
+        "method": "GET",
+        "uri": "/chs/images/favicon.ico",
+        "headers": {},
+        "body": {}
+      },
+      "keywords": ""
     }
   }
 }

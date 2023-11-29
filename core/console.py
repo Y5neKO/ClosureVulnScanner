@@ -9,6 +9,7 @@
 
 import argparse
 import json
+import re
 import sys
 import threading
 
@@ -21,6 +22,11 @@ from core.request import *
 from poc.index import *
 from exp.index import *
 
+"""
+线程锁，防止竞争输出导致输出到文件乱码
+"""
+lock = threading.Lock()
+
 
 def web_info(url):
     """
@@ -29,7 +35,11 @@ def web_info(url):
     @return: Flag
     """
     parsed_url = urlparse(url)
-    response = requests.post(url, timeout=3)
+    try:
+        response = requests.post(url, timeout=1)
+    except Exception:
+        print("连接错误")
+        sys.exit(1)
     response.encoding = "utf-8"
     protocal = parsed_url.scheme
     host = parsed_url.netloc
@@ -42,7 +52,7 @@ def web_info(url):
     soup = BeautifulSoup(response.text, "html.parser")
     try:
         title = soup.title.string
-    except:
+    except Exception:
         title = "无"
     print("[*]--------------------目标信息--------------------")
     print("Title: " + title)
@@ -107,7 +117,7 @@ def scan(url, timeout):
     # 接着在进行复杂poc验证
     # 多线程操作
     for i in poc_index:
-        t2 = threading.Thread(target=poc_thread_func, args=(i, url, timeout))   # 通过poc_thread_func方法进行多线程操作
+        t2 = threading.Thread(target=poc_thread_func, args=(i, url, timeout))  # 通过poc_thread_func方法进行多线程操作
         threads2.append(t2)
         t2.start()
     for t2 in threads2:
@@ -145,13 +155,19 @@ def finger_base(url, timeout, asset_name, info):
     @param info: 指纹详细信息
     @return: Flag
     """
-    response = web_request_plus(url, headers=info["payload"]["headers"], post=info["payload"]["body"], timeout=timeout)
-    if re.search(info["keywords"], response.text) or re.search(info["keywords"], str(response.headers)):
+    response = web_request_plus(url.rstrip, headers=info["payload"]["headers"], post=info["payload"]["body"], timeout=timeout)
+    # print(response.headers)
+    status_flag = 0    # 状态码flag
+    if info["keywords"] is None:
+        if response.status_code == 200:
+            status_flag = 1
+    if re.search(info["keywords"], response.text) or re.search(info["keywords"],
+                                                               str(response.headers)) or status_flag:
         result = ("[" + color("+", "green") + "]目标[ " + url + " ]存在[" + color(asset_name, "orange") + "]特征")
-        print(result)
         normal_log(result)
     else:
         result = ("[" + color("-", "red") + "]目标[ " + url + " ]不存在[" + asset_name + "]特征")
+    with lock:
         print(result)
     return 1
 
@@ -170,7 +186,8 @@ def poc_thread_func(i, url, timeout):
         normal_log(result)
     else:
         result = ("[" + color("-", "red") + "]目标[ " + url + " ]不存在[" + res['name'] + "]漏洞")
-    print(result)
+    with lock:
+        print(result)
 
 
 def poc_base(poc_name, url, timeout):
@@ -211,7 +228,7 @@ def exp_base(url, exp_name, cmd, timeout):
     try:
         flag, res = eval(exp_name).run(url, cmd)
         return flag, res
-    except Exception as error:
+    except Exception:
         pass
 
 
@@ -277,14 +294,16 @@ def main():
     # scanner.add_argument("--scan", type=str, dest="scan", default="all",
     #                     help="基础扫描, 使用poc目录内插件:Shiro,Weblogic, 不指定默认全部扫描")
     scanner.add_argument("--exp", type=str, dest="exp_name", help="指定exp模块, 使用exp目录内插件")
-    scanner.add_argument("--cmd", type=str, dest="cmd", default="whoami", help="指定exp模块执行的命令, 若模块不支持命令执行可缺省")
+    scanner.add_argument("--cmd", type=str, dest="cmd", default="whoami",
+                         help="指定exp模块执行的命令, 若模块不支持命令执行可缺省")
     scanner.add_argument("-t", type=int, dest="timeout", default=5000, help="设置超时时间(ms), 默认5000ms")
     scanner.add_argument("--proxy", type=str, dest="proxy",
                          help="使用代理, 目前支持Socks,HTTP; 格式:{socks|http}://ip_addr:port")
     scanner.add_argument("-o", type=str, dest="output", help="输出扫描结果到指定路径")
 
     scanner2 = parser.add_argument_group('拓展参数')
-    scanner2.add_argument('--list', type=str, dest="list_name", choices=["poc", "exp"], help="列出已经加载的poc/exp插件")
+    scanner2.add_argument('--list', type=str, dest="list_name", choices=["poc", "exp"],
+                          help="列出已经加载的poc/exp插件")
     scanner2.add_argument('--add-poc', type=str, dest="add_poc_name", help="添加poc插件")
     scanner2.add_argument('--add-exp', type=str, dest="add_exp_name", help="添加exp插件")
 

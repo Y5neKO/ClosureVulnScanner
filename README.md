@@ -3,7 +3,7 @@
   基于Python的Web综合漏洞扫描器,名字取自<b>Arknights® Closure</b>
   <br><br>
   <a href='https://blog.ysneko.com'><img src="https://img.shields.io/static/v1?label=Powered%20by&message=Y5neKO&color=green" alt="Author"></a>
-  <a href='https://www.python.org/'><img src="https://img.shields.io/static/v1?label=Python&message=1.8&color=yellow" alt="Python"></a>
+  <a href='https://www.python.org/'><img src="https://img.shields.io/static/v1?label=Python&message=3.8.0&color=yellow" alt="Python"></a>
   <br><br>
   <a href="#">
     <img src="https://img.shields.io/badge/Supported%20by-Alipay🈲%20%E2%86%92-gray.svg?colorA=655BE1&colorB=4F44D6&style=for-the-badge" alt="支付宝"/>
@@ -18,6 +18,7 @@
   <br><br>
   <img src="Closure.png" alt="Closure" style="zoom:50%;" />
 </p>
+
 
 ## CVS - ClosureVulnScanner
 

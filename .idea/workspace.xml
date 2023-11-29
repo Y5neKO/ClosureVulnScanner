@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d94f7142-d580-4afb-8faf-de5e40e5a768" name="更改" comment="2023/10/31更新文件（正在开发）">
-      <change afterPath="$PROJECT_DIR$/poc/Thinkphp2_rce.py" afterDir="false" />
+    <list default="true" id="d94f7142-d580-4afb-8faf-de5e40e5a768" name="更改" comment="2023/10/31 更新v0.1版本">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/console.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/console.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finger/finger.json" beforeDir="false" afterPath="$PROJECT_DIR$/finger/finger.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +26,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Y5neKO&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="04ce46f5-6862-42cc-af80-eeb2b1ea60f9" />
+        <option name="url" value="https://github.com/Y5neKO/ClosureVulnScanner" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -46,22 +65,25 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;H:/Python_Project/ClosureVulnScanner&quot;,
+    &quot;last_opened_file_path&quot;: &quot;H:/学习记录/项目记录/安恒信息/明鉴api/mingjian-api&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\Python_Project\ClosureVulnScanner\exp" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="H:\Python_Project\ClosureVulnScanner\poc\index" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.ClosureVulnScanner">
     <configuration name="ClosureVulnScanner" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ClosureVulnScanner" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -76,7 +98,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ClosureVulnScanner.py" />
-      <option name="PARAMETERS" value="-u https://www.google.com/ --proxy socks://127.0.0.1:7890" />
+      <option name="PARAMETERS" value="-u https://www.baidu.com/ -e identify" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -84,9 +106,36 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="console" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ClosureVulnScanner" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/core" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/core/console.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.console" />
+      <item itemvalue="Python.ClosureVulnScanner" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.ClosureVulnScanner" />
+        <item itemvalue="Python.console" />
       </list>
     </recent_temporary>
   </component>
@@ -100,6 +149,14 @@
       <updated>1698736669243</updated>
       <workItem from="1698736670394" duration="18308000" />
       <workItem from="1698808029627" duration="1433000" />
+      <workItem from="1698812362551" duration="28226000" />
+      <workItem from="1698892569704" duration="784000" />
+      <workItem from="1698915643472" duration="1740000" />
+      <workItem from="1699424849557" duration="713000" />
+      <workItem from="1701135230023" duration="11804000" />
+      <workItem from="1701152265780" duration="866000" />
+      <workItem from="1701153839187" duration="48000" />
+      <workItem from="1701226859453" duration="2867000" />
     </task>
     <task id="LOCAL-00001" summary="2023/10/31更新文件（正在开发）">
       <option name="closed" value="true" />
@@ -117,7 +174,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698762350603</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2023/10/31 更新v0.1版本">
+      <option name="closed" value="true" />
+      <created>1698848695496</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1698848695496</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,12 +191,43 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="OPEN_GENERIC_TABS">
       <map>
-        <entry key="2811e4b6-2fd4-455c-9612-ef38013cb61e" value="TOOL_WINDOW" />
+        <entry key="4e21ed3e-5950-4f20-8afc-3d366fcb3a12" value="TOOL_WINDOW" />
+        <entry key="cf91be67-823a-45f8-b144-cf95bce0cdc2" value="TOOL_WINDOW" />
       </map>
     </option>
     <option name="TAB_STATES">
       <map>
-        <entry key="2811e4b6-2fd4-455c-9612-ef38013cb61e">
+        <entry key="4e21ed3e-5950-4f20-8afc-3d366fcb3a12">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="cf91be67-823a-45f8-b144-cf95bce0cdc2">
           <value>
             <State>
               <option name="FILTERS">
@@ -162,20 +258,22 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="2023/10/31更新文件（正在开发）" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023/10/31更新文件（正在开发）" />
+    <MESSAGE value="2023/10/31 更新v0.1版本" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023/10/31 更新v0.1版本" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/core/console.py</url>
-          <line>35</line>
-          <option name="timeStamp" value="2" />
+          <line>157</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ClosureVulnScanner$ClosureVulnScanner.coverage" NAME="ClosureVulnScanner 覆盖结果" MODIFIED="1698743288791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ClosureVulnScanner$ClosureVulnScanner.coverage" NAME="ClosureVulnScanner 覆盖结果" MODIFIED="1701152413149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ClosureVulnScanner$console.coverage" NAME="console 覆盖结果" MODIFIED="1701151913114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
   </component>
 </project>
