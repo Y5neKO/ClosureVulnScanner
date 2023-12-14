@@ -155,7 +155,7 @@ def finger_base(url, timeout, asset_name, info):
     @param info: 指纹详细信息
     @return: Flag
     """
-    response = web_request_plus(url.rstrip, headers=info["payload"]["headers"], post=info["payload"]["body"], timeout=timeout)
+    response = web_request_plus(url.rstrip(), headers=info["payload"]["headers"], post=info["payload"]["body"], timeout=timeout)
     # print(response.headers)
     status_flag = 0    # 状态码flag
     if info["keywords"] is None:

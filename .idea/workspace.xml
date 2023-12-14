@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d94f7142-d580-4afb-8faf-de5e40e5a768" name="更改" comment="2023/10/31 更新v0.1版本">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/console.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/console.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finger/finger.json" beforeDir="false" afterPath="$PROJECT_DIR$/finger/finger.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -157,6 +155,8 @@
       <workItem from="1701152265780" duration="866000" />
       <workItem from="1701153839187" duration="48000" />
       <workItem from="1701226859453" duration="2867000" />
+      <workItem from="1702534084471" duration="201000" />
+      <workItem from="1702534305404" duration="1765000" />
     </task>
     <task id="LOCAL-00001" summary="2023/10/31更新文件（正在开发）">
       <option name="closed" value="true" />
@@ -273,7 +273,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ClosureVulnScanner$ClosureVulnScanner.coverage" NAME="ClosureVulnScanner 覆盖结果" MODIFIED="1701152413149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ClosureVulnScanner$ClosureVulnScanner.coverage" NAME="ClosureVulnScanner 覆盖结果" MODIFIED="1702535595285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ClosureVulnScanner$console.coverage" NAME="console 覆盖结果" MODIFIED="1701151913114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
   </component>
 </project>

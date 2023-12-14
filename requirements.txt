@@ -1,6 +1,5 @@
 requests~=2.31.0
 beautifulsoup4~=4.12.2
 PySocks~=1.7.1
-socks~=0
+socks
 urllib3~=1.25.11
-PyQt5~=5.15.9
