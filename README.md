@@ -276,7 +276,7 @@ def run(url, cmd):
 
 **以及各位支持的小伙伴**
 
-[![Stargazers repo roster for @Y5neKO/ClosureVulnScanner](https://reporoster.com/stars/Y5neKO/ClosureVulnScanner)](https://github.com/Y5neKO/ClosureVulnScanner/stargazers)
+[![Stargazers repo roster for @Y5neKO/ClosureVulnScanner](http://reporoster.com/stars/Y5neKO/ClosureVulnScanner)](https://github.com/Y5neKO/ClosureVulnScanner/stargazers)
 
 
 ## 使用许可
