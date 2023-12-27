@@ -38,11 +38,37 @@
 
 
 
+## 快速开始
+
+**稳定版**：
+
+功能无异常的发布版本。
+
+```sh
+wget {请从Release下载}
+cd ClosureVulnScanner
+python3 -m pip install -r requirements.txt
+python3 ClosureVulnScanner.py
+```
+
+**开发版**：
+
+主要用于作者个人编程使用的的开发版本，可能存在Bug或者因为代码未编写完而出现异常的情况
+
+```sh
+git clone https://github.com/Y5neKO/ClosureVulnScanner
+cd ClosureVulnScanner
+python3 -m pip install -r requirements.txt
+python3 ClosureVulnScanner.py
+```
+
+
+
 ## 使用说明
 
 ```sh
 root#
--> python ClosureVulnScanner.py -h
+-> python3 ClosureVulnScanner.py -h
 
     ,ad8888ba,   88
    d8"'    `"8b  88
@@ -129,6 +155,7 @@ optional arguments:
             "请求字段1": "请求键值1"
         }
       },
+      "location": "验证关键字的位置：uri、headers、body、iconhash",
       "keywords": "验证关键字，支持正则表达式"
     }
 ```
@@ -166,6 +193,7 @@ optional arguments:
             "请求字段1": "请求键值1"
         }
       },
+      "location": "验证关键字的位置：uri、headers、body、iconhash",
       "keywords": "验证关键字，支持正则表达式"
     }
 ```
@@ -246,7 +274,9 @@ def run(url, cmd):
 
 @Y5neKO
 
+**以及各位支持的小伙伴**
 
+[![Stargazers repo roster for @Y5neKO/ClosureVulnScanner](https://reporoster.com/stars/Y5neKO/ClosureVulnScanner)](https://github.com/Y5neKO/ClosureVulnScanner/stargazers)
 
 
 ## 使用许可

@@ -1,5 +1,7 @@
-requests~=2.31.0
+requests~=2.25.1
 beautifulsoup4~=4.12.2
 PySocks~=1.7.1
 socks
-urllib3~=1.25.11
+urllib3~=1.26.5
+ttkbootstrap~=1.10.1
+bs4~=0.0.1

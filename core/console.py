@@ -8,10 +8,12 @@
 """
 
 import argparse
+import concurrent.futures
 import json
 import re
 import sys
 import threading
+import time
 
 import socks
 from bs4 import BeautifulSoup
@@ -26,6 +28,10 @@ from exp.index import *
 线程锁，防止竞争输出导致输出到文件乱码
 """
 lock = threading.Lock()
+"""
+默认最大线程数
+"""
+max_threads = 200
 
 
 def web_info(url):
@@ -66,7 +72,6 @@ def web_info(url):
         print("Proxy: " + color("Off", "red"))
     return 1
 
-
 def identify(url, timeout):
     """
     资产识别模块
@@ -74,19 +79,34 @@ def identify(url, timeout):
     @param timeout: 超时时间
     @return: Flag
     """
-    threads = []
+    # threads = []
+    # print("回显窗口:\n")
+    # web_info(url)
+    # print("[*]--------------------任务开始--------------------")
+    # with open("./finger/finger.json", "r", encoding="utf-8") as file:
+    #     json_data = json.load(file)
+    #     # 多线程操作
+    #     for asset_name, info in json_data['AssetName'].items():
+    #         t = threading.Thread(target=finger_base, args=(url, timeout, asset_name, info))
+    #         threads.append(t)
+    #         t.start()
+    # for t in threads:
+    #     t.join()
+    # print("[*]--------------------任务结束--------------------")
+    # return 1
     print("回显窗口:\n")
     web_info(url)
     print("[*]--------------------任务开始--------------------")
     with open("./finger/finger.json", "r", encoding="utf-8") as file:
         json_data = json.load(file)
-        # 多线程操作
-        for asset_name, info in json_data['AssetName'].items():
-            t = threading.Thread(target=finger_base, args=(url, timeout, asset_name, info))
-            threads.append(t)
-            t.start()
-    for t in threads:
-        t.join()
+        with concurrent.futures.ThreadPoolExecutor(max_threads) as executor:
+            futures = {executor.submit(finger_base, url, timeout, asset_name, info): (asset_name, info) for asset_name, info in json_data['AssetName'].items()}
+            for future in concurrent.futures.as_completed(futures):
+                asset_name, info = futures[future]
+                try:
+                    future.result()
+                except Exception as e:
+                    print(f"Thread for {asset_name} encountered an error: {e}")
     print("[*]--------------------任务结束--------------------")
     return 1
 
@@ -155,14 +175,21 @@ def finger_base(url, timeout, asset_name, info):
     @param info: 指纹详细信息
     @return: Flag
     """
-    response = web_request_plus(url.rstrip(), headers=info["payload"]["headers"], post=info["payload"]["body"], timeout=timeout)
-    # print(response.headers)
-    status_flag = 0    # 状态码flag
-    if info["keywords"] is None:
+    response = web_request_plus(url.rstrip() + info["payload"]['uri'], headers=info["payload"]["headers"], post=info["payload"]["body"], timeout=timeout)
+    flag = 0    # 验证标识
+    if info['location'] == "uri":
         if response.status_code == 200:
-            status_flag = 1
-    if re.search(info["keywords"], response.text) or re.search(info["keywords"],
-                                                               str(response.headers)) or status_flag:
+            flag = 1
+        if re.search(r'404|NOT FOUND', response.text):
+            flag = 0    # 某些网站404状态码不返回在响应头中
+    elif info['location'] == "headers":
+        if re.search(re.compile(info['keywords']), str(response.headers)):
+            flag = 1
+    elif info['location'] == "body":
+        if re.search(re.compile(info['keywords']), str(response.text)):
+            flag = 1
+    #输出结果
+    if flag:
         result = ("[" + color("+", "green") + "]目标[ " + url + " ]存在[" + color(asset_name, "orange") + "]特征")
         normal_log(result)
     else:
@@ -207,21 +234,43 @@ def poc_base(poc_name, url, timeout):
 
 def ez_poc_base(url, timeout, poc_name, info):
     """
-    简单poc验证模块，用于漏洞扫描模块调用
+    简单poc验证模块，用于漏洞扫描模块调用(复用自finger_base模块，功能类似)
     @param url:
     @param timeout:
     @param poc_name:
     @param info:
     @return:
     """
-    response = web_request_plus(url, headers=info["payload"]["headers"], post=info["payload"]["body"], timeout=timeout)
-    if re.search(info["keywords"], response.text) or re.search(info["keywords"], str(response.headers)):
+    # response = web_request_plus(url, headers=info["payload"]["headers"], post=info["payload"]["body"], timeout=timeout)
+    # if re.search(re.compile(info["keywords"]), response.text) or re.search(re.compile(info["keywords"]), str(response.headers)):
+    #     result = ("[" + color("+", "green") + "]目标[ " + url + " ]存在[" + color(poc_name, "orange") + "]漏洞")
+    #     print(result)
+    #     normal_log(result)
+    # else:
+    #     result = ("[" + color("-", "red") + "]目标[ " + url + " ]不存在[" + poc_name + "]漏洞")
+    #     print(result)
+    response = web_request_plus(url.rstrip() + info["payload"]['uri'], headers=info["payload"]["headers"], post=info["payload"]["body"], timeout=timeout)
+    flag = 0    # 验证标识
+    if info['location'] == "uri":
+        if response.status_code == 200:
+            flag = 1
+        if re.search(r'404|NOT FOUND', response.text):
+            flag = 0    # 某些网站404状态码不返回在响应头中
+    elif info['location'] == "headers":
+        if re.search(re.compile(info['keywords']), str(response.headers)):
+            flag = 1
+    elif info['location'] == "body":
+        if re.search(re.compile(info['keywords']), str(response.text)):
+            flag = 1
+    #输出结果
+    if flag:
         result = ("[" + color("+", "green") + "]目标[ " + url + " ]存在[" + color(poc_name, "orange") + "]漏洞")
-        print(result)
         normal_log(result)
     else:
         result = ("[" + color("-", "red") + "]目标[ " + url + " ]不存在[" + poc_name + "]漏洞")
+    with lock:
         print(result)
+    return 1
 
 
 def exp_base(url, exp_name, cmd, timeout):
@@ -279,6 +328,29 @@ class Logger(object):
 
     def flush(self):
         pass
+
+
+class ThreadPool:
+    def __init__(self, max_threads):
+        self.max_threads = max_threads
+        self.lock = threading.Lock()
+        self.threads = set()
+
+    def worker(self, thread_id):
+        with self.lock:
+            print(f"Thread {thread_id} started")
+            # Your thread's work goes here
+            time.sleep(2)
+            print(f"Thread {thread_id} finished")
+            self.threads.remove(threading.current_thread())
+
+    def submit(self):
+        with self.lock:
+            if len(self.threads) < self.max_threads:
+                thread_id = len(self.threads)
+                thread = threading.Thread(target=self.worker, args=(thread_id,))
+                self.threads.add(thread)
+                thread.start()
 
 
 def main():
