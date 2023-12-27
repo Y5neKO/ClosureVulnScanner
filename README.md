@@ -272,9 +272,13 @@ def run(url, cmd):
 
 ## 贡献者
 
-@Y5neKO
+<a href="https://github.com/Y5neKO/ClosureVulnScanner/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Y5neKO/ClosureVulnScanner" />
+</a>
 
-**以及各位支持的小伙伴**
+以及
+
+## 贡献者们
 
 [![Stargazers repo roster for @Y5neKO/ClosureVulnScanner](http://reporoster.com/stars/Y5neKO/ClosureVulnScanner)](https://github.com/Y5neKO/ClosureVulnScanner/stargazers)
 
