@@ -276,7 +276,7 @@ def run(url, cmd):
   <img src="https://contrib.rocks/image?repo=Y5neKO/ClosureVulnScanner" />
 </a>
 
-以及
+
 
 ## 贡献者们
 
