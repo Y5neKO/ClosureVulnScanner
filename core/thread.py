@@ -68,6 +68,7 @@ def finger_base(url, timeout, asset_name, info):
     elif info['location'] == "body":
         if re.search(re.compile(info['keywords']), str(response.text)):
             flag = 1
+    elif info['location'] == "":
     # 输出结果
     if flag:
         result = ("[" + color("+", "green") + "]目标[ " + url + " ]存在[" + color(asset_name, "orange") + "]特征")

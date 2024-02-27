@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d94f7142-d580-4afb-8faf-de5e40e5a768" name="更改" comment="2023/10/31 更新v0.1版本">
-      <change afterPath="$PROJECT_DIR$/2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/thread.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ClosureVulnScanner.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ClosureVulnScanner.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClosureVulnScanner.py" beforeDir="false" afterPath="$PROJECT_DIR$/CVS.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/console.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/console.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/log.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/proxy.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/proxy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/request.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finger/finger.json" beforeDir="false" afterPath="$PROJECT_DIR$/finger/finger.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/thread.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +36,9 @@
         <option name="url" value="https://github.com/Y5neKO/ClosureVulnScanner" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/README.md" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -189,7 +182,7 @@
       <workItem from="1708600402158" duration="613000" />
       <workItem from="1708678875269" duration="639000" />
       <workItem from="1708933545763" duration="6490000" />
-      <workItem from="1709016503772" duration="2168000" />
+      <workItem from="1709016503772" duration="3285000" />
     </task>
     <task id="LOCAL-00001" summary="2023/10/31更新文件（正在开发）">
       <option name="closed" value="true" />
