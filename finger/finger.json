@@ -323,17 +323,6 @@
 	  "location": "uri",
       "keywords": ""
     },
-    "Jingyi": {
-      "description": "Jingyi指纹特征",
-      "payload": {
-        "method": "GET",
-        "uri": "/favicon.ico",
-        "headers": {},
-        "body": {}
-      },
-	  "location": "uri",
-      "keywords": ""
-    },
     "phpmps": {
       "description": "phpmps指纹特征",
       "payload": {
@@ -482,17 +471,6 @@
       "payload": {
         "method": "GET",
         "uri": "/plugins/avatar/crossdomain.xml",
-        "headers": {},
-        "body": {}
-      },
-	  "location": "uri",
-      "keywords": ""
-    },
-    "metinfo": {
-      "description": "metinfo指纹特征",
-      "payload": {
-        "method": "GET",
-        "uri": "/favicon.ico",
         "headers": {},
         "body": {}
       },
@@ -697,17 +675,6 @@
 	  "location": "uri",
       "keywords": ""
     },
-    "phpcms": {
-      "description": "phpcms指纹特征",
-      "payload": {
-        "method": "GET",
-        "uri": "/robots.txt",
-        "headers": {},
-        "body": {}
-      },
-	  "location": "uri",
-      "keywords": ""
-    },
     "HdWiki": {
       "description": "HdWiki指纹特征",
       "payload": {
@@ -790,17 +757,6 @@
       "payload": {
         "method": "GET",
         "uri": "/wp-admin/images/wp-logo-2x.png",
-        "headers": {},
-        "body": {}
-      },
-	  "location": "uri",
-      "keywords": ""
-    },
-    "shopex": {
-      "description": "shopex指纹特征",
-      "payload": {
-        "method": "GET",
-        "uri": "/favicon.ico",
         "headers": {},
         "body": {}
       },
@@ -944,17 +900,6 @@
       "payload": {
         "method": "GET",
         "uri": "/template/skin4/images/logo.png",
-        "headers": {},
-        "body": {}
-      },
-	  "location": "uri",
-      "keywords": ""
-    },
-    "MvMmall": {
-      "description": "MvMmall指纹特征",
-      "payload": {
-        "method": "GET",
-        "uri": "/favicon.ico",
         "headers": {},
         "body": {}
       },
@@ -1153,17 +1098,6 @@
       "payload": {
         "method": "GET",
         "uri": "/console/images/login.gif",
-        "headers": {},
-        "body": {}
-      },
-	  "location": "uri",
-      "keywords": ""
-    },
-    "phpcmsv9": {
-      "description": "phpcmsv9指纹特征",
-      "payload": {
-        "method": "GET",
-        "uri": "/robots.txt",
         "headers": {},
         "body": {}
       },
@@ -1753,17 +1687,6 @@
 	  "location": "uri",
       "keywords": ""
     },
-    "JBOOS": {
-      "description": "JBOOS指纹特征",
-      "payload": {
-        "method": "GET",
-        "uri": "/favicon.ico",
-        "headers": {},
-        "body": {}
-      },
-	  "location": "uri",
-      "keywords": ""
-    },
     "WebLogic": {
       "description": "WebLogic指纹特征",
       "payload": {
@@ -1852,17 +1775,6 @@
 	  "location": "uri",
       "keywords": ""
     },
-    "XpShop": {
-      "description": "XpShop指纹特征",
-      "payload": {
-        "method": "GET",
-        "uri": "/favicon.ico",
-        "headers": {},
-        "body": {}
-      },
-	  "location": "uri",
-      "keywords": ""
-    },
     "Live800": {
       "description": "Live800指纹特征",
       "payload": {
@@ -1890,28 +1802,6 @@
       "payload": {
         "method": "GET",
         "uri": "/Admin/images/right.gif",
-        "headers": {},
-        "body": {}
-      },
-	  "location": "uri",
-      "keywords": ""
-    },
-    "万户OA": {
-      "description": "万户OA指纹特征",
-      "payload": {
-        "method": "GET",
-        "uri": "/favicon.ico",
-        "headers": {},
-        "body": {}
-      },
-	  "location": "uri",
-      "keywords": ""
-    },
-    "IMO云办公室系统": {
-      "description": "IMO云办公室系统指纹特征",
-      "payload": {
-        "method": "GET",
-        "uri": "/favicon.ico",
         "headers": {},
         "body": {}
       },
@@ -2000,17 +1890,6 @@
       "payload": {
         "method": "GET",
         "uri": "/office/images/login/ico.gif",
-        "headers": {},
-        "body": {}
-      },
-	  "location": "uri",
-      "keywords": ""
-    },
-    "B2Bbuilder": {
-      "description": "B2Bbuilder指纹特征",
-      "payload": {
-        "method": "GET",
-        "uri": "/favicon.ico",
         "headers": {},
         "body": {}
       },
@@ -2391,17 +2270,6 @@
 	  "location": "uri",
       "keywords": ""
     },
-    "DzzOffice": {
-      "description": "DzzOffice指纹特征",
-      "payload": {
-        "method": "GET",
-        "uri": "/favicon.ico",
-        "headers": {},
-        "body": {}
-      },
-	  "location": "uri",
-      "keywords": ""
-    },
     "KessionCms": {
       "description": "KessionCms指纹特征",
       "payload": {
@@ -2435,33 +2303,11 @@
 	  "location": "uri",
       "keywords": ""
     },
-    "浪潮CMS": {
-      "description": "浪潮CMS指纹特征",
-      "payload": {
-        "method": "GET",
-        "uri": "/images/logo.gif",
-        "headers": {},
-        "body": {}
-      },
-	  "location": "uri",
-      "keywords": ""
-    },
     "蓝科CMS": {
       "description": "蓝科CMS指纹特征",
       "payload": {
         "method": "GET",
         "uri": "/admin/images/left_title.gif",
-        "headers": {},
-        "body": {}
-      },
-	  "location": "uri",
-      "keywords": ""
-    },
-    "TipAsk问答系统": {
-      "description": "TipAsk问答系统指纹特征",
-      "payload": {
-        "method": "GET",
-        "uri": "/favicon.ico",
         "headers": {},
         "body": {}
       },
@@ -2506,17 +2352,6 @@
       "payload": {
         "method": "GET",
         "uri": "/js/oa/dealthings/visit/winsjs/winsdtt.js",
-        "headers": {},
-        "body": {}
-      },
-	  "location": "uri",
-      "keywords": ""
-    },
-    "3gmeeting视讯系统": {
-      "description": "3gmeeting视讯系统指纹特征",
-      "payload": {
-        "method": "GET",
-        "uri": "/images/download.jpg",
         "headers": {},
         "body": {}
       },
@@ -2589,44 +2424,11 @@
 	  "location": "uri",
       "keywords": ""
     },
-    "天柏在线考试系统": {
-      "description": "天柏在线考试系统指纹特征",
-      "payload": {
-        "method": "GET",
-        "uri": "/favicon.ico",
-        "headers": {},
-        "body": {}
-      },
-	  "location": "uri",
-      "keywords": ""
-    },
     "WizBank": {
       "description": "WizBank指纹特征",
       "payload": {
         "method": "GET",
         "uri": "/wb_image/tp.gif",
-        "headers": {},
-        "body": {}
-      },
-	  "location": "uri",
-      "keywords": ""
-    },
-    "桃源相册管理系统": {
-      "description": "桃源相册管理系统指纹特征",
-      "payload": {
-        "method": "GET",
-        "uri": "/images/logo.gif",
-        "headers": {},
-        "body": {}
-      },
-	  "location": "uri",
-      "keywords": ""
-    },
-    "VeryIde": {
-      "description": "VeryIde指纹特征",
-      "payload": {
-        "method": "GET",
-        "uri": "/favicon.ico",
         "headers": {},
         "body": {}
       },
@@ -2649,17 +2451,6 @@
       "payload": {
         "method": "GET",
         "uri": "/theme/admin/images/btn_search.gif",
-        "headers": {},
-        "body": {}
-      },
-	  "location": "uri",
-      "keywords": ""
-    },
-    "Jboos": {
-      "description": "Jboos指纹特征",
-      "payload": {
-        "method": "GET",
-        "uri": "/favicon.ico",
         "headers": {},
         "body": {}
       },
@@ -3315,28 +3106,6 @@
 	  "location": "uri",
       "keywords": ""
     },
-    "MajExpress": {
-      "description": "MajExpress指纹特征",
-      "payload": {
-        "method": "GET",
-        "uri": "/favicon.ico",
-        "headers": {},
-        "body": {}
-      },
-	  "location": "uri",
-      "keywords": ""
-    },
-    "Trunkey": {
-      "description": "Trunkey指纹特征",
-      "payload": {
-        "method": "GET",
-        "uri": "/robots.txt",
-        "headers": {},
-        "body": {}
-      },
-	  "location": "uri",
-      "keywords": ""
-    },
     "FoosunCms": {
       "description": "FoosunCms指纹特征",
       "payload": {
@@ -3353,17 +3122,6 @@
       "payload": {
         "method": "GET",
         "uri": "/admin/images/login-top-bg.gif",
-        "headers": {},
-        "body": {}
-      },
-	  "location": "uri",
-      "keywords": ""
-    },
-    "OurPhp": {
-      "description": "OurPhp指纹特征",
-      "payload": {
-        "method": "GET",
-        "uri": "/favicon.ico",
         "headers": {},
         "body": {}
       },
@@ -3403,33 +3161,11 @@
 	  "location": "uri",
       "keywords": ""
     },
-    "汇文图书馆书目检索系统": {
-      "description": "汇文图书馆书目检索系统指纹特征",
-      "payload": {
-        "method": "GET",
-        "uri": "/favicon.ico",
-        "headers": {},
-        "body": {}
-      },
-	  "location": "uri",
-      "keywords": ""
-    },
     "菲斯特诺期刊系统": {
       "description": "菲斯特诺期刊系统指纹特征",
       "payload": {
         "method": "GET",
         "uri": "/images/more27.gif",
-        "headers": {},
-        "body": {}
-      },
-	  "location": "uri",
-      "keywords": ""
-    },
-    "Winmail Server": {
-      "description": "Winmail Server指纹特征",
-      "payload": {
-        "method": "GET",
-        "uri": "/favicon.ico",
         "headers": {},
         "body": {}
       },

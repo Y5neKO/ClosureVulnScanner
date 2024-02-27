@@ -11,11 +11,26 @@ import datetime
 import logging
 import os
 import re
+import sys
 
 now = datetime.datetime.now()
 formatted_date = now.strftime("%Y-%m-%d")
 if not os.path.exists('./log'):
     os.makedirs('./log')
+
+
+class Logger(object):
+    def __init__(self, filename="Default.log"):
+        self.terminal = sys.stdout
+        self.log = open(filename, "w", encoding="utf-8")  # 防止编码错误
+
+    def write(self, message):
+        self.terminal.write(message)
+        message = re.sub(r'\033\[\d+m', '', message)
+        self.log.write(message)
+
+    def flush(self):
+        pass
 
 
 def normal_log(log):

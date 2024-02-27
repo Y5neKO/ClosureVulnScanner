@@ -48,7 +48,7 @@
 wget {请从Release下载}
 cd ClosureVulnScanner
 python3 -m pip install -r requirements.txt
-python3 ClosureVulnScanner.py
+python3 CVS.py
 ```
 
 **开发版**：
@@ -59,7 +59,7 @@ python3 ClosureVulnScanner.py
 git clone https://github.com/Y5neKO/ClosureVulnScanner
 cd ClosureVulnScanner
 python3 -m pip install -r requirements.txt
-python3 ClosureVulnScanner.py
+python3 CVS.py
 ```
 
 
@@ -68,7 +68,7 @@ python3 ClosureVulnScanner.py
 
 ```sh
 root#
--> python3 ClosureVulnScanner.py -h
+-> python3 CVS.py -h
 
     ,ad8888ba,   88
    d8"'    `"8b  88
@@ -84,7 +84,7 @@ root#
 欢迎使用Closure Vulnerability Scanner
 Github: https://github.com/Y5neKO
 
-usage: ClosureVulnScanner.py [-h] [-u URL] [-e {identify,scan,exp}] [--exp EXP_NAME] [--cmd CMD] [-t TIMEOUT] [--proxy PROXY] [-o OUTPUT]
+usage: CVS.py [-h] [-u URL] [-e {identify,scan,exp}] [--exp EXP_NAME] [--cmd CMD] [-t TIMEOUT] [--proxy PROXY] [-o OUTPUT]
                              [--list LIST_POC_NAME] [--add-poc ADD_POC_NAME] [--add-exp ADD_EXP_NAME]
 
 使用帮助

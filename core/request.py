@@ -80,11 +80,16 @@ ua = random.choice([
 
 
 def check_network() -> bool:
-    ipaddress = socket.gethostbyname(socket.gethostname())
-    if ipaddress == 'www.baidu.com':
-        return False
-    else:
+    # ipaddress = socket.gethostbyname(socket.gethostname())
+    # if ipaddress == 'www.baidu.com':
+    #     return False
+    # else:
+    #     return True
+    try:
+        socket.create_connection(("www.baidu.com", 80))
         return True
+    except OSError:
+        return False
 
 
 def check_protocol(url):
@@ -103,7 +108,7 @@ def alive(url) -> bool:
 
 
 def web_request(url, cookie=None, post=None, timeout=5000):
-    if check_network():
+    try:
         url = check_protocol(url)
         try:
             disable_warnings()
@@ -123,14 +128,14 @@ def web_request(url, cookie=None, post=None, timeout=5000):
             response = error
             error_log(error)
         return response
-    else:
+    except Exception:
         print("请检查网络")
         return 0
 
 
 def web_request_plus(url, headers, cookie=None, post=None, timeout=5000):
     headers['User-Agent'] = ua
-    if check_network():
+    try:
         url = check_protocol(url)
         try:
             disable_warnings()
@@ -151,7 +156,7 @@ def web_request_plus(url, headers, cookie=None, post=None, timeout=5000):
             response = error
             error_log(error)
         return response
-    else:
+    except Exception:
         print("请检查网络")
         return 0
 

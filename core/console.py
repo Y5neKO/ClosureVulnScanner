@@ -10,24 +10,14 @@
 import argparse
 import concurrent.futures
 import json
-import re
-import sys
-import threading
-import time
 
-import socks
 from bs4 import BeautifulSoup
 
-from core.color import *
-from core.log import *
-from core.request import *
-from poc.index import *
+from core.proxy import *
+from core.thread import *
 from exp.index import *
+from poc.index import *
 
-"""
-线程锁，防止竞争输出导致输出到文件乱码
-"""
-lock = threading.Lock()
 """
 默认最大线程数
 """
@@ -44,13 +34,15 @@ def web_info(url):
     try:
         response = requests.post(url, timeout=1)
     except Exception:
-        print("连接错误")
+        print(color("[ERROR]", "red") + "连接错误，请检查目标地址和连接状态")
         sys.exit(1)
     response.encoding = "utf-8"
     protocal = parsed_url.scheme
     host = parsed_url.netloc
     port = parsed_url.port
     uri = parsed_url.path
+    if uri == "":
+        uri = "/"
     if port is None:
         port = 80
         if protocal == "https":
@@ -72,42 +64,33 @@ def web_info(url):
         print("Proxy: " + color("Off", "red"))
     return 1
 
+
 def identify(url, timeout):
     """
-    资产识别模块
+    指纹识别模块
     @param url: 地址
     @param timeout: 超时时间
     @return: Flag
     """
-    # threads = []
-    # print("回显窗口:\n")
-    # web_info(url)
-    # print("[*]--------------------任务开始--------------------")
-    # with open("./finger/finger.json", "r", encoding="utf-8") as file:
-    #     json_data = json.load(file)
-    #     # 多线程操作
-    #     for asset_name, info in json_data['AssetName'].items():
-    #         t = threading.Thread(target=finger_base, args=(url, timeout, asset_name, info))
-    #         threads.append(t)
-    #         t.start()
-    # for t in threads:
-    #     t.join()
-    # print("[*]--------------------任务结束--------------------")
-    # return 1
     print("回显窗口:\n")
     web_info(url)
     print("[*]--------------------任务开始--------------------")
     with open("./finger/finger.json", "r", encoding="utf-8") as file:
         json_data = json.load(file)
         with concurrent.futures.ThreadPoolExecutor(max_threads) as executor:
-            futures = {executor.submit(finger_base, url, timeout, asset_name, info): (asset_name, info) for asset_name, info in json_data['AssetName'].items()}
+            futures = {executor.submit(finger_base, url, timeout, asset_name, info): (asset_name, info) for
+                       asset_name, info in json_data['AssetName'].items()}
             for future in concurrent.futures.as_completed(futures):
                 asset_name, info = futures[future]
                 try:
                     future.result()
                 except Exception as e:
                     print(f"Thread for {asset_name} encountered an error: {e}")
-    print("[*]--------------------任务结束--------------------")
+    if len(result_list) > 0:
+        print("[*]--------------------扫描结果--------------------")
+        for i in range(len(result_list)):
+            print(result_list[i])
+        print("[*]--------------------任务结束--------------------")
     return 1
 
 
@@ -166,113 +149,6 @@ def exp(url, exp_name, cmd, timeout):
     return 1
 
 
-def finger_base(url, timeout, asset_name, info):
-    """
-    指纹基础模块，用于资产识别模块调用
-    @param url: 链接
-    @param timeout: 超时时间
-    @param asset_name: 资产名称
-    @param info: 指纹详细信息
-    @return: Flag
-    """
-    response = web_request_plus(url.rstrip() + info["payload"]['uri'], headers=info["payload"]["headers"], post=info["payload"]["body"], timeout=timeout)
-    flag = 0    # 验证标识
-    if info['location'] == "uri":
-        if response.status_code == 200:
-            flag = 1
-        if re.search(r'404|NOT FOUND', response.text):
-            flag = 0    # 某些网站404状态码不返回在响应头中
-    elif info['location'] == "headers":
-        if re.search(re.compile(info['keywords']), str(response.headers)):
-            flag = 1
-    elif info['location'] == "body":
-        if re.search(re.compile(info['keywords']), str(response.text)):
-            flag = 1
-    #输出结果
-    if flag:
-        result = ("[" + color("+", "green") + "]目标[ " + url + " ]存在[" + color(asset_name, "orange") + "]特征")
-        normal_log(result)
-    else:
-        result = ("[" + color("-", "red") + "]目标[ " + url + " ]不存在[" + asset_name + "]特征")
-    with lock:
-        print(result)
-    return 1
-
-
-def poc_thread_func(i, url, timeout):
-    """
-    复杂poc验证多线程模块，用于漏洞扫描模块调用
-    @param i: 线程索引
-    @param url: 地址
-    @param timeout: 超时时间
-    @return: Flag
-    """
-    res = poc_base(i, url, timeout)
-    if res['vulnerable']:
-        result = ("[" + color("+", "green") + "]目标[ " + url + " ]存在[" + color(res['name'], "orange") + "]漏洞")
-        normal_log(result)
-    else:
-        result = ("[" + color("-", "red") + "]目标[ " + url + " ]不存在[" + res['name'] + "]漏洞")
-    with lock:
-        print(result)
-
-
-def poc_base(poc_name, url, timeout):
-    """
-    复杂poc验证基础模块，用于漏洞扫描模块调用
-    @param poc_name: poc目录内的poc索引名称
-    @param url: 地址
-    @param timeout: 超时时间
-    @return: 验证结果
-    """
-    try:
-        res = eval(poc_name).run(url, timeout)
-        return res
-    except Exception as error:
-        pass
-
-
-def ez_poc_base(url, timeout, poc_name, info):
-    """
-    简单poc验证模块，用于漏洞扫描模块调用(复用自finger_base模块，功能类似)
-    @param url:
-    @param timeout:
-    @param poc_name:
-    @param info:
-    @return:
-    """
-    # response = web_request_plus(url, headers=info["payload"]["headers"], post=info["payload"]["body"], timeout=timeout)
-    # if re.search(re.compile(info["keywords"]), response.text) or re.search(re.compile(info["keywords"]), str(response.headers)):
-    #     result = ("[" + color("+", "green") + "]目标[ " + url + " ]存在[" + color(poc_name, "orange") + "]漏洞")
-    #     print(result)
-    #     normal_log(result)
-    # else:
-    #     result = ("[" + color("-", "red") + "]目标[ " + url + " ]不存在[" + poc_name + "]漏洞")
-    #     print(result)
-    response = web_request_plus(url.rstrip() + info["payload"]['uri'], headers=info["payload"]["headers"], post=info["payload"]["body"], timeout=timeout)
-    flag = 0    # 验证标识
-    if info['location'] == "uri":
-        if response.status_code == 200:
-            flag = 1
-        if re.search(r'404|NOT FOUND', response.text):
-            flag = 0    # 某些网站404状态码不返回在响应头中
-    elif info['location'] == "headers":
-        if re.search(re.compile(info['keywords']), str(response.headers)):
-            flag = 1
-    elif info['location'] == "body":
-        if re.search(re.compile(info['keywords']), str(response.text)):
-            flag = 1
-    #输出结果
-    if flag:
-        result = ("[" + color("+", "green") + "]目标[ " + url + " ]存在[" + color(poc_name, "orange") + "]漏洞")
-        normal_log(result)
-    else:
-        result = ("[" + color("-", "red") + "]目标[ " + url + " ]不存在[" + poc_name + "]漏洞")
-    with lock:
-        print(result)
-    return 1
-
-
 def exp_base(url, exp_name, cmd, timeout):
     try:
         flag, res = eval(exp_name).run(url, cmd)
@@ -293,66 +169,6 @@ def extract_cmd(input_string):
         return matches.group(1)
 
 
-def proxy(proxy_addr):
-    """
-    代理模块
-    @param proxy_addr: 代理完整地址
-    @return: Flag
-    """
-    match = re.search(r"//(\d+\.\d+\.\d+\.\d+):(\d+)", proxy_addr)
-    if match:
-        # 提取IP地址和端口号
-        ip_address = match.group(1)
-        port_number = match.group(2)
-        if proxy_addr.startswith("socks://"):
-            socks.set_default_proxy(socks.SOCKS5, ip_address, int(port_number))
-        elif proxy_addr.startswith("http://"):
-            socks.set_default_proxy(socks.HTTP, ip_address, int(port_number))
-        socket.socket = socks.socksocket
-        return 1
-    else:
-        print("代理格式错误")
-        error_log("代理格式错误")
-        return 0
-
-
-class Logger(object):
-    def __init__(self, filename="Default.log"):
-        self.terminal = sys.stdout
-        self.log = open(filename, "w", encoding="utf-8")  # 防止编码错误
-
-    def write(self, message):
-        self.terminal.write(message)
-        message = re.sub(r'\033\[\d+m', '', message)
-        self.log.write(message)
-
-    def flush(self):
-        pass
-
-
-class ThreadPool:
-    def __init__(self, max_threads):
-        self.max_threads = max_threads
-        self.lock = threading.Lock()
-        self.threads = set()
-
-    def worker(self, thread_id):
-        with self.lock:
-            print(f"Thread {thread_id} started")
-            # Your thread's work goes here
-            time.sleep(2)
-            print(f"Thread {thread_id} finished")
-            self.threads.remove(threading.current_thread())
-
-    def submit(self):
-        with self.lock:
-            if len(self.threads) < self.max_threads:
-                thread_id = len(self.threads)
-                thread = threading.Thread(target=self.worker, args=(thread_id,))
-                self.threads.add(thread)
-                thread.start()
-
-
 def main():
     """
     控制台主入口
@@ -362,7 +178,7 @@ def main():
     scanner = parser.add_argument_group('扫描参数')
     scanner.add_argument("-u", type=str, dest="url", help="目标url, example: http(s)://www.baidu.com/")
     scanner.add_argument("-e", type=str, dest="extension", default="identify", choices=["identify", "scan", "exp"],
-                         help="指定操作类型, 默认为资产识别。identify:资产识别 | scan:漏洞扫描 | exp:漏洞利用")
+                         help="指定操作类型, 默认为指纹识别。identify:指纹识别 | scan:漏洞扫描 | exp:漏洞利用")
     # scanner.add_argument("--scan", type=str, dest="scan", default="all",
     #                     help="基础扫描, 使用poc目录内插件:Shiro,Weblogic, 不指定默认全部扫描")
     scanner.add_argument("--exp", type=str, dest="exp_name", help="指定exp模块, 使用exp目录内插件")
