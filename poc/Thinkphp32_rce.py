@@ -57,6 +57,6 @@ Upgrade-Insecure-Requests: 1
                 relsult['method'] = 'GET'
                 relsult['url'] = url
                 relsult['payload'] = payload2
-            return relsult
+        return relsult
     except:
         return relsult

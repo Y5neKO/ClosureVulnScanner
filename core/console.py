@@ -90,7 +90,7 @@ def identify(url, timeout):
         print("[*]--------------------扫描结果--------------------")
         for i in range(len(result_list)):
             print(result_list[i])
-        print("[*]--------------------任务结束--------------------")
+    print("[*]--------------------任务结束--------------------")
     return 1
 
 
@@ -125,6 +125,12 @@ def scan(url, timeout):
         t2.start()
     for t2 in threads2:
         t2.join()
+    if len(result_list) > 0:
+        print("[*]--------------------扫描结果--------------------")
+        for i in range(len(result_list)):
+            print(result_list[i])
+            if len(result_list) > 1:
+                print("----------")
     print("[*]--------------------任务结束--------------------")
     return 1
 

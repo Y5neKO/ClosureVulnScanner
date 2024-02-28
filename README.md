@@ -24,6 +24,7 @@
 
 - **v0.0**: 目前正在开发中，广泛征求意见.
 - **v0.1**: 实现了基础功能，包括指纹、exp、poc、多线程以及代理等功能.
+- **v0.2**: 重构了代码结构，优化多线程算法，修复了部分bug
 
 
 ## 默认配置
@@ -31,10 +32,11 @@
 
 
 ## 版本&更新日志
-**版本** v0.1
+**版本** v0.2
 
 - *2023.10.26* | First init.
 - *2023.11.01* | v0.1版本发布.
+- *2024.01.29* | v0.2版本发布
 
 
 
@@ -79,13 +81,13 @@ root#
    Y8a.    .a8P  88  "8a,   ,a8"  aa    ]8I  "8a,   ,a88  88          "8b,   ,aa
     `"Y8888Y"'   88   `"YbbdP"'   `"YbbdP"'   `"YbbdP'Y8  88           `"Ybbd8"'
 
-                                                                           By Y5neKO :)
+                                                                           v0.2 By Y5neKO :)
+                                                                           扰扰马足车尘，被岁月无情，暗消年少。
 
 欢迎使用Closure Vulnerability Scanner
 Github: https://github.com/Y5neKO
 
-usage: CVS.py [-h] [-u URL] [-e {identify,scan,exp}] [--exp EXP_NAME] [--cmd CMD] [-t TIMEOUT] [--proxy PROXY] [-o OUTPUT]
-                             [--list LIST_POC_NAME] [--add-poc ADD_POC_NAME] [--add-exp ADD_EXP_NAME]
+usage: CVS.py [-h] [-u URL] [-e {identify,scan,exp}] [--exp EXP_NAME] [--cmd CMD] [-t TIMEOUT] [--proxy PROXY] [-o OUTPUT] [--list {poc,exp}] [--add-poc ADD_POC_NAME] [--add-exp ADD_EXP_NAME]
 
 使用帮助
 
@@ -95,15 +97,15 @@ optional arguments:
 扫描参数:
   -u URL                目标url, example: http(s)://www.baidu.com/
   -e {identify,scan,exp}
-                        指定操作类型, 默认为资产识别。identify:资产识别 | scan:漏洞扫描 | exp:漏洞利用
+                        指定操作类型, 默认为指纹识别。identify:指纹识别 | scan:漏洞扫描 | exp:漏洞利用
   --exp EXP_NAME        指定exp模块, 使用exp目录内插件
-  --cmd CMD             指定exp模块命令执行
+  --cmd CMD             指定exp模块执行的命令, 若模块不支持命令执行可缺省
   -t TIMEOUT            设置超时时间(ms), 默认5000ms
   --proxy PROXY         使用代理, 目前支持Socks,HTTP; 格式:{socks|http}://ip_addr:port
   -o OUTPUT             输出扫描结果到指定路径
 
 拓展参数:
-  --list LIST_POC_NAME  列出已经加载的poc插件
+  --list {poc,exp}      列出已经加载的poc/exp插件
   --add-poc ADD_POC_NAME
                         添加poc插件
   --add-exp ADD_EXP_NAME
@@ -113,6 +115,8 @@ optional arguments:
 
 
 ## 目录及功能描述
+
+`asset`: 静态资源目录
 
 `core`: 核心功能目录
 
@@ -155,7 +159,8 @@ optional arguments:
             "请求字段1": "请求键值1"
         }
       },
-      "location": "验证关键字的位置：uri、headers、body、iconhash",
+      "location": "验证关键字的位置：uri、headers、body",
+      "checkhash": "目标hash校验值,默认为32位md5",
       "keywords": "验证关键字，支持正则表达式"
     }
 ```
@@ -193,7 +198,7 @@ optional arguments:
             "请求字段1": "请求键值1"
         }
       },
-      "location": "验证关键字的位置：uri、headers、body、iconhash",
+      "location": "验证关键字的位置：uri、headers、body",
       "keywords": "验证关键字，支持正则表达式"
     }
 ```

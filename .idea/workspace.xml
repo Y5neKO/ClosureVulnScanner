@@ -5,8 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d94f7142-d580-4afb-8faf-de5e40e5a768" name="更改" comment="2023/10/31 更新v0.1版本">
+      <change afterPath="$PROJECT_DIR$/poc/Thinkphp3_log_leakage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poc/Thinkphp5023_rce.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poc/Thinkphp5_rce.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poc/Thinkphp_driver_display_rce.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poc/Thinkphp_index_construct_rce.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poc/Thinkphp_index_showid_rce.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poc/Thinkphp_invoke_func_code_exec.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poc/Thinkphp_lite_code_exec.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poc/Thinkphp_method_filter_code_exec.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poc/Thinkphp_multi_sql_leak.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poc/Thinkphp_pay_orderid_sqli.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poc/Thinkphp_request_input_rce.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poc/Thinkphp_view_recent_xff_sqli.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poc/thinkphp5_sqli.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ClosureVulnScanner.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ClosureVulnScanner.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/console.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/console.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/thread.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finger/finger.json" beforeDir="false" afterPath="$PROJECT_DIR$/finger/finger.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poc/Thinkphp32_rce.py" beforeDir="false" afterPath="$PROJECT_DIR$/poc/Thinkphp32_rce.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poc/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/poc/index.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,9 +80,11 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.CVS.executor&quot;: &quot;Run&quot;,
     &quot;Python.ClosureVulnScanner.executor&quot;: &quot;Run&quot;,
     &quot;Python.gui (1).executor&quot;: &quot;Run&quot;,
     &quot;Python.gui.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
@@ -74,7 +96,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -84,6 +106,7 @@
       <recent name="H:\Python_Project\ClosureVulnScanner\exp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\Project\Python_Project\ClosureVulnScanner\core" />
       <recent name="H:\Python_Project\ClosureVulnScanner" />
       <recent name="H:\Python_Project\ClosureVulnScanner\gui" />
       <recent name="H:\Python_Project\ClosureVulnScanner\poc\index" />
@@ -99,13 +122,14 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.8" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="H:\Project\Python_Project\ClosureVulnScanner\CVS.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CVS.py" />
+      <option name="PARAMETERS" value="-u &quot;http://127.0.0.1&quot; -e scan" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -136,9 +160,38 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ClosureVulnScanner" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/core" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/core/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.CVS" />
+      <item itemvalue="Python.gui" />
+      <item itemvalue="Python.test" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.CVS" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.gui" />
       </list>
     </recent_temporary>
@@ -182,7 +235,9 @@
       <workItem from="1708600402158" duration="613000" />
       <workItem from="1708678875269" duration="639000" />
       <workItem from="1708933545763" duration="6490000" />
-      <workItem from="1709016503772" duration="3285000" />
+      <workItem from="1709016503772" duration="10537000" />
+      <workItem from="1709089843678" duration="1957000" />
+      <workItem from="1709105028634" duration="8274000" />
     </task>
     <task id="LOCAL-00001" summary="2023/10/31更新文件（正在开发）">
       <option name="closed" value="true" />
@@ -287,10 +342,30 @@
     <MESSAGE value="2023/10/31 更新v0.1版本" />
     <option name="LAST_COMMIT_MESSAGE" value="2023/10/31 更新v0.1版本" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/poc/Thinkphp32_rce.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ClosureVulnScanner$test.coverage" NAME="test 覆盖结果" MODIFIED="1709021950693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/ClosureVulnScanner$console.coverage" NAME="console 覆盖结果" MODIFIED="1701151913114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/ClosureVulnScanner$gui__1_.coverage" NAME="gui (1) 覆盖结果" MODIFIED="1703237007455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ClosureVulnScanner$gui.coverage" NAME="gui 覆盖结果" MODIFIED="1703237598125" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ClosureVulnScanner$ClosureVulnScanner.coverage" NAME="ClosureVulnScanner 覆盖结果" MODIFIED="1708329211919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ClosureVulnScanner$CVS.coverage" NAME="CVS 覆盖结果" MODIFIED="1709105403387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

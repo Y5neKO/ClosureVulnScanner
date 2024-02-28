@@ -6,9 +6,11 @@
 """
 import threading
 import time
+import hashlib
 
 from core.color import *
 from core.request import *
+from poc.index import *
 
 
 """
@@ -19,6 +21,34 @@ lock = threading.Lock()
 扫描结果集
 """
 result_list = []
+
+
+def calculate_url_hash(url, hash_method='md5'):
+    """
+    Retrieves the content from the provided URL and calculates its hash.
+
+    :param url: The URL of the content to hash
+    :param hash_method: The hashing method to use (default is 'sha256')
+    :return: The hex digest of the hash
+    """
+    # Choose the hashing algorithm
+    hash_function = getattr(hashlib, hash_method)()
+
+    # Retrieve the content from the URL
+    response = requests.get(url)
+
+    # Check for a successful request
+    if response.status_code == 200:
+        # Update the hash with the content of the URL
+        hash_function.update(response.content)
+        # Return the hex digest of the hash
+        return hash_function.hexdigest()
+    elif re.search(r'404|NOT FOUND', response.text):
+        # raise Exception(f"Content not found at URL: {url}")
+        return "404"
+    else:
+        # raise Exception(f"Failed to retrieve content from URL: {url}")
+        return "无法连接"
 
 
 class ThreadPool:
@@ -68,7 +98,9 @@ def finger_base(url, timeout, asset_name, info):
     elif info['location'] == "body":
         if re.search(re.compile(info['keywords']), str(response.text)):
             flag = 1
-    elif info['location'] == "":
+    if info['checkhash'] != "":
+        if calculate_url_hash(url.rstrip() + info["payload"]['uri']) != info['checkhash']:
+            flag = 0
     # 输出结果
     if flag:
         result = ("[" + color("+", "green") + "]目标[ " + url + " ]存在[" + color(asset_name, "orange") + "]特征")
@@ -108,7 +140,8 @@ def ez_poc_base(url, timeout, poc_name, info):
     # 输出结果
     if flag:
         result = ("[" + color("+", "green") + "]目标[ " + url + " ]存在[" + color(poc_name, "orange") + "]漏洞")
-
+        result_list.append(
+            "[" + color("+", "green") + "]目标[ " + url + " ]存在[" + color(poc_name, "orange") + "]漏洞\npayload为: " + info['payload'])
         normal_log(result)
     else:
         result = ("[" + color("-", "red") + "]目标[ " + url + " ]不存在[" + poc_name + "]漏洞")
@@ -129,6 +162,8 @@ def poc_thread_func(i, url, timeout):
     if res['vulnerable']:
         result = ("[" + color("+", "green") + "]目标[ " + url + " ]存在[" + color(res['name'], "orange") + "]漏洞")
         normal_log(result)
+        result_list.append(
+            "[" + color("+", "green") + "]目标[ " + url + " ]存在[" + color(res['name'], "orange") + "]漏洞\npayload为: " + res['payload'])
     else:
         result = ("[" + color("-", "red") + "]目标[ " + url + " ]不存在[" + res['name'] + "]漏洞")
     with lock:
@@ -147,4 +182,5 @@ def poc_base(poc_name, url, timeout):
         res = eval(poc_name).run(url, timeout)
         return res
     except Exception as error:
+        print(error)
         pass

@@ -8,7 +8,7 @@
 from core import request
 from core.color import *
 
-version = "0.1"
+version = "0.2"
 # 调用一言接口
 if request.check_network():
     hitokoto = request.web_request("https://v1.jinrishici.com/rensheng.txt").text
