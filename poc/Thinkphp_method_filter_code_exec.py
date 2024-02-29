@@ -25,7 +25,7 @@ def run(url, timeout):
         '_method': 'filter',
     }
     try:
-        vurl = urllib.parse.urljoin(url, 'index.php')
+        vurl = url + '/index.php'
         req = requests.post(vurl, data=payload, headers=headers, timeout=timeout, verify=False)
         if "4e5e5d7364f443e28fbf0d3ae744a59a" in req.text and 'var_dump' not in req.text:
             result['vulnerable'] = True

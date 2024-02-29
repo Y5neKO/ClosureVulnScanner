@@ -8,5 +8,6 @@ exp索引文件
 """
 from exp import Thinkphp2_rce as Thinkphp2_rce_exp
 from exp import Thinkphp32_rce as Thinkphp32_rce_exp
+from exp import Thinkphp5023_rce as Thinkphp5023_rce_exp
 
-exp_index = ["Thinkphp2_rce_exp", "Thinkphp32_rce_exp"]
+exp_index = ["Thinkphp2_rce_exp", "Thinkphp32_rce_exp", "Thinkphp5023_rce_exp"]

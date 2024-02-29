@@ -1216,18 +1216,6 @@
       "checkhash": "",
       "keywords": ""
     },
-    "powereasy动易": {
-      "description": "powereasy动易指纹特征",
-      "payload": {
-        "method": "GET",
-        "uri": "/License.txt",
-        "headers": {},
-        "body": {}
-      },
-	  "location": "uri",
-      "checkhash": "",
-      "keywords": ""
-    },
     "dvbbs": {
       "description": "dvbbs指纹特征",
       "payload": {
@@ -1341,18 +1329,6 @@
       "payload": {
         "method": "GET",
         "uri": "/Inedu3In1/images/default/images/2.gif",
-        "headers": {},
-        "body": {}
-      },
-	  "location": "uri",
-      "checkhash": "",
-      "keywords": ""
-    },
-    "PowerEasy": {
-      "description": "PowerEasy指纹特征",
-      "payload": {
-        "method": "GET",
-        "uri": "/License.txt",
         "headers": {},
         "body": {}
       },
@@ -1581,18 +1557,6 @@
       "payload": {
         "method": "GET",
         "uri": "/images/logo_bg.jpg",
-        "headers": {},
-        "body": {}
-      },
-	  "location": "uri",
-      "checkhash": "",
-      "keywords": ""
-    },
-    "分类信息网bank.asp后门": {
-      "description": "分类信息网bank.asp后门指纹特征",
-      "payload": {
-        "method": "GET",
-        "uri": "/login.js",
         "headers": {},
         "body": {}
       },

