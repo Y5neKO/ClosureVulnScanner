@@ -11,7 +11,10 @@ from core.color import *
 version = "0.2"
 # 调用一言接口
 if request.check_network():
-    hitokoto = request.web_request("https://v1.jinrishici.com/rensheng.txt").text
+    try:
+        hitokoto = request.web_request("https://v1.jinrishici.com/rensheng.txt").text
+    except ConnectionError:
+        hitokoto = "Closure Vulnerability Scanner"
 else:
     hitokoto = "Closure Vulnerability Scanner"
 

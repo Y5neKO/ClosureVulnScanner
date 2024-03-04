@@ -1,3 +1,4 @@
+<center><p>中文 | <a href="README_EN.md">ENGLISH</a></p></center><br>
 <h1 align="center">CVS - ClosureVulnScanner</h1>
 <center><img src="https://socialify.git.ci/Y5neKO/ClosureVulnScanner/image?description=1&forks=1&issues=1&language=1&logo=https%3A%2F%2Fraw.githubusercontent.com%2FY5neKO%2FClosureVulnScanner%2Fmain%2Fasset%2FClosure.png&name=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Light" alt="ClosureVulnScanner" /></center>
 <p align="center">

@@ -8,9 +8,15 @@
 
 主程序入口
 """
+import signal
 
 from core.banner import banner
 from core.console import *
+
+
+def signal_handler(sig, frame):
+    print('收到 Ctrl+C，停止程序...')
+    sys.exit(0)
 
 
 def run():
@@ -21,4 +27,5 @@ def run():
 
 
 if __name__ == '__main__':
+    signal.signal(signal.SIGINT, signal_handler)
     run()

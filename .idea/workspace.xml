@@ -5,26 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d94f7142-d580-4afb-8faf-de5e40e5a768" name="更改" comment="2023/10/31 更新v0.1版本">
-      <change afterPath="$PROJECT_DIR$/exp/Thinkphp5023_rce.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/thread.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exp/Thinkphp2_rce.py" beforeDir="false" afterPath="$PROJECT_DIR$/exp/Thinkphp2_rce.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exp/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/exp/index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finger/finger.json" beforeDir="false" afterPath="$PROJECT_DIR$/finger/finger.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poc/Thinkphp2_rce.py" beforeDir="false" afterPath="$PROJECT_DIR$/poc/Thinkphp2_rce.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poc/Thinkphp3_log_leakage.py" beforeDir="false" afterPath="$PROJECT_DIR$/poc/Thinkphp3_log_leakage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poc/Thinkphp5023_rce.py" beforeDir="false" afterPath="$PROJECT_DIR$/poc/Thinkphp5023_rce.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poc/Thinkphp5_rce.py" beforeDir="false" afterPath="$PROJECT_DIR$/poc/Thinkphp5_rce.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poc/Thinkphp_driver_display_rce.py" beforeDir="false" afterPath="$PROJECT_DIR$/poc/Thinkphp_driver_display_rce.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poc/Thinkphp_index_construct_rce.py" beforeDir="false" afterPath="$PROJECT_DIR$/poc/Thinkphp_index_construct_rce.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poc/Thinkphp_index_showid_rce.py" beforeDir="false" afterPath="$PROJECT_DIR$/poc/Thinkphp_index_showid_rce.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poc/Thinkphp_invoke_func_code_exec.py" beforeDir="false" afterPath="$PROJECT_DIR$/poc/Thinkphp_invoke_func_code_exec.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poc/Thinkphp_lite_code_exec.py" beforeDir="false" afterPath="$PROJECT_DIR$/poc/Thinkphp_lite_code_exec.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poc/Thinkphp_method_filter_code_exec.py" beforeDir="false" afterPath="$PROJECT_DIR$/poc/Thinkphp_method_filter_code_exec.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poc/Thinkphp_multi_sql_leak.py" beforeDir="false" afterPath="$PROJECT_DIR$/poc/Thinkphp_multi_sql_leak.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poc/Thinkphp_pay_orderid_sqli.py" beforeDir="false" afterPath="$PROJECT_DIR$/poc/Thinkphp_pay_orderid_sqli.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poc/Thinkphp_request_input_rce.py" beforeDir="false" afterPath="$PROJECT_DIR$/poc/Thinkphp_request_input_rce.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poc/Thinkphp_view_recent_xff_sqli.py" beforeDir="false" afterPath="$PROJECT_DIR$/poc/Thinkphp_view_recent_xff_sqli.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poc/thinkphp5_sqli.py" beforeDir="false" afterPath="$PROJECT_DIR$/poc/thinkphp5_sqli.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/proxy_scan.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/test.cer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CVS.py" beforeDir="false" afterPath="$PROJECT_DIR$/CVS.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/banner.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/banner.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,13 +67,14 @@
     "Python.ClosureVulnScanner.executor": "Run",
     "Python.gui (1).executor": "Run",
     "Python.gui.executor": "Run",
+    "Python.proxy_scan.executor": "Run",
     "Python.test.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "H:/Project/Python_Project/ClosureVulnScanner",
+    "last_opened_file_path": "H:/Project/Python_Project/ClosureVulnScanner/core",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -100,6 +86,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\Project\Python_Project\ClosureVulnScanner\core" />
       <recent name="H:\Python_Project\ClosureVulnScanner\gui" />
       <recent name="H:\Python_Project\ClosureVulnScanner\exp" />
     </key>
@@ -110,7 +97,7 @@
       <recent name="H:\Python_Project\ClosureVulnScanner\poc\index" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.CVS">
+  <component name="RunManager" selected="Python.proxy_scan">
     <configuration name="CVS" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ClosureVulnScanner" />
       <option name="ENV_FILES" value="" />
@@ -158,6 +145,29 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="proxy_scan" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ClosureVulnScanner" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/core" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/core/proxy_scan.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ClosureVulnScanner" />
       <option name="ENV_FILES" value="" />
@@ -182,12 +192,14 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.proxy_scan" />
       <item itemvalue="Python.CVS" />
       <item itemvalue="Python.gui" />
       <item itemvalue="Python.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.proxy_scan" />
         <item itemvalue="Python.CVS" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.gui" />
@@ -237,6 +249,7 @@
       <workItem from="1709089843678" duration="1957000" />
       <workItem from="1709105028634" duration="8274000" />
       <workItem from="1709171282248" duration="5472000" />
+      <workItem from="1709263713796" duration="8558000" />
     </task>
     <task id="LOCAL-00001" summary="2023/10/31更新文件（正在开发）">
       <option name="closed" value="true" />
@@ -366,6 +379,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ClosureVulnScanner$test.coverage" NAME="test 覆盖结果" MODIFIED="1709021950693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
+    <SUITE FILE_PATH="coverage/ClosureVulnScanner$proxy_scan.coverage" NAME="proxy_scan 覆盖结果" MODIFIED="1709278110380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/ClosureVulnScanner$console.coverage" NAME="console 覆盖结果" MODIFIED="1701151913114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/ClosureVulnScanner$gui__1_.coverage" NAME="gui (1) 覆盖结果" MODIFIED="1703237007455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ClosureVulnScanner$gui.coverage" NAME="gui 覆盖结果" MODIFIED="1703237598125" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
