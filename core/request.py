@@ -126,7 +126,8 @@ def web_request(url, cookie=None, post=None, timeout=5000):
             return response
         except requests.exceptions.RequestException as error:
             response = error
-            error_log(error)
+            print("请求错误")
+            error_log(current_function_location())
         return response
     except Exception:
         print("请检查网络")
@@ -154,9 +155,11 @@ def web_request_plus(url, headers, cookie=None, post=None, timeout=5000):
             return response
         except requests.exceptions.RequestException as error:
             response = error
-            error_log(error)
+            print("请求错误")
+            error_log(current_function_location())
         return response
-    except Exception:
+    except Exception as error:
+        print(url)
         print("请检查网络")
         return 0
 

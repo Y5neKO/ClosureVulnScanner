@@ -8,6 +8,7 @@
 """
 
 import datetime
+import inspect
 import logging
 import os
 import re
@@ -31,6 +32,18 @@ class Logger(object):
 
     def flush(self):
         pass
+
+
+def current_function_location():
+    frame = inspect.currentframe()
+    try:
+        caller_frame = frame.f_back
+        caller_name = caller_frame.f_code.co_name
+        caller_line = caller_frame.f_lineno
+        caller_file = caller_frame.f_code.co_filename
+        return f"Function {caller_name} in file {caller_file} at line {caller_line}"
+    finally:
+        del frame
 
 
 def normal_log(log):
