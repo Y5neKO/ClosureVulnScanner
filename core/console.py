@@ -52,7 +52,7 @@ def web_info(url):
         title = soup.title.string
     except Exception:
         title = "无"
-    print("[*]--------------------目标信息--------------------")
+    print_centered("目标信息")
     print("Title: " + title)
     print("Proto: " + protocal)
     print("Host:  " + host)
@@ -74,7 +74,7 @@ def identify(url, timeout):
     """
     print("回显窗口:\n")
     web_info(url)
-    print("[*]--------------------任务开始--------------------")
+    print_centered("任务开始")
     with open("./finger/finger.json", "r", encoding="utf-8") as file:
         json_data = json.load(file)
         with concurrent.futures.ThreadPoolExecutor(max_threads) as executor:
@@ -87,10 +87,10 @@ def identify(url, timeout):
                 except Exception as e:
                     print(f"Thread for {asset_name} encountered an error: {e}")
     if len(result_list) > 0:
-        print("[*]--------------------扫描结果--------------------")
+        print_centered("扫描结果")
         for i in range(len(result_list)):
             print(result_list[i])
-    print("[*]--------------------任务结束--------------------")
+    print_centered("任务结束")
     return 1
 
 
@@ -105,7 +105,7 @@ def scan(url, timeout):
     threads2 = []
     print("回显窗口:\n")
     web_info(url)
-    print("[*]--------------------任务开始--------------------")
+    print_centered("任务开始")
     # 首先进行简单poc验证
     with open("./ez_poc/ez_poc.json", "r", encoding="utf-8") as file:
         json_data = json.load(file)
@@ -126,13 +126,13 @@ def scan(url, timeout):
     for t2 in threads2:
         t2.join()
     if len(result_list) > 0:
-        print("[*]--------------------扫描结果--------------------")
+        print_centered("扫描结果")
         for i in range(len(result_list)):
             print(result_list[i])
             if len(result_list) > 1:
                 if i < len(result_list) - 1:
                     print("----------")
-    print("[*]--------------------任务结束--------------------")
+    print_centered("任务结束")
     return 1
 
 
@@ -147,16 +147,24 @@ def exp(url, exp_name, cmd, timeout):
     """
     print("回显窗口:\n")
     web_info(url)
-    print("[*]--------------------任务开始--------------------")
+    print_centered("任务开始")
     flag, res = exp_base(url, exp_name, cmd, timeout)
     res = extract_cmd(res)
     print("命令执行结果:")
     print(res)
-    print("[*]--------------------任务结束--------------------")
+    print_centered("任务结束")
     return 1
 
 
 def exp_base(url, exp_name, cmd, timeout):
+    """
+    exp利用基础模块
+    @param url:
+    @param exp_name:
+    @param cmd:
+    @param timeout:
+    @return:
+    """
     try:
         flag, res = eval(exp_name).run(url, cmd)
         return flag, res
@@ -174,6 +182,18 @@ def extract_cmd(input_string):
     matches = re.search(pattern, input_string)
     if matches:
         return matches.group(1)
+
+
+def print_centered(text):
+    """
+    打印分割线
+    @param text: 居中文字
+    @return:
+    """
+    terminal_width = os.get_terminal_size().columns
+    text_width = len(text)
+    left_padding = (terminal_width - text_width - 10) // 2  # 10是因为"----------"占用了10个字符
+    print('-' * left_padding + text + '-' * left_padding)
 
 
 def main():
@@ -197,8 +217,8 @@ def main():
     scanner.add_argument("-o", type=str, dest="output", help="输出扫描结果到指定路径")
 
     scanner2 = parser.add_argument_group('拓展参数')
-    scanner2.add_argument('--list', type=str, dest="list_name", choices=["poc", "exp"],
-                          help="列出已经加载的poc/exp插件")
+    scanner2.add_argument('--list-poc', action="store_true", dest="list_poc", help="列出已经加载的poc")
+    scanner2.add_argument('--list-exp', action="store_true", dest="list_exp", help="列出已经加载的exp")
     scanner2.add_argument('--add-poc', type=str, dest="add_poc_name", help="添加poc插件")
     scanner2.add_argument('--add-exp', type=str, dest="add_exp_name", help="添加exp插件")
 
@@ -216,14 +236,14 @@ def main():
             identify(args.url, timeout=args.timeout)
         except ConnectionError as error:
             error_log("core.console->main()->identify模块|" + str(error))
-            print("[*]--------------------连接错误--------------------")
+            print_centered("连接错误")
 
     elif args.url and args.extension == "scan":
         try:
             scan(args.url, timeout=args.timeout)
         except ConnectionError as error:
             error_log("core.console->main()->scan模块|" + str(error))
-            print("[*]--------------------连接错误--------------------")
+            print_centered("连接错误")
 
     elif args.url and args.extension == "exp":
         if args.exp_name and args.cmd:
@@ -231,21 +251,38 @@ def main():
                 exp(args.url, args.exp_name + "_exp", args.cmd, timeout=args.timeout)
             except ConnectionError as error:
                 error_log("core.console->main()->exp模块|" + str(error))
-                print("[*]--------------------连接错误--------------------")
+                print_centered("连接错误")
         else:
             print("EXP模块未指定名称")
 
-    elif args.list_name == "poc":
+    elif args.list_poc is True:
+        print_centered("----")
+        poc_count = 0
         print("已经加载的poc插件:")
         for i in poc_index:
             i = i.replace("_poc", "")
+            poc_count += 1
             print(i)
+        with open('./ez_poc/ez_poc.json', 'r', encoding="utf-8") as file:
+            json_data = json.load(file)
+            for asset_name, info in json_data['PocName'].items():
+                print(asset_name)
+                poc_count += 1
+        print("----------")
+        print("已加载poc插件{}条".format(color(str(poc_count), "yellow")))
+        print_centered("----")
 
-    elif args.list_name == "exp":
+    elif args.list_exp is True:
+        print_centered("----")
+        exp_count = 0
         print("已经加载的exp插件:")
         for i in exp_index:
             i = i.replace("_exp", "")
+            exp_count += 1
             print(i)
+        print("----------")
+        print("已加载exp插件{}条".format(color(str(exp_count), "yellow")))
+        print_centered("----")
 
     elif args.add_poc_name:
         with open('./poc/index.py', 'r', encoding="utf-8") as file:
