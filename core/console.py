@@ -101,8 +101,8 @@ def scan(url, timeout):
     @param timeout: 超时时间
     @return: Flag
     """
-    threads = []
-    threads2 = []
+    threads_ez = []
+    threads_complex = []
     print("回显窗口:\n")
     web_info(url)
     print_centered("任务开始")
@@ -112,18 +112,18 @@ def scan(url, timeout):
         # 多线程操作
         for asset_name, info in json_data['PocName'].items():
             t = threading.Thread(target=ez_poc_base, args=(url, timeout, asset_name, info))
-            threads.append(t)
+            threads_ez.append(t)
             t.start()
-    for t in threads:
+    for t in threads_ez:
         t.join()
 
     # 接着在进行复杂poc验证
     # 多线程操作
     for i in poc_index:
         t2 = threading.Thread(target=poc_thread_func, args=(i, url, timeout))  # 通过poc_thread_func方法进行多线程操作
-        threads2.append(t2)
+        threads_complex.append(t2)
         t2.start()
-    for t2 in threads2:
+    for t2 in threads_complex:
         t2.join()
     if len(result_list) > 0:
         print_centered("扫描结果")
@@ -131,7 +131,7 @@ def scan(url, timeout):
             print(result_list[i])
             if len(result_list) > 1:
                 if i < len(result_list) - 1:
-                    print("----------")
+                    print("--------------------")
     print_centered("任务结束")
     return 1
 
@@ -192,7 +192,7 @@ def print_centered(text):
     """
     terminal_width = os.get_terminal_size().columns
     text_width = len(text)
-    left_padding = (terminal_width - text_width - 10) // 2  # 10是因为"----------"占用了10个字符
+    left_padding = (terminal_width - text_width - len(text)) // 2
     print('-' * left_padding + text + '-' * left_padding)
 
 
@@ -208,6 +208,7 @@ def main():
                          help="指定操作类型, 默认为指纹识别。identify:指纹识别 | scan:漏洞扫描 | exp:漏洞利用")
     # scanner.add_argument("--scan", type=str, dest="scan", default="all",
     #                     help="基础扫描, 使用poc目录内插件:Shiro,Weblogic, 不指定默认全部扫描")
+    # scanner.add_argument("--cookie", type=str, dest="cookie", help="指定cookie")
     scanner.add_argument("--exp", type=str, dest="exp_name", help="指定exp模块, 使用exp目录内插件")
     scanner.add_argument("--cmd", type=str, dest="cmd", default="whoami",
                          help="指定exp模块执行的命令, 若模块不支持命令执行可缺省")
@@ -217,6 +218,7 @@ def main():
     scanner.add_argument("-o", type=str, dest="output", help="输出扫描结果到指定路径")
 
     scanner2 = parser.add_argument_group('拓展参数')
+    scanner2.add_argument("--list-finger", action="store_true", dest="list_finger", help="列出已经加载的指纹库")
     scanner2.add_argument('--list-poc', action="store_true", dest="list_poc", help="列出已经加载的poc")
     scanner2.add_argument('--list-exp', action="store_true", dest="list_exp", help="列出已经加载的exp")
     scanner2.add_argument('--add-poc', type=str, dest="add_poc_name", help="添加poc插件")
@@ -255,6 +257,18 @@ def main():
         else:
             print("EXP模块未指定名称")
 
+    elif args.list_finger is True:
+        print_centered("----")
+        finger_count = 0
+        with open('./finger/finger.json', 'r', encoding="utf-8") as file:
+            json_data = json.load(file)
+            for asset_name, info in json_data['AssetName'].items():
+                print(asset_name)
+                finger_count += 1
+        print("--------------------")
+        print("已加载指纹库{}条".format(color(str(finger_count), "yellow")))
+        print_centered("----")
+
     elif args.list_poc is True:
         print_centered("----")
         poc_count = 0
@@ -268,7 +282,7 @@ def main():
             for asset_name, info in json_data['PocName'].items():
                 print(asset_name)
                 poc_count += 1
-        print("----------")
+        print("--------------------")
         print("已加载poc插件{}条".format(color(str(poc_count), "yellow")))
         print_centered("----")
 
@@ -280,7 +294,7 @@ def main():
             i = i.replace("_exp", "")
             exp_count += 1
             print(i)
-        print("----------")
+        print("--------------------")
         print("已加载exp插件{}条".format(color(str(exp_count), "yellow")))
         print_centered("----")
 

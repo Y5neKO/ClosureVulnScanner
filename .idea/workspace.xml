@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d94f7142-d580-4afb-8faf-de5e40e5a768" name="更改" comment="2023/10/31 更新v0.1版本">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README_EN.md" beforeDir="false" afterPath="$PROJECT_DIR$/README_EN.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/console.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/console.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,34 +70,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Python.CVS.executor": "Run",
-    "Python.ClosureVulnScanner.executor": "Run",
-    "Python.Tui.executor": "Run",
-    "Python.gui (1).executor": "Run",
-    "Python.gui.executor": "Run",
-    "Python.gui2.executor": "Run",
-    "Python.gui3.executor": "Run",
-    "Python.gui_test.executor": "Run",
-    "Python.proxy_scan.executor": "Run",
-    "Python.test.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "H:/Project/Python_Project/ClosureVulnScanner",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "http.proxy",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.CVS.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ClosureVulnScanner.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Tui.executor&quot;: &quot;Run&quot;,
+    &quot;Python.gui (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.gui.executor&quot;: &quot;Run&quot;,
+    &quot;Python.gui2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.gui3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.gui_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.proxy_scan.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;H:/Project/Python_Project/ClosureVulnScanner/lib&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="H:\Project\Python_Project\ClosureVulnScanner\core" />
@@ -226,8 +228,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Tui" />
       <item itemvalue="Python.CVS" />
+      <item itemvalue="Python.Tui" />
       <item itemvalue="Python.gui2" />
       <item itemvalue="Python.gui3" />
       <item itemvalue="Python.gui" />
@@ -245,7 +247,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-09665e90c3a7-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.15026.15" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PY-241.14494.241" />
+        <option value="bundled-python-sdk-0509580d9d50-28c9f5db9ffe-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.14494.241" />
       </set>
     </attachedChunks>
   </component>
@@ -305,7 +308,18 @@
       <workItem from="1711998100745" duration="668000" />
       <workItem from="1711998781418" duration="85000" />
       <workItem from="1712024298407" duration="1765000" />
-      <workItem from="1712044837153" duration="1442000" />
+      <workItem from="1712044837153" duration="2425000" />
+      <workItem from="1712050710220" duration="11000" />
+      <workItem from="1712666768564" duration="744000" />
+      <workItem from="1713093129153" duration="680000" />
+      <workItem from="1713145300073" duration="941000" />
+      <workItem from="1713230351949" duration="1267000" />
+      <workItem from="1713318941702" duration="5181000" />
+      <workItem from="1713404179730" duration="13000" />
+      <workItem from="1713404247537" duration="965000" />
+      <workItem from="1713405565612" duration="4000" />
+      <workItem from="1713405709890" duration="214000" />
+      <workItem from="1713405931265" duration="64000" />
     </task>
     <task id="LOCAL-00001" summary="2023/10/31更新文件（正在开发）">
       <option name="closed" value="true" />

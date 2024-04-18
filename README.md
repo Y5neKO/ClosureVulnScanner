@@ -71,7 +71,7 @@ python3 CVS.py
 
 ## 使用说明
 
-```sh
+```zsh
 root#
 -> python3 CVS.py -h
 
@@ -128,6 +128,8 @@ optional arguments:
 `ez_poc`: 简单发包型poc验证模块插件目录
 
 `finger`: 指纹信息目录
+
+`lib`: 第三方依赖目录(ysoserial等)
 
 `log`: 程序日志目录
 

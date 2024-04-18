@@ -129,6 +129,8 @@ optional arguments:
 
 `finger`: Fingerprint information directory
 
+`lib`: Third-party dependency directory(e.g. ysoserial.jar)
+
 `log`: Program log directory
 
 `poc`: Complex POC verification module plug-in directory
