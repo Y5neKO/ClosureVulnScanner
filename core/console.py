@@ -11,6 +11,7 @@ import argparse
 import concurrent.futures
 import json
 
+import chardet
 from bs4 import BeautifulSoup
 
 from core.proxy import *
@@ -149,8 +150,9 @@ def exp(url, exp_name, cmd, timeout):
     web_info(url)
     print_centered("任务开始")
     flag, res = exp_base(url, exp_name, cmd, timeout)
-    res = extract_cmd(res)
+    res_encode = chardet.detect(res.encode())['encoding']
     print("命令执行结果:")
+    res = extract_cmd(res.encode().decode('utf-8'))
     print(res)
     print_centered("任务结束")
     return 1
@@ -190,7 +192,10 @@ def print_centered(text):
     @param text: 居中文字
     @return:
     """
-    terminal_width = os.get_terminal_size().columns
+    try:
+        terminal_width = os.get_terminal_size().columns
+    except:
+        terminal_width = 20
     text_width = len(text)
     left_padding = (terminal_width - text_width - len(text)) // 2
     print('-' * left_padding + text + '-' * left_padding)

